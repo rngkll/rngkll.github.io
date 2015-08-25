@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Guía de como configurar nikola">
+<meta name="viewport" content="width=device-width">
+<title>Itilizar nikola por primera vez | Mi blog</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="http://rngkll.github.io/posts/utilizar-nikola.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+    <div class="post">
+    
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Itilizar nikola por primera vez</a></h1>
+
+        <div class="meta" style="background-color: rgb(234, 234, 234); ">
+        <span class="authordate">
+            Publicado: <time class="published" datetime="2012-03-30T23:00:00-03:00">2012-03-30 23:00</time>
+               [<a href="utilizar-nikola.md" id="sourcelink">Código fuente</a>]
+        </span>
+        <br><span class="tags">Etiquetas: 
+                    <a class="tag" href="../categories/blog.html"><span>blog</span></a>
+                    <a class="tag" href="../categories/markdown.html"><span>markdown</span></a>
+                    <a class="tag" href="../categories/nikola.html"><span>nikola</span></a>
+                    <a class="tag" href="../categories/python.html"><span>python</span></a>
+                </span>
+                <br><span class="authordate">
+            
+
+        </span>
+        </div>
+    <div>
+<h2>Instalación</h2>
+<h2>Utilizar markdown</h2>
+<p>Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.</p>
+<p>Primero se debe de verificar que este en la estructura <strong>COMPILERS</strong></p>
+<pre class="code literal-block"># 'rest' is reStructuredText
+# 'markdown' is MarkDown
+# 'html' assumes the file is HTML and just copies it
+COMPILERS = {
+    "rest": ('.rst', '.txt'),
+    "markdown": ('.md', '.mdown', '.markdown'),
+    "textile": ('.textile',),
+    "txt2tags": ('.t2t',),
+    "bbcode": ('.bb',),
+    #"wiki": ('.wiki',),
+    "ipynb": ('.ipynb',),
+    "html": ('.html', '.htm'),
+    # PHP files are rendered the usual way (i.e. with the full templates).
+    # The resulting files have .php extensions, making it possible to run
+    # them without reconfiguring your server to recognize them.
+    "php": ('.php',),
+    # Pandoc detects the input from the source filename
+    # but is disabled by default as it would conflict
+    # with many of the others.
+    # "pandoc": ('.rst', '.md', '.txt'),
+}
+</pre>
+
+
+<p>Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, <code>("posts/*.md", "posts", "post.tmpl")</code> a los dos tipos de entras <strong>POST</strong> y <strong>PAGES</strong>.</p>
+<pre class="code literal-block">POSTS = (
+    ("posts/*.rst", "posts", "post.tmpl"),
+    ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.md", "posts", "post.tmpl"),
+)
+PAGES = (
+    ("stories/*.rst", "stories", "story.tmpl"),
+    ("stories/*.txt", "stories", "story.tmpl"),
+    ("stories/*.md", "stories", "story.tmpl"),
+)
+</pre>
+</div>
+    
+        <ul class="pager hidden-print">
+<li class="next">
+                <a href="prueba-para-nikola.html" rel="next" title="Prueba para nikola">Siguiente publicación</a>
+            </li>
+        </ul>
+<script src="https://apis.google.com/js/plusone.js"></script><div class="g-comments" data-href="http://rngkll.github.io/posts/utilizar-nikola.html" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">
+</div>
+
+
+    
+
+    </div>
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://rngkll.github.io/" title="Mi blog">Mi blog</a>
+            </h1>
+            
+            
+            <ul class="unstyled">
+<li>
+            
+                <li>
+<a href="../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../categories/index.html">Etiquetas</a>
+                </li>
+<li>
+<a href="../rss.xml">Canal RSS</a>
+
+            </li>
+<li>
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://rngkll.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+</li>
+            
+            
+            </ul>
+</div>
+        <div id="footer">
+            Contents © 2015         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </div>
+    </div>
+    
+            <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+</body>
+</html>
