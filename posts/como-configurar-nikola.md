@@ -1,6 +1,6 @@
-.. title: Itilizar nikola por primera vez
+.. title: Utilizar Nikola por primera vez
 .. slug: utilizar-nikola
-.. date: 2012-03-30 23:00:00 UTC-03:00
+.. date: 2015-08-20 23:00:00 UTC-06:00
 .. tags: nikola, python, blog, markdown
 .. author: Alvaro Segura Del Barco
 .. link: https://getnikola.com/
@@ -8,6 +8,22 @@
 .. category: guias
 
 # Instalación
+
+La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se teste utilizando, en si son usuarios de Linux.
+
+En el directorio del repositorio del sitio
+```
+virtualenv --python=python3 .env
+source .env/bin/activate
+pip3 install --upgrade "Nikola[extras]"
+```
+## Primeros usos
+
+En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando `nikola init --demo .`, luego se debe de construir el sitio con el comando `nikola build`.
+
+El siguiente paso es ver el sitio, para lo que va a utilizar el comando `nikola serve -b`.
+
+
 
 # Utilizar markdown
 Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.
