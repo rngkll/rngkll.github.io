@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mi blog</title><link>http://rngkll.github.io/</link><description>Algunas notas y otras cosas</description><atom:link rel="self" type="application/rss+xml" href="http://rngkll.github.io/rss.xml"></atom:link><language>es</language><lastBuildDate>Mon, 24 Aug 2015 05:02:11 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Configuración para la printrbot simple</title><link>http://rngkll.github.io/posts/configuracion-para-la-printrbot-simple.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h3&gt;Código:&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;M104 S{TEMP0} ; set temperature
-G21 ;metric values
-G90 ;absolute positioning
-M82 ;set extruder to absolute mode
-M107 ;start with the fan off
-G28 X0 Y0 ;move X/Y to min endstops
-G28 Z0 ;move Z to min endstops
-M109 S{TEMP0} ;wait on temperature line
-G29 ; Auto bed levelling
-G92 E0 ;zero the extruded length
-G1 F{TRAVEL_SPEED} ;
-&lt;/pre&gt;&lt;/div&gt;</description><category>3dprint printrbot</category><guid>http://rngkll.github.io/posts/configuracion-para-la-printrbot-simple.html</guid><pubDate>Sat, 15 Aug 2015 03:39:41 GMT</pubDate></item><item><title>Prueba para nikola</title><link>http://rngkll.github.io/posts/prueba-para-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;p&gt;Write your post here.&lt;/p&gt;</description><guid>http://rngkll.github.io/posts/prueba-para-nikola.html</guid><pubDate>Mon, 10 Aug 2015 06:06:21 GMT</pubDate></item><item><title>Itilizar nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Mi blog</title><link>http://rngkll.github.io/</link><description>Algunas notas y otras cosas</description><atom:link href="http://rngkll.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>es</language><lastBuildDate>Thu, 27 Aug 2015 06:26:27 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se teste utilizando, en si son usuarios de Linux.&lt;/p&gt;
+&lt;p&gt;En el directorio del repositorio del sitio&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;virtualenv --python=python3 .env
+source .env/bin/activate
+pip3 install --upgrade "Nikola[extras]"
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Primeros usos&lt;/h3&gt;
+&lt;p&gt;En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando &lt;code&gt;nikola init --demo .&lt;/code&gt;, luego se debe de construir el sitio con el comando &lt;code&gt;nikola build&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El siguiente paso es ver el sitio, para lo que va a utilizar el comando &lt;code&gt;nikola serve -b&lt;/code&gt;.&lt;/p&gt;
 &lt;h2&gt;Utilizar markdown&lt;/h2&gt;
 &lt;p&gt;Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.&lt;/p&gt;
 &lt;p&gt;Primero se debe de verificar que este en la estructura &lt;strong&gt;COMPILERS&lt;/strong&gt;&lt;/p&gt;
@@ -50,4 +49,16 @@ PAGES = (
     ("stories/*.txt", "stories", "story.tmpl"),
     ("stories/*.md", "stories", "story.tmpl"),
 )
-&lt;/pre&gt;&lt;/div&gt;</description><category>blog</category><category>markdown</category><category>nikola</category><category>python</category><guid>http://rngkll.github.io/posts/utilizar-nikola.html</guid><pubDate>Sat, 31 Mar 2012 02:00:00 GMT</pubDate></item></channel></rss>
+&lt;/pre&gt;&lt;/div&gt;</description><category>blog</category><category>markdown</category><category>nikola</category><category>python</category><guid>http://rngkll.github.io/posts/utilizar-nikola.html</guid><pubDate>Fri, 21 Aug 2015 05:00:00 GMT</pubDate></item><item><title>Configuración para la printrbot simple</title><link>http://rngkll.github.io/posts/configuracion-para-la-printrbot-simple.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h3&gt;Código:&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;M104 S{TEMP0} ; set temperature
+G21 ;metric values
+G90 ;absolute positioning
+M82 ;set extruder to absolute mode
+M107 ;start with the fan off
+G28 X0 Y0 ;move X/Y to min endstops
+G28 Z0 ;move Z to min endstops
+M109 S{TEMP0} ;wait on temperature line
+G29 ; Auto bed levelling
+G92 E0 ;zero the extruded length
+G1 F{TRAVEL_SPEED} ;
+&lt;/pre&gt;&lt;/div&gt;</description><category>3dprint printrbot</category><guid>http://rngkll.github.io/posts/configuracion-para-la-printrbot-simple.html</guid><pubDate>Sat, 15 Aug 2015 03:39:41 GMT</pubDate></item></channel></rss>

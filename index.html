@@ -16,53 +16,10 @@
             
             
         <div class="postbox">
-        <h1><a href="posts/configuracion-para-la-printrbot-simple.html">Configuración para la printrbot simple</a></h1>
+        <h1><a href="posts/utilizar-nikola.html">Utilizar Nikola por primera vez</a></h1>
             <div class="meta" style="background-color: rgb(234, 234, 234); ">
                 <span class="authordate">
-                    Publicado: <time class="published" datetime="2015-08-14T21:39:41-06:00">2015-08-14 21:39</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/3dprint-printrbot.html"><span>3dprint printrbot</span></a>
-                </span>
-            </div>
-        <div>
-<h3>Código:</h3>
-<pre class="code literal-block">M104 S{TEMP0} ; set temperature
-G21 ;metric values
-G90 ;absolute positioning
-M82 ;set extruder to absolute mode
-M107 ;start with the fan off
-G28 X0 Y0 ;move X/Y to min endstops
-G28 Z0 ;move Z to min endstops
-M109 S{TEMP0} ;wait on temperature line
-G29 ; Auto bed levelling
-G92 E0 ;zero the extruded length
-G1 F{TRAVEL_SPEED} ;
-</pre>
-</div>
-            
-        
-<div class="g-commentcount" data-href="/posts/configuracion-para-la-printrbot-simple.html"></div>
-<script src="https://apis.google.com/js/plusone.js"></script>
-</div>
-        <div class="postbox">
-        <h1><a href="posts/prueba-para-nikola.html">Prueba para nikola</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2015-08-10T06:06:21+00:00">2015-08-10 06:06</time></span>
-                <br><span class="tags">Tags: 
-                </span>
-            </div>
-        <p>Write your post here.</p>
-            
-        
-<div class="g-commentcount" data-href="/posts/prueba-para-nikola.html"></div>
-<script src="https://apis.google.com/js/plusone.js"></script>
-</div>
-        <div class="postbox">
-        <h1><a href="posts/utilizar-nikola.html">Itilizar nikola por primera vez</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2012-03-30T23:00:00-03:00">2012-03-30 23:00</time></span>
+                    Publicado: <time class="published" datetime="2015-08-20T23:00:00-06:00">2015-08-20 23:00</time></span>
                 <br><span class="tags">Tags: 
                             <a class="tag" href="categories/blog.html"><span>blog</span></a>
                             <a class="tag" href="categories/markdown.html"><span>markdown</span></a>
@@ -72,6 +29,17 @@ G1 F{TRAVEL_SPEED} ;
             </div>
         <div>
 <h2>Instalación</h2>
+<p>La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se teste utilizando, en si son usuarios de Linux.</p>
+<p>En el directorio del repositorio del sitio</p>
+<pre class="code literal-block">virtualenv --python=python3 .env
+source .env/bin/activate
+pip3 install --upgrade "Nikola[extras]"
+</pre>
+
+
+<h3>Primeros usos</h3>
+<p>En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando <code>nikola init --demo .</code>, luego se debe de construir el sitio con el comando <code>nikola build</code>.</p>
+<p>El siguiente paso es ver el sitio, para lo que va a utilizar el comando <code>nikola serve -b</code>.</p>
 <h2>Utilizar markdown</h2>
 <p>Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.</p>
 <p>Primero se debe de verificar que este en la estructura <strong>COMPILERS</strong></p>
@@ -115,6 +83,35 @@ PAGES = (
             
         
 <div class="g-commentcount" data-href="/posts/utilizar-nikola.html"></div>
+<script src="https://apis.google.com/js/plusone.js"></script>
+</div>
+        <div class="postbox">
+        <h1><a href="posts/configuracion-para-la-printrbot-simple.html">Configuración para la printrbot simple</a></h1>
+            <div class="meta" style="background-color: rgb(234, 234, 234); ">
+                <span class="authordate">
+                    Publicado: <time class="published" datetime="2015-08-14T21:39:41-06:00">2015-08-14 21:39</time></span>
+                <br><span class="tags">Tags: 
+                            <a class="tag" href="categories/3dprint-printrbot.html"><span>3dprint printrbot</span></a>
+                </span>
+            </div>
+        <div>
+<h3>Código:</h3>
+<pre class="code literal-block">M104 S{TEMP0} ; set temperature
+G21 ;metric values
+G90 ;absolute positioning
+M82 ;set extruder to absolute mode
+M107 ;start with the fan off
+G28 X0 Y0 ;move X/Y to min endstops
+G28 Z0 ;move Z to min endstops
+M109 S{TEMP0} ;wait on temperature line
+G29 ; Auto bed levelling
+G92 E0 ;zero the extruded length
+G1 F{TRAVEL_SPEED} ;
+</pre>
+</div>
+            
+        
+<div class="g-commentcount" data-href="/posts/configuracion-para-la-printrbot-simple.html"></div>
 <script src="https://apis.google.com/js/plusone.js"></script>
 </div>
     
