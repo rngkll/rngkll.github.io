@@ -7,42 +7,102 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://rngkll.github.io/categories/3dprint-printrbot.xml</loc>
-  <lastmod>2015-08-24T05:02:00Z</lastmod>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/categories/3dprint.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/blog.xml</loc>
-  <lastmod>2015-08-27T06:26:00Z</lastmod>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/categories/cat_3dprint.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/cat_guias.xml</loc>
-  <lastmod>2015-08-27T06:26:00Z</lastmod>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/markdown.xml</loc>
-  <lastmod>2015-08-27T06:26:00Z</lastmod>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/nikola.xml</loc>
-  <lastmod>2015-08-27T06:26:00Z</lastmod>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/categories/printrbot.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/python.xml</loc>
-  <lastmod>2015-08-27T06:26:00Z</lastmod>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/3dprint-printrbot.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/3dprint.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/blog.xml</loc>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/cat_3dprint.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/cat_guias.xml</loc>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/markdown.xml</loc>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/nikola.xml</loc>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/printrbot.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/python.xml</loc>
+  <lastmod>2015-09-24T04:48:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/galleries/demo/rss.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/galleries/rss.xml</loc>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/rss.xml</loc>
+  <lastmod>2015-09-24T04:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/galleries/demo/rss.xml</loc>
-  <lastmod>2015-08-27T06:01:00Z</lastmod>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/galleries/rss.xml</loc>
-  <lastmod>2015-08-27T06:01:00Z</lastmod>
+  <lastmod>2015-09-24T04:47:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/rss.xml</loc>
-  <lastmod>2015-08-27T06:26:00Z</lastmod>
+  <lastmod>2015-09-24T04:54:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/sitemap.xml</loc>
-  <lastmod>2015-08-27T06:26:00Z</lastmod>
+  <lastmod>2015-09-24T04:54:00Z</lastmod>
  </sitemap>
 </sitemapindex>
