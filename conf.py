@@ -81,9 +81,11 @@ DEFAULT_LANG = "es"
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
-    DEFAULT_LANG: "",
+    DEFAULT_LANG: "es",
     # Example for another language:
     # "es": "./es",
+    "es": "./",
+    "en": "./en",
 }
 
 # What will translated input files be named like?
@@ -175,6 +177,9 @@ DATE_FORMAT = '%Y-%m-%d %H:%M'
 # LOCALE_FALLBACK = locale to use when an explicit locale is unavailable
 # LOCALE_DEFAULT = locale to use for languages not mentioned in LOCALES; if
 # not set the default Nikola mapping is used.
+LOCALES = {
+        "es":"es_CR.utf-8",
+        }
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 #
@@ -202,14 +207,14 @@ DATE_FORMAT = '%Y-%m-%d %H:%M'
 #
 
 POSTS = (
+    ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.md", "posts", "post.tmpl"),
 )
 PAGES = (
+    ("stories/*.md", "stories", "story.tmpl"),
     ("stories/*.rst", "stories", "story.tmpl"),
     ("stories/*.txt", "stories", "story.tmpl"),
-    ("stories/*.md", "stories", "story.tmpl"),
 )
 
 # One or more folders containing files to be copied as-is into the output.
@@ -232,8 +237,8 @@ PAGES = (
 # 'markdown' is MarkDown
 # 'html' assumes the file is HTML and just copies it
 COMPILERS = {
-    "rest": ('.rst', '.txt'),
     "markdown": ('.md', '.mdown', '.markdown'),
+    "rest": ('.rst', '.txt'),
     "textile": ('.textile',),
     "txt2tags": ('.t2t',),
     "bbcode": ('.bb',),
@@ -657,7 +662,7 @@ LICENSE = ""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Contents &copy; {date} <a href="mailto:{email}">{author}</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="https://github.com" rel="nofollow">Github</a>    {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -914,6 +919,16 @@ SEARCH_FORM = """
 # in the default template (base.tmpl).
 # (translatable)
 # BODY_END = ""
+#BODY_END = "<script>
+#  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+#        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+#          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+#            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+#  
+#    ga('create', 'UA-66923756-1', 'auto');
+#      ga('send', 'pageview');
+#      
+#      </script>"
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.
