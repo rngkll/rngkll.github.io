@@ -265,6 +265,7 @@ COMPILERS = {
 # LANG will not be visible at all in the pages in that language.
 # Formerly known as HIDE_UNTRANSLATED_POSTS (inverse)
 # SHOW_UNTRANSLATED_POSTS = True
+SHOW_UNTRANSLATED_POSTS = False
 
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
@@ -287,6 +288,7 @@ WRITE_TAG_CLOUD = True
 # output / TRANSLATION[lang] / TAG_PATH / tag.html (list of posts for a tag)
 # output / TRANSLATION[lang] / TAG_PATH / tag.xml (RSS feed for a tag)
 # TAG_PATH = "categories"
+TAG_PATH = "etiquetas"
 
 # If TAG_PAGES_ARE_INDEXES is set to True, each tag's page will contain
 # the posts themselves. If set to False, it will be just a list of links.
@@ -924,10 +926,10 @@ SEARCH_FORM = """
 #        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 #          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 #            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-#  
+#
 #    ga('create', 'UA-66923756-1', 'auto');
 #      ga('send', 'pageview');
-#      
+#
 #      </script>"
 
 # The possibility to extract metadata from the filename by using a
