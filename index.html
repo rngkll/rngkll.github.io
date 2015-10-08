@@ -22,10 +22,11 @@
                 <span class="authordate">
                     Publicado: <time class="published" datetime="2015-08-20T23:00:00-06:00">2015-08-20 23:00</time></span>
                 <br><span class="tags">Tags: 
-                            <a class="tag" href="./categories/blog.html"><span>blog</span></a>
-                            <a class="tag" href="./categories/markdown.html"><span>markdown</span></a>
-                            <a class="tag" href="./categories/nikola.html"><span>nikola</span></a>
-                            <a class="tag" href="./categories/python.html"><span>python</span></a>
+                            <a class="tag" href="./etiquetas/blog.html"><span>blog</span></a>
+                            <a class="tag" href="./etiquetas/jaquerespeis.html"><span>jaquerespeis</span></a>
+                            <a class="tag" href="./etiquetas/markdown.html"><span>markdown</span></a>
+                            <a class="tag" href="./etiquetas/nikola.html"><span>nikola</span></a>
+                            <a class="tag" href="./etiquetas/python.html"><span>python</span></a>
                 </span>
             </div>
         <div>
@@ -127,8 +128,8 @@ COMPILERS = {
                 <span class="authordate">
                     Publicado: <time class="published" datetime="2015-08-14T21:39:41-06:00">2015-08-14 21:39</time></span>
                 <br><span class="tags">Tags: 
-                            <a class="tag" href="./categories/3dprint.html"><span>3dprint</span></a>
-                            <a class="tag" href="./categories/printrbot.html"><span>printrbot</span></a>
+                            <a class="tag" href="./etiquetas/3dprint.html"><span>3dprint</span></a>
+                            <a class="tag" href="./etiquetas/printrbot.html"><span>printrbot</span></a>
                 </span>
             </div>
         <div>
@@ -152,56 +153,12 @@ G1 F{TRAVEL_SPEED} ;
 <script src="https://apis.google.com/js/plusone.js"></script>
 </div>
         <div class="postbox">
-        <h1><a href="posts/using-us-netflix-with-roku-and-openwrt.html">Using US netflix with roku and openwrt</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2014-08-29T21:30:19-06:00">2014-08-29 21:30</time></span>
-                <br><span class="tags">Tags: 
-                </span>
-            </div>
-        <div>
-<h2>First method</h2>
-<p>The Roku has no possibility to change the DNS to a specific one, so to use US Netflix with the roku the DNS has to be set in  the router.</p>
-<p>I don’t like all my DNS traffic going to a DNS that I don’t trust so with options of dnsmasq that comes with openwrt I set DNS Forwarding.</p>
-<p>Be careful to change x.x.x.x for the ip address of the DNS service you want to use.</p>
-<p>example http://www.unblock-us.com ip 208.122.23.23</p>
-<p>in the file /etc/config/dhcp add the following lines below config dnsmasq.</p>
-<pre class="code literal-block">    list server '/netflix.com/x.x.x.x'
-    list server '/nflximg.net/x.x.x.x'
-    list server '/nflximg.com/x.x.x.x'
-    list server '/roku.com/x.x.x.x'
-    list server '/mgo-images.com/x.x.x.x'
-    list server '/netflix.net/x.x.x.x'
-    list server '/netflix.net/x.x.x.x'
-    list server '/roku.com/x.x.x.x'
-    list server '/scorecardresearch.com/x.x.x.x'
-</pre>
-
-
-<p>it is necessary to add all that list servers.</p>
-<p>This method could work for any other hardware but I have only tested it in the roku.</p>
-<h2>Second method</h2>
-<p>At first I was using the first method but I had to keep adding forwarder addresses to the dhcp file.</p>
-<p>in “network-&gt;firewall-&gt;custom rules” add the following rules</p>
-<pre class="code literal-block">iptables -t nat -A PREROUTING -i br-lan -s x.x.x.x -p udp –dport 53 -j DNAT –to-destination y.y.y.y:53
-#iptables -t nat -A POSTROUTING -j MASQUERADE
-</pre>
-
-
-<p>where <code>x.x.x.x</code> is the roku or other device you want to use with a specific dns server and <code>y.y.y.y</code> is the address of the specific dns server.</p>
-</div>
-            
-        
-<div class="g-commentcount" data-href="/posts/using-us-netflix-with-roku-and-openwrt.html"></div>
-<script src="https://apis.google.com/js/plusone.js"></script>
-</div>
-        <div class="postbox">
         <h1><a href="posts/instalando-repetierhost-en-ubuntu-1404.html">Instalando RepetierHost en Ubuntu 1404</a></h1>
             <div class="meta" style="background-color: rgb(234, 234, 234); ">
                 <span class="authordate">
                     Publicado: <time class="published" datetime="2014-05-07T10:23:32-06:00">2014-05-07 10:23</time></span>
                 <br><span class="tags">Tags: 
-                            <a class="tag" href="./categories/3dprint-printrbot.html"><span>3dprint printrbot</span></a>
+                            <a class="tag" href="./etiquetas/3dprint-printrbot.html"><span>3dprint printrbot</span></a>
                 </span>
             </div>
         <div>
@@ -270,46 +227,6 @@ Print Area Height: 100
             
         
 <div class="g-commentcount" data-href="/posts/instalando-repetierhost-en-ubuntu-1404.html"></div>
-<script src="https://apis.google.com/js/plusone.js"></script>
-</div>
-        <div class="postbox">
-        <h1><a href="posts/freeswitch-in-raspberry-pi.html">Freeswitch in Raspberry Pi</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2013-07-09T10:23:32-06:00">2013-07-09 10:23</time></span>
-                <br><span class="tags">Tags: 
-                </span>
-            </div>
-        <div>
-<h2>Experiments using raspberry pi</h2>
-<p>I bought the raspberry pi to use it as a print and scanner server in my house, now I have some more ideas, one is using freeswitch to test voip performance in the rpi.</p>
-<p>installing Freeswitch in the rpi.</p>
-<p>Pi uses the default Debian image so we need to install Debian dependencies.</p>
-<pre class="code literal-block">apt-get install autoconf automake gawk g++ git-core libjpeg62-dev libncurses5-dev libtool make python-dev gawk pkg-config libtiff4-dev libperl-dev libgdbm-dev libdb-dev
-</pre>
-
-
-<p>Change to /usr/local/src and download Freeswitch using git</p>
-<pre class="code literal-block">git clone -b v1.2.stable git://git.freeswitch.org/freeswitch.git
-git clone git://git.freeswitch.org/freeswitch-contrib.git
-git clone git://git.freeswitch.org/freeswitch-sample-configs.git
-</pre>
-
-
-<p>Raspberry Pi has limited resources so I will compile Freeswitch to get a better performance.</p>
-<h3>Compiling steps</h3>
-<pre class="code literal-block">./bootstrap.sh ./configure -C
-</pre>
-
-
-<p>I had some problems when mod_flite enabled, I have a 256mb rpi.</p>
-<p>make &amp;&amp; make install Now Freeswitch is installed. freeswitch initscript for debian can be found here</p>
-<h2>Resources</h2>
-<p>http://wiki.freeswitch.org/wiki/Installation_Guide</p>
-</div>
-            
-        
-<div class="g-commentcount" data-href="/posts/freeswitch-in-raspberry-pi.html"></div>
 <script src="https://apis.google.com/js/plusone.js"></script>
 </div>
         <div class="postbox">

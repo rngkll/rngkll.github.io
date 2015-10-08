@@ -1,7 +1,7 @@
 .. title: Utilizar Nikola por primera vez
 .. slug: utilizar-nikola
 .. date: 2015-08-20 23:00:00 UTC-06:00
-.. tags: nikola, python, blog, markdown
+.. tags: nikola, python, blog, markdown, jaquerespeis
 .. author: Alvaro Segura Del Barco
 .. link: https://getnikola.com/
 .. description: Guía de como configurar nikola
