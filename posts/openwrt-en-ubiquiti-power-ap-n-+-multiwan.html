@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>OpenWRT en Ubiquiti Power AP N + Multiwan | Mi blog</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href=".././rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../en/rss.xml">
+<link rel="canonical" href="http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-+-multiwan.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+    <div class="post">
+    
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">OpenWRT en Ubiquiti Power AP N + Multiwan</a></h1>
+
+        <div class="meta" style="background-color: rgb(234, 234, 234); ">
+        <span class="authordate">
+            Publicado: <time class="published" datetime="2013-04-01T11:19:38-06:00">2013-04-01 11:19</time>
+               [<a href="openwrt-en-ubiquiti-power-ap-n-+-multiwan.md" id="sourcelink">Código fuente</a>]
+        </span>
+        <br><span class="authordate">
+            
+
+        </span>
+        </div>
+    <div>
+<h2>Instalación de openwrt</h2>
+<h3>Descargar la imagen</h3>
+<p>Como en openwrt.org no existe una imagen hecha específicamente para ese router es necesario utilizar la del Ubiquiti Nanostation M</p>
+<p>http://backfire.openwrt.org/10.03.1/ar71xx/openwrt-ar71xx-ubnt-nano-m-jffs2-factory.bin
+Cargar por TFTP</p>
+<h3>Requerimientos</h3>
+<ul>
+<li>Cable ethernet entre la computadora y el router</li>
+<li>Configuración de la tarjeta de red: 192.168.1.254/255.255.255.0</li>
+<li>Cliente tftp</li>
+<li>El firmware que se va a cargar</li>
+</ul>
+<h3>Procedimiento</h3>
+<ul>
+<li>Apagar el dispositivo</li>
+<li>Apertar el botón de reset</li>
+<li>Encender el dispositivo</li>
+<li>Liberar el botón cerca de 10 segundos de encender el dispositivo. Los leds empiezan a cambiar.</li>
+<li>hacer ping 192.168.1.20, si funciona estamos listos para cargar la imagen.</li>
+<li>Cargar la imagen por tftp como flash_update (Me parece que en las versiones mas nuevas no es necesario)</li>
+</ul>
+<pre class="code literal-block">tftp 192.168.1.20
+tftp&gt; bin
+tftp&gt; put imagen.bin flash_update
+Sent 1965199 bytes in 28.8 seconds
+tftp&gt; quit
+</pre>
+
+
+<p>En el momento que el equipo reinicia solo va a contestar por el puerto de la WAN, ingresamos a http://192.168.1.1 y cambiamos la contraseña.</p>
+<h3>Configuración</h3>
+<p>Por ssh vamos a editar las interfaces de red en /etc/config/network y sustituimos por lo siguiente.</p>
+<pre class="code literal-block">config 'switch' 'eth1'
+        option 'enable_vlan' '1'
+
+config 'switch_vlan'
+        option 'device' 'eth1'
+        option 'vlan' '1'
+        option 'ports' '0 1 2 3 4'
+
+config 'interface' 'loopback'
+        option 'ifname' 'lo'
+        option 'proto' 'static'
+        option 'ipaddr' '127.0.0.1'
+        option 'netmask' '255.0.0.0'
+
+config 'interface' 'lan'
+        option 'ifname' 'eth1'
+        option 'type' 'bridge'
+        option 'proto' 'static'
+        option 'ipaddr' '192.168.1.1'
+        option 'netmask' '255.255.255.0'
+        option '_orig_ifname' 'eth1'
+        option '_orig_bridge' 'true'
+
+config 'interface' 'wan'
+        option 'ifname' 'eth0'
+        option '_orig_ifname' 'eth0'
+        option '_orig_bridge' 'false'
+        option 'proto' 'dhcp'
+</pre>
+
+
+<p>Con esto ya tenemos un router inalámbrico en su configuración normal, de aquí en adelante es jugar con el OpenWRT para poder hacer lo que uno quiera.</p>
+<h2>Multiwan</h2>
+<p>Es necesario instalar los siguientes paquetes:</p>
+<pre class="code literal-block">luci-app-multiwan
+multiwan
+</pre>
+
+
+<p>Para utilizar se tiene que configurar el switch que concentra los 4 puertos para separar uno para utilizarlo como una segunda wan.</p>
+<pre class="code literal-block">config 'interface' 'loopback'
+    option 'ifname' 'lo'
+    option 'proto' 'static'
+    option 'ipaddr' '127.0.0.1'
+    option 'netmask' '255.0.0.0'
+
+config 'switch' 'eth1'
+    option 'enable_vlan' '1'
+
+config 'switch_vlan'
+    option 'device' 'eth1'
+    option 'vlan' '1'
+    option 'vid' '1'
+    option 'ports' '0t 1 2 3'
+
+config 'switch_vlan'
+    option 'device' 'eth1'
+    option 'vlan' '2'
+    option 'vid' '2'
+    option 'ports' '0t 4'
+
+config 'interface' 'lan'
+    option 'ifname' 'eth1.1'
+    option 'type' 'bridge'
+    option '_orig_ifname' 'eth1'
+    option '_orig_bridge' 'true'
+    option 'proto' 'static'
+    option 'ipaddr' '172.16.1.1'
+    option 'netmask' '255.255.255.0'
+
+config 'interface' 'wan'
+    option 'ifname' 'eth0'
+    option '_orig_ifname' 'eth0'
+    option '_orig_bridge' 'false'
+    option 'proto' 'dhcp'
+    option 'broadcast' '1'
+
+config 'interface' 'wan2'
+    option 'ifname' 'eth1.2'
+    option '_orig_ifname' 'eth1.2'
+    option '_orig_bridge' 'false'
+    option 'proto' 'static'
+    option 'ipaddr' '192.168.1.3'
+    option 'netmask' '255.255.255.0'
+    option 'gateway' '192.168.1.1'
+    option 'broadcast' '192.168.1.255'
+    option 'dns' '200.91.75.5 200.91.75.6'
+</pre>
+
+
+<p>Despues de esto nada mas hay que agregar la nueva interfaz creada a la zona del wan del firewall, esto se puede hacer de manera gráfica.</p>
+<p>A causa de un pico de voltaje durante una tormenta eléctrica no se va experimentar mas con este router.</p>
+</div>
+    
+        <ul class="pager hidden-print">
+<li class="previous">
+                <a href="usuarios-sftp-sin-ssh.html" rel="prev" title="Usuarios sftp sin ssh">Publicación anterior</a>
+            </li>
+            <li class="next">
+                <a href="optimizacion-de-apache2.html" rel="next" title="Optimización de apache2">Siguiente publicación</a>
+            </li>
+        </ul>
+<script src="https://apis.google.com/js/plusone.js"></script><div class="g-comments" data-href="http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-+-multiwan.html" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">
+</div>
+
+
+    
+
+    </div>
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://rngkll.github.io/" title="Mi blog">Mi blog</a>
+            </h1>
+            
+            <small>
+                También disponible en: 
+                
+            <li><a href="http://rngkll.github.io/en/" rel="alternate" hreflang="en">English</a></li>
+
+            </small>
+            
+            <ul class="unstyled">
+<li>
+            
+                <li>
+<a href="../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../categories/index.html">Etiquetas</a>
+                </li>
+<li>
+<a href="../rss.xml">Canal RSS</a>
+
+            </li>
+<li>
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="http://rngkll.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+</li>
+            
+            
+            </ul>
+</div>
+        <div id="footer">
+            Contents © 2016 <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="https://github.com" rel="nofollow">Github</a>    
+            
+        </div>
+    </div>
+    
+            <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+</body>
+</html>

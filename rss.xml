@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>Mi blog</title><link>http://rngkll.github.io/</link><description>Algunas notas y otras cosas</description><atom:link rel="self" href="http://rngkll.github.io/rss.xml" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Thu, 08 Oct 2015 03:39:33 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
-&lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se teste utilizando, en si son usuarios de Linux.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Mi blog</title><link>http://rngkll.github.io/</link><description>Algunas notas y otras cosas</description><atom:link href="http://rngkll.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 09 Jan 2016 16:38:36 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jerk chicken natural</title><link>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;La idea&lt;/h2&gt;
+&lt;p&gt;Hace unos días estábamos de vacaciones en pavones y Coco(administradora de la casa rentada) nos llevo unas hojas de Allspice, de una se me ocurrió que podíamos hacer Jerk Chicken, resulta que la hoja tiene muy buen sabor pero no se conserva bien, por lo que no se vende comercialmente.&lt;/p&gt;
+&lt;h2&gt;Ingredientes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hojas de &lt;a href="https://en.wikipedia.org/wiki/Allspice"&gt;allspice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Ginger"&gt;Jengibre&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Salsa de soya&lt;/li&gt;
+&lt;li&gt;Cebolla&lt;/li&gt;
+&lt;li&gt;Ajo&lt;/li&gt;
+&lt;li&gt;Chile panameño o algun otro&lt;/li&gt;
+&lt;li&gt;Azucar&lt;/li&gt;
+&lt;li&gt;Sal&lt;/li&gt;
+&lt;li&gt;Aceite&lt;/li&gt;
+&lt;li&gt;Jugo de limón&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Preparación&lt;/h2&gt;
+&lt;p&gt;Las proporciones dependen de la cantidad y que tan fuerte se quiera, no me gusta hacerlo con medida pero voy a escribir unas instrucciones de mas o menos como lo hice.&lt;/p&gt;
+&lt;p&gt;En una licuadora agregué(cantidades aproximadas):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Allspice, 6 hojas.&lt;/li&gt;
+&lt;li&gt;Como 2 centimetros cubicos de jengibre.&lt;/li&gt;
+&lt;li&gt;Una botella de salsa de soya, aprox 100ml.&lt;/li&gt;
+&lt;li&gt;Unas 2 cebollas medianas.&lt;/li&gt;
+&lt;li&gt;media cabeza de ajo.&lt;/li&gt;
+&lt;li&gt;Un chile&lt;/li&gt;
+&lt;li&gt;Mas o menos, 5 cucharadas de azucar.&lt;/li&gt;
+&lt;li&gt;Al gusto, creo que fueron 2 cucharaditas de sal.&lt;/li&gt;
+&lt;li&gt;Aceite aproximadamente 150ml.&lt;/li&gt;
+&lt;li&gt;El jugo de 4 limones. &lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>allspice</category><category>comida</category><category>jerk</category><guid>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</guid><pubDate>Fri, 01 Jan 2016 06:00:00 GMT</pubDate></item><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://rngkll.github.io/posts/programar microcontrolador stm322.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Que se necesita&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Microcontrolador STM322&lt;/li&gt;
+&lt;li&gt;GDB o un debugger, editor de texto o IDE&lt;/li&gt;
+&lt;li&gt;Una maquina con Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Requerimientos con Gnu/Linux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;arm-none-eabi-gcc – The GNU Compiler Collection – cross compilador para ARM EABI (directo en el procesador)&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-gdb – The GNU Debugger for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-binutils – A set of programs to assemble and manipulate binary and object files for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;openocd – Debugging, in-system programming and boundary-scan testing for embedded target devices&lt;/li&gt;
+&lt;li&gt;vim – Editor de texto&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Terminos importantes&lt;/h2&gt;
+&lt;p&gt;CMSIS = Cortex Microcontroller Software Interface Standard &lt;a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php"&gt;info&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;&lt;/div&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://rngkll.github.io/posts/programar microcontrolador stm322.html</guid><pubDate>Mon, 28 Dec 2015 05:00:00 GMT</pubDate></item><item><title>Lugares de comida que me gustan</title><link>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Estos son algunos de los lugares que mas me gusta vistar para comer.&lt;/p&gt;
+&lt;h2&gt;Lista&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ruca che:&lt;/strong&gt; En moravia, exelente restaurante de carnes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manos en la masa:&lt;/strong&gt; Increible brunch en barrio escalante, afuera de Casa Batsu.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go-fish:&lt;/strong&gt; Pinares, especialidad en mariscos pero todo es muy bueno.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rincon picante:&lt;/strong&gt; 150 este, soda tapia la sabana, la sopa en la que uno cocina el resto de ingredientes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;La asociación china:&lt;/strong&gt; San José, comida china, conocido tambien como la casa china.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maxi's by Ricky:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Patty factory:&lt;/strong&gt; Cuando quiero una sopa de mondongo y no estoy en Limón, este es el lugar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Soda guiligan:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diagonal a la alizan francesa:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Soda tala:&lt;/strong&gt; El talapindo como tiene que ser, es el mejor desayuno que uno puede probar. &lt;a href="https://www.facebook.com/Soda-Tala-201049860065851/timeline/"&gt;facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chicharronera hermanos Level:&lt;/strong&gt; &lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>comida</category><category>restaurantes</category><guid>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</guid><pubDate>Thu, 08 Oct 2015 03:56:28 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.&lt;/p&gt;
 &lt;p&gt;En el directorio del repositorio del sitio&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;virtualenv --python=python3 .env
 source .env/bin/activate
@@ -155,7 +215,157 @@ Print Area Height: 100
 &lt;/pre&gt;
 
 
-&lt;p&gt;Cuando tenga mas recomendaciones las agrego, si alguien tiene alguna recomendación se lo agradecería para agregarla.&lt;/p&gt;&lt;/div&gt;</description><category>3dprint printrbot</category><guid>http://rngkll.github.io/posts/instalando-repetierhost-en-ubuntu-1404.html</guid><pubDate>Wed, 07 May 2014 16:23:32 GMT</pubDate></item><item><title>Usuarios sftp sin ssh</title><link>http://rngkll.github.io/posts/usuarios-sftp-sin-ssh.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Para evitar que los usuario puedan acceder por medio de ssh pero si tengan acceso sftp al servidor.&lt;/p&gt;
+&lt;p&gt;Cuando tenga mas recomendaciones las agrego, si alguien tiene alguna recomendación se lo agradecería para agregarla.&lt;/p&gt;&lt;/div&gt;</description><category>3dprint printrbot</category><guid>http://rngkll.github.io/posts/instalando-repetierhost-en-ubuntu-1404.html</guid><pubDate>Wed, 07 May 2014 16:23:32 GMT</pubDate></item><item><title>Optimización de apache2</title><link>http://rngkll.github.io/posts/optimizacion-de-apache2.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Primero hay que revisar cuales módulos están cargados, esto se puede hacer con&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;apachectl -M
+&lt;/pre&gt;
+
+
+&lt;p&gt;Lo ideal es tener solo los módulos necesarios para que el sitio funcione, la cantidad de módulos influye en e tamaño de cada proceso de apache que se encuentra corriendo.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;HostnameLookups off
+&lt;/pre&gt;
+
+
+&lt;p&gt;Cuando un cliente el accede el servidor web, se crea una bitácora en access.log, si esta directiva esta en On se busca el nombre en el servidor de nombres, aun con un cache de dns esto es muy lento.&lt;/p&gt;
+&lt;p&gt;Cuando se establece una conexión esta se deja escuchando por un tiempo por si se le hace una nueva petición, en el caso de tener muchos visitantes y dejar la conexiones abiertas por mucho tiempo, se crea un problema, por eso se puede bajar el tiempo para poder servir nuevas peticiones. (Esta altamente ligado al MaxClients).&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;KeepAlive On
+KeepAliveTimeout 2
+&lt;/pre&gt;
+
+
+&lt;p&gt;Para el momento de calcular MaxClients.&lt;/p&gt;
+&lt;p&gt;Una buena referencia es MaxClients = (total de memoria)/(promedio de memoria utilizada por cada proceso de apache)&lt;/p&gt;
+&lt;p&gt;Una buena manera de ver el tamaño de un proceso de apache es con el comando &lt;code&gt;ps -ylC apache2 --sort:rss&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Con esto se puede ver el tamaño del proceso mas grande de ultimo.&lt;/p&gt;
+&lt;p&gt;Una suma de la columna del rss nos da un valor del total de memoria que esta usando el proceso, esto puede aumentar porque no todos los procesos tiene el mismo tamaño.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;ps -ylC apache2 --sort:rss | awk '{SUM += $8 } END {print SUM}'
+&lt;/pre&gt;
+
+
+&lt;p&gt;Hay que tomar en cuenta también el resto de procesos del servidor.&lt;/p&gt;
+&lt;p&gt;Utilizando top y acomodando por rss podemos ver los procesos que están utilizando mas memoria, entre estos deberíamos encontrar los procesos de apache y el o los de la base de datos si es que se tiene una.&lt;/p&gt;&lt;/div&gt;</description><category>apache</category><category>keepalive</category><category>optimizacion</category><category>web</category><guid>http://rngkll.github.io/posts/optimizacion-de-apache2.html</guid><pubDate>Fri, 18 Oct 2013 17:16:14 GMT</pubDate></item><item><title>OpenWRT en Ubiquiti Power AP N + Multiwan</title><link>http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-+-multiwan.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación de openwrt&lt;/h2&gt;
+&lt;h3&gt;Descargar la imagen&lt;/h3&gt;
+&lt;p&gt;Como en openwrt.org no existe una imagen hecha específicamente para ese router es necesario utilizar la del Ubiquiti Nanostation M&lt;/p&gt;
+&lt;p&gt;http://backfire.openwrt.org/10.03.1/ar71xx/openwrt-ar71xx-ubnt-nano-m-jffs2-factory.bin
+Cargar por TFTP&lt;/p&gt;
+&lt;h3&gt;Requerimientos&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Cable ethernet entre la computadora y el router&lt;/li&gt;
+&lt;li&gt;Configuración de la tarjeta de red: 192.168.1.254/255.255.255.0&lt;/li&gt;
+&lt;li&gt;Cliente tftp&lt;/li&gt;
+&lt;li&gt;El firmware que se va a cargar&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Procedimiento&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Apagar el dispositivo&lt;/li&gt;
+&lt;li&gt;Apertar el botón de reset&lt;/li&gt;
+&lt;li&gt;Encender el dispositivo&lt;/li&gt;
+&lt;li&gt;Liberar el botón cerca de 10 segundos de encender el dispositivo. Los leds empiezan a cambiar.&lt;/li&gt;
+&lt;li&gt;hacer ping 192.168.1.20, si funciona estamos listos para cargar la imagen.&lt;/li&gt;
+&lt;li&gt;Cargar la imagen por tftp como flash_update (Me parece que en las versiones mas nuevas no es necesario)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;tftp 192.168.1.20
+tftp&amp;gt; bin
+tftp&amp;gt; put imagen.bin flash_update
+Sent 1965199 bytes in 28.8 seconds
+tftp&amp;gt; quit
+&lt;/pre&gt;
+
+
+&lt;p&gt;En el momento que el equipo reinicia solo va a contestar por el puerto de la WAN, ingresamos a http://192.168.1.1 y cambiamos la contraseña.&lt;/p&gt;
+&lt;h3&gt;Configuración&lt;/h3&gt;
+&lt;p&gt;Por ssh vamos a editar las interfaces de red en /etc/config/network y sustituimos por lo siguiente.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;config 'switch' 'eth1'
+        option 'enable_vlan' '1'
+
+config 'switch_vlan'
+        option 'device' 'eth1'
+        option 'vlan' '1'
+        option 'ports' '0 1 2 3 4'
+
+config 'interface' 'loopback'
+        option 'ifname' 'lo'
+        option 'proto' 'static'
+        option 'ipaddr' '127.0.0.1'
+        option 'netmask' '255.0.0.0'
+
+config 'interface' 'lan'
+        option 'ifname' 'eth1'
+        option 'type' 'bridge'
+        option 'proto' 'static'
+        option 'ipaddr' '192.168.1.1'
+        option 'netmask' '255.255.255.0'
+        option '_orig_ifname' 'eth1'
+        option '_orig_bridge' 'true'
+
+config 'interface' 'wan'
+        option 'ifname' 'eth0'
+        option '_orig_ifname' 'eth0'
+        option '_orig_bridge' 'false'
+        option 'proto' 'dhcp'
+&lt;/pre&gt;
+
+
+&lt;p&gt;Con esto ya tenemos un router inalámbrico en su configuración normal, de aquí en adelante es jugar con el OpenWRT para poder hacer lo que uno quiera.&lt;/p&gt;
+&lt;h2&gt;Multiwan&lt;/h2&gt;
+&lt;p&gt;Es necesario instalar los siguientes paquetes:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;luci-app-multiwan
+multiwan
+&lt;/pre&gt;
+
+
+&lt;p&gt;Para utilizar se tiene que configurar el switch que concentra los 4 puertos para separar uno para utilizarlo como una segunda wan.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;config 'interface' 'loopback'
+    option 'ifname' 'lo'
+    option 'proto' 'static'
+    option 'ipaddr' '127.0.0.1'
+    option 'netmask' '255.0.0.0'
+
+config 'switch' 'eth1'
+    option 'enable_vlan' '1'
+
+config 'switch_vlan'
+    option 'device' 'eth1'
+    option 'vlan' '1'
+    option 'vid' '1'
+    option 'ports' '0t 1 2 3'
+
+config 'switch_vlan'
+    option 'device' 'eth1'
+    option 'vlan' '2'
+    option 'vid' '2'
+    option 'ports' '0t 4'
+
+config 'interface' 'lan'
+    option 'ifname' 'eth1.1'
+    option 'type' 'bridge'
+    option '_orig_ifname' 'eth1'
+    option '_orig_bridge' 'true'
+    option 'proto' 'static'
+    option 'ipaddr' '172.16.1.1'
+    option 'netmask' '255.255.255.0'
+
+config 'interface' 'wan'
+    option 'ifname' 'eth0'
+    option '_orig_ifname' 'eth0'
+    option '_orig_bridge' 'false'
+    option 'proto' 'dhcp'
+    option 'broadcast' '1'
+
+config 'interface' 'wan2'
+    option 'ifname' 'eth1.2'
+    option '_orig_ifname' 'eth1.2'
+    option '_orig_bridge' 'false'
+    option 'proto' 'static'
+    option 'ipaddr' '192.168.1.3'
+    option 'netmask' '255.255.255.0'
+    option 'gateway' '192.168.1.1'
+    option 'broadcast' '192.168.1.255'
+    option 'dns' '200.91.75.5 200.91.75.6'
+&lt;/pre&gt;
+
+
+&lt;p&gt;Despues de esto nada mas hay que agregar la nueva interfaz creada a la zona del wan del firewall, esto se puede hacer de manera gráfica.&lt;/p&gt;
+&lt;p&gt;A causa de un pico de voltaje durante una tormenta eléctrica no se va experimentar mas con este router.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-+-multiwan.html</guid><pubDate>Mon, 01 Apr 2013 17:19:38 GMT</pubDate></item><item><title>Usuarios sftp sin ssh</title><link>http://rngkll.github.io/posts/usuarios-sftp-sin-ssh.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Para evitar que los usuario puedan acceder por medio de ssh pero si tengan acceso sftp al servidor.&lt;/p&gt;
 &lt;h3&gt;Cambiar el shell del usuario al sftp-server&lt;/h3&gt;
 &lt;h4&gt;Centos 5.7&lt;/h4&gt;
 &lt;pre class="code literal-block"&gt;usermod -s  /usr/libexec/openssh/sftp-server username

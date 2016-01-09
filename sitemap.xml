@@ -7,254 +7,391 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://rngkll.github.io/2013/index.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/2014/index.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/2015/index.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/2016/index.html</loc>
+  <lastmod>2016-01-09T16:41:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/archive.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T14:00:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/2013/index.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/2014/index.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/2015/index.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/2016/index.html</loc>
+  <lastmod>2016-01-01T14:00:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/archive.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T14:00:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/3dprint-printrbot.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/3dprint.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/allspice.html</loc>
+  <lastmod>2016-01-01T14:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/apache.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/arm.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/blog.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/cat_3dprint.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/cat_comida.html</loc>
+  <lastmod>2016-01-01T14:01:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/cat_guias.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/cat_linux.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/comida.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/cpp.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/index.html</loc>
-  <lastmod>2015-10-08T03:49:00Z</lastmod>
+  <lastmod>2016-01-09T16:41:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/jaquerespeis.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/jerk.html</loc>
+  <lastmod>2016-01-01T14:01:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/keepalive.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/markdown.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/nikola.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/optimizacion.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/printrbot.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/python.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/restaurantes.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/stm32.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/en/etiquetas/web.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/galleries/demo/index.html</loc>
-  <lastmod>2015-09-24T04:47:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/galleries/index.html</loc>
-  <lastmod>2015-09-24T04:47:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/index.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/posts/freeswitch-in-raspberry-pi.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="es" href="http://rngkll.github.io/posts/freeswitch-in-raspberry-pi.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/en/posts/using-us-netflix-with-roku-and-openwrt.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="es" href="http://rngkll.github.io/posts/using-us-netflix-with-roku-and-openwrt.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/3dprint-printrbot.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/3dprint.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/allspice.html</loc>
+  <lastmod>2016-01-09T16:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/apache.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/arm.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/blog.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/cat_3dprint.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/cat_comida.html</loc>
+  <lastmod>2016-01-09T16:38:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/cat_guias.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/cat_linux.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/comida.html</loc>
+  <lastmod>2016-01-09T16:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/cpp.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/index.html</loc>
-  <lastmod>2015-10-08T03:49:00Z</lastmod>
+  <lastmod>2016-01-09T16:41:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/jaquerespeis.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/jerk.html</loc>
+  <lastmod>2016-01-09T16:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/keepalive.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/markdown.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/nikola.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/optimizacion.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/printrbot.html</loc>
-  <lastmod>2015-10-08T03:36:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/python.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/restaurantes.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/stm32.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/etiquetas/web.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/galleries/demo/index.html</loc>
-  <lastmod>2015-09-24T04:47:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/galleries/index.html</loc>
-  <lastmod>2015-09-24T04:47:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/index.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-09T16:38:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/listings/hello.py.html</loc>
-  <lastmod>2015-09-24T04:47:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/listings/index.html</loc>
-  <lastmod>2015-09-24T04:47:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/posts/configuracion-para-la-printrbot-simple.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/configuracion-para-la-printrbot-simple.html" />
  </url>
  <url>
+  <loc>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</loc>
+  <lastmod>2016-01-09T16:38:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/el-mejor-jerk-chicken.html" />
+ </url>
+ <url>
   <loc>http://rngkll.github.io/posts/instalando-repetierhost-en-ubuntu-1404.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/instalando-repetierhost-en-ubuntu-1404.html" />
  </url>
  <url>
+  <loc>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/lugares-de-comida-que-me-gustan.html" />
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-+-multiwan.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/openwrt-en-ubiquiti-power-ap-n-+-multiwan.html" />
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/posts/optimizacion-de-apache2.html</loc>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/optimizacion-de-apache2.html" />
+ </url>
+ <url>
+  <loc>http://rngkll.github.io/posts/programar microcontrolador stm322.html</loc>
+  <lastmod>2016-01-01T14:00:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/programar microcontrolador stm322.html" />
+ </url>
+ <url>
   <loc>http://rngkll.github.io/posts/usuarios-sftp-sin-ssh.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/usuarios-sftp-sin-ssh.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/posts/utilizar-nikola.html</loc>
-  <lastmod>2015-10-08T03:39:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/utilizar-nikola.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/a-study-in-scarlet.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/a-study-in-scarlet.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/about-nikola.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/about-nikola.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/bootstrap-demo.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/bootstrap-demo.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/charts.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/charts.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/creating-a-theme.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/creating-a-theme.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/extending.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/extending.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/handbook.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/handbook.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/internals.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/internals.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/listings-demo.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/listings-demo.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/quickref.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/quickref.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/quickstart.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/quickstart.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/slides-demo.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/slides-demo.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/social_buttons.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/social_buttons.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/stories/theming.html</loc>
-  <lastmod>2015-09-24T05:14:00Z</lastmod>
+  <lastmod>2016-01-01T13:42:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/stories/theming.html" />
  </url>
 </urlset>
