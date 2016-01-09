@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/2015/index.html</loc>
-  <lastmod>2016-01-01T13:42:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/2016/index.html</loc>
@@ -95,7 +95,7 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/index.html</loc>
-  <lastmod>2016-01-09T16:41:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/en/etiquetas/jaquerespeis.html</loc>
@@ -197,7 +197,7 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/cat_guias.html</loc>
-  <lastmod>2016-01-01T13:42:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/cat_linux.html</loc>
@@ -205,7 +205,7 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/comida.html</loc>
-  <lastmod>2016-01-09T16:38:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/cpp.html</loc>
@@ -213,11 +213,11 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/index.html</loc>
-  <lastmod>2016-01-09T16:41:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/jaquerespeis.html</loc>
-  <lastmod>2016-01-01T13:42:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/etiquetas/jerk.html</loc>
@@ -269,7 +269,7 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/index.html</loc>
-  <lastmod>2016-01-09T16:38:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
  </url>
  <url>
   <loc>http://rngkll.github.io/listings/hello.py.html</loc>
@@ -286,7 +286,7 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</loc>
-  <lastmod>2016-01-09T16:38:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/el-mejor-jerk-chicken.html" />
  </url>
  <url>
@@ -297,7 +297,6 @@
  <url>
   <loc>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</loc>
   <lastmod>2016-01-01T13:42:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/lugares-de-comida-que-me-gustan.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-+-multiwan.html</loc>
@@ -312,7 +311,6 @@
  <url>
   <loc>http://rngkll.github.io/posts/programar microcontrolador stm322.html</loc>
   <lastmod>2016-01-01T14:00:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/programar microcontrolador stm322.html" />
  </url>
  <url>
   <loc>http://rngkll.github.io/posts/usuarios-sftp-sin-ssh.html</loc>
@@ -321,7 +319,7 @@
  </url>
  <url>
   <loc>http://rngkll.github.io/posts/utilizar-nikola.html</loc>
-  <lastmod>2016-01-01T13:42:00Z</lastmod>
+  <lastmod>2016-01-09T16:53:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="http://rngkll.github.io/en/posts/utilizar-nikola.html" />
  </url>
  <url>

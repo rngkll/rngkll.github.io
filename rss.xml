@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Mi blog</title><link>http://rngkll.github.io/</link><description>Algunas notas y otras cosas</description><atom:link href="http://rngkll.github.io/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 09 Jan 2016 16:38:36 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jerk chicken natural</title><link>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;La idea&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mi blog</title><link>http://rngkll.github.io/</link><description>Algunas notas y otras cosas</description><atom:link type="application/rss+xml" rel="self" href="http://rngkll.github.io/rss.xml"></atom:link><language>es</language><lastBuildDate>Sat, 09 Jan 2016 16:53:25 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jerk chicken natural</title><link>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;La idea&lt;/h2&gt;
 &lt;p&gt;Hace unos días estábamos de vacaciones en pavones y Coco(administradora de la casa rentada) nos llevo unas hojas de Allspice, de una se me ocurrió que podíamos hacer Jerk Chicken, resulta que la hoja tiene muy buen sabor pero no se conserva bien, por lo que no se vende comercialmente.&lt;/p&gt;
 &lt;h2&gt;Ingredientes&lt;/h2&gt;
 &lt;ul&gt;
@@ -28,38 +28,7 @@
 &lt;li&gt;Al gusto, creo que fueron 2 cucharaditas de sal.&lt;/li&gt;
 &lt;li&gt;Aceite aproximadamente 150ml.&lt;/li&gt;
 &lt;li&gt;El jugo de 4 limones. &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>allspice</category><category>comida</category><category>jerk</category><guid>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</guid><pubDate>Fri, 01 Jan 2016 06:00:00 GMT</pubDate></item><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://rngkll.github.io/posts/programar microcontrolador stm322.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Que se necesita&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Microcontrolador STM322&lt;/li&gt;
-&lt;li&gt;GDB o un debugger, editor de texto o IDE&lt;/li&gt;
-&lt;li&gt;Una maquina con Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Requerimientos con Gnu/Linux&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;arm-none-eabi-gcc – The GNU Compiler Collection – cross compilador para ARM EABI (directo en el procesador)&lt;/li&gt;
-&lt;li&gt;arm-none-eabi-gdb – The GNU Debugger for the ARM EABI (bare-metal) target&lt;/li&gt;
-&lt;li&gt;arm-none-eabi-binutils – A set of programs to assemble and manipulate binary and object files for the ARM EABI (bare-metal) target&lt;/li&gt;
-&lt;li&gt;openocd – Debugging, in-system programming and boundary-scan testing for embedded target devices&lt;/li&gt;
-&lt;li&gt;vim – Editor de texto&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Terminos importantes&lt;/h2&gt;
-&lt;p&gt;CMSIS = Cortex Microcontroller Software Interface Standard &lt;a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php"&gt;info&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Referencias&lt;/h2&gt;
-&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;&lt;/div&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://rngkll.github.io/posts/programar microcontrolador stm322.html</guid><pubDate>Mon, 28 Dec 2015 05:00:00 GMT</pubDate></item><item><title>Lugares de comida que me gustan</title><link>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Estos son algunos de los lugares que mas me gusta vistar para comer.&lt;/p&gt;
-&lt;h2&gt;Lista&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ruca che:&lt;/strong&gt; En moravia, exelente restaurante de carnes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Manos en la masa:&lt;/strong&gt; Increible brunch en barrio escalante, afuera de Casa Batsu.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Go-fish:&lt;/strong&gt; Pinares, especialidad en mariscos pero todo es muy bueno.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rincon picante:&lt;/strong&gt; 150 este, soda tapia la sabana, la sopa en la que uno cocina el resto de ingredientes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;La asociación china:&lt;/strong&gt; San José, comida china, conocido tambien como la casa china.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maxi's by Ricky:&lt;/strong&gt; &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Patty factory:&lt;/strong&gt; Cuando quiero una sopa de mondongo y no estoy en Limón, este es el lugar.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Soda guiligan:&lt;/strong&gt; &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Diagonal a la alizan francesa:&lt;/strong&gt; &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Soda tala:&lt;/strong&gt; El talapindo como tiene que ser, es el mejor desayuno que uno puede probar. &lt;a href="https://www.facebook.com/Soda-Tala-201049860065851/timeline/"&gt;facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Chicharronera hermanos Level:&lt;/strong&gt; &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>comida</category><category>restaurantes</category><guid>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</guid><pubDate>Thu, 08 Oct 2015 03:56:28 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>allspice</category><category>comida</category><category>jerk</category><guid>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</guid><pubDate>Fri, 01 Jan 2016 06:00:00 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
 &lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.&lt;/p&gt;
 &lt;p&gt;En el directorio del repositorio del sitio&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;virtualenv --python=python3 .env

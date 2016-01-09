@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Mi blog (comida)</title><link>http://rngkll.github.io/</link><description></description><atom:link href="http://rngkll.github.io/etiquetas/comida.xml" type="application/rss+xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 09 Jan 2016 16:38:36 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jerk chicken natural</title><link>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;La idea&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mi blog (comida)</title><link>http://rngkll.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://rngkll.github.io/etiquetas/comida.xml"></atom:link><language>es</language><lastBuildDate>Sat, 09 Jan 2016 16:53:24 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Jerk chicken natural</title><link>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;La idea&lt;/h2&gt;
 &lt;p&gt;Hace unos días estábamos de vacaciones en pavones y Coco(administradora de la casa rentada) nos llevo unas hojas de Allspice, de una se me ocurrió que podíamos hacer Jerk Chicken, resulta que la hoja tiene muy buen sabor pero no se conserva bien, por lo que no se vende comercialmente.&lt;/p&gt;
 &lt;h2&gt;Ingredientes&lt;/h2&gt;
 &lt;ul&gt;
@@ -28,18 +28,4 @@
 &lt;li&gt;Al gusto, creo que fueron 2 cucharaditas de sal.&lt;/li&gt;
 &lt;li&gt;Aceite aproximadamente 150ml.&lt;/li&gt;
 &lt;li&gt;El jugo de 4 limones. &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>allspice</category><category>comida</category><category>jerk</category><guid>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</guid><pubDate>Fri, 01 Jan 2016 06:00:00 GMT</pubDate></item><item><title>Lugares de comida que me gustan</title><link>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Estos son algunos de los lugares que mas me gusta vistar para comer.&lt;/p&gt;
-&lt;h2&gt;Lista&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ruca che:&lt;/strong&gt; En moravia, exelente restaurante de carnes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Manos en la masa:&lt;/strong&gt; Increible brunch en barrio escalante, afuera de Casa Batsu.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Go-fish:&lt;/strong&gt; Pinares, especialidad en mariscos pero todo es muy bueno.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rincon picante:&lt;/strong&gt; 150 este, soda tapia la sabana, la sopa en la que uno cocina el resto de ingredientes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;La asociación china:&lt;/strong&gt; San José, comida china, conocido tambien como la casa china.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maxi's by Ricky:&lt;/strong&gt; &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Patty factory:&lt;/strong&gt; Cuando quiero una sopa de mondongo y no estoy en Limón, este es el lugar.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Soda guiligan:&lt;/strong&gt; &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Diagonal a la alizan francesa:&lt;/strong&gt; &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Soda tala:&lt;/strong&gt; El talapindo como tiene que ser, es el mejor desayuno que uno puede probar. &lt;a href="https://www.facebook.com/Soda-Tala-201049860065851/timeline/"&gt;facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Chicharronera hermanos Level:&lt;/strong&gt; &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>comida</category><category>restaurantes</category><guid>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</guid><pubDate>Thu, 08 Oct 2015 03:56:28 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;&lt;/div&gt;</description><category>allspice</category><category>comida</category><category>jerk</category><guid>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</guid><pubDate>Fri, 01 Jan 2016 06:00:00 GMT</pubDate></item></channel></rss>

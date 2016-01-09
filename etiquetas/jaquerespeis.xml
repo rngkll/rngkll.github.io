@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mi blog (jaquerespeis)</title><link>http://rngkll.github.io/</link><description></description><atom:link rel="self" href="http://rngkll.github.io/etiquetas/jaquerespeis.xml" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Fri, 01 Jan 2016 13:42:11 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://rngkll.github.io/posts/programar microcontrolador stm322.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Que se necesita&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Microcontrolador STM322&lt;/li&gt;
-&lt;li&gt;GDB o un debugger, editor de texto o IDE&lt;/li&gt;
-&lt;li&gt;Una maquina con Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Requerimientos con Gnu/Linux&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;arm-none-eabi-gcc – The GNU Compiler Collection – cross compilador para ARM EABI (directo en el procesador)&lt;/li&gt;
-&lt;li&gt;arm-none-eabi-gdb – The GNU Debugger for the ARM EABI (bare-metal) target&lt;/li&gt;
-&lt;li&gt;arm-none-eabi-binutils – A set of programs to assemble and manipulate binary and object files for the ARM EABI (bare-metal) target&lt;/li&gt;
-&lt;li&gt;openocd – Debugging, in-system programming and boundary-scan testing for embedded target devices&lt;/li&gt;
-&lt;li&gt;vim – Editor de texto&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Terminos importantes&lt;/h2&gt;
-&lt;p&gt;CMSIS = Cortex Microcontroller Software Interface Standard &lt;a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php"&gt;info&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Referencias&lt;/h2&gt;
-&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;&lt;/div&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://rngkll.github.io/posts/programar microcontrolador stm322.html</guid><pubDate>Mon, 28 Dec 2015 05:00:00 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mi blog (jaquerespeis)</title><link>http://rngkll.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://rngkll.github.io/etiquetas/jaquerespeis.xml"></atom:link><language>es</language><lastBuildDate>Sat, 09 Jan 2016 16:53:25 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
 &lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.&lt;/p&gt;
 &lt;p&gt;En el directorio del repositorio del sitio&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;virtualenv --python=python3 .env
