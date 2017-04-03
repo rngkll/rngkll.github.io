@@ -74,5 +74,4 @@ _**NOTA:** La opción `-G` indica a ethminer que utilice GPU para minar, en caso
 https://github.com/paritytech/parity
 https://github.com/Atrides/eth-proxy
 https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
-
-
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html
