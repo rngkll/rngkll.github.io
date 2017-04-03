@@ -53,11 +53,11 @@ sudo apt-get install cpp-ethereum
 
 1. Crear un wallet con [geth](https://github.com/ethereum/go-ethereum/wiki/geth) o [parity](https://github.com/paritytech/parity).
 
-1. Instalar los drivers de video, en el caso de usar una tarjeta de video.
+1. Instalar los drivers de vídeo, en el caso de usar una tarjeta de vídeo.
 
 1. Modificar el archivo de configuración de eth-proxy para usar el wallet.
 
-1. En el directory de eth-proxy, ejecutar `eth-proxy.py`
+1. En el directorio eth-proxy, ejecutar `eth-proxy.py`
 
 ```bash
 sudo python eth-proxy/eth-proxy.py
