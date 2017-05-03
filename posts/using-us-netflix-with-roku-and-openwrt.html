@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Using US netflix with roku and openwrt | Mi Sitio</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../en/rss.xml">
+<link rel="canonical" href="http://rngkll.github.io/posts/using-us-netflix-with-roku-and-openwrt.html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+    <div class="post">
+    
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Using US netflix with roku and openwrt</a></h1>
+
+        <div class="meta" style="background-color: rgb(234, 234, 234); ">
+        <span class="authordate">
+            Publicado: <time class="published" datetime="2014-08-29T21:30:19-06:00">2014-08-29 21:30</time>
+               [<a href="using-us-netflix-with-roku-and-openwrt.md" id="sourcelink">Código fuente</a>]
+        </span>
+        <br><span class="authordate">
+            
+
+        </span>
+        </div>
+    <div>
+<h2>First method</h2>
+<p>The Roku has no possibility to change the DNS to a specific one, so to use US Netflix with the roku the DNS has to be set in  the router.</p>
+<p>I don’t like all my DNS traffic going to a DNS that I don’t trust so with options of dnsmasq that comes with openwrt I set DNS Forwarding.</p>
+<p>Be careful to change x.x.x.x for the ip address of the DNS service you want to use.</p>
+<p>example http://www.unblock-us.com ip 208.122.23.23</p>
+<p>in the file /etc/config/dhcp add the following lines below config dnsmasq.</p>
+<pre class="code literal-block"><span></span>    list server '/netflix.com/x.x.x.x'
+    list server '/nflximg.net/x.x.x.x'
+    list server '/nflximg.com/x.x.x.x'
+    list server '/roku.com/x.x.x.x'
+    list server '/mgo-images.com/x.x.x.x'
+    list server '/netflix.net/x.x.x.x'
+    list server '/netflix.net/x.x.x.x'
+    list server '/roku.com/x.x.x.x'
+    list server '/scorecardresearch.com/x.x.x.x'
+</pre>
+
+
+<p>it is necessary to add all that list servers.</p>
+<p>This method could work for any other hardware but I have only tested it in the roku.</p>
+<h2>Second method</h2>
+<p>At first I was using the first method but I had to keep adding forwarder addresses to the dhcp file.</p>
+<p>in “network-&gt;firewall-&gt;custom rules” add the following rules</p>
+<pre class="code literal-block"><span></span>iptables -t nat -A PREROUTING -i br-lan -s x.x.x.x -p udp –dport 53 -j DNAT –to-destination y.y.y.y:53
+#iptables -t nat -A POSTROUTING -j MASQUERADE
+</pre>
+
+
+<p>where <code>x.x.x.x</code> is the roku or other device you want to use with a specific dns server and <code>y.y.y.y</code> is the address of the specific dns server.</p>
+</div>
+    
+        <ul class="pager hidden-print">
+<li class="previous">
+                <a href="instalando-repetierhost-en-ubuntu-1404.html" rel="prev" title="Instalando RepetierHost en Ubuntu 1404">Publicación anterior</a>
+            </li>
+            <li class="next">
+                <a href="configuracion-para-la-printrbot-simple.html" rel="next" title="Configuración para la printrbot simple">Siguiente publicación</a>
+            </li>
+        </ul>
+</div>
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
+            </h1>
+            
+            <small>
+                También disponible en: 
+                
+            <li><a href="http://rngkll.github.io/en/" rel="alternate" hreflang="en">English</a></li>
+
+            </small>
+            
+            <ul class="unstyled">
+<li>
+            
+                <li>
+<a href="../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../categories/index.html">Etiquetas</a>
+                </li>
+<li>
+<a href="../rss.xml">Canal RSS</a>
+
+            </li>
+<li>
+            
+            
+            </ul>
+</div>
+        <div id="footer">
+            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </div>
+    </div>
+    
+            <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+</body>
+</html>

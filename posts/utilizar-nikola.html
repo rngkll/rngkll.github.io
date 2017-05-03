@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="description" content="Guía de como configurar nikola">
 <meta name="viewport" content="width=device-width">
-<title>Utilizar Nikola por primera vez | Mi blog</title>
+<title>Utilizar Nikola por primera vez | Mi Sitio</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href=".././rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../rss.xml">
 <link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../en/rss.xml">
 <link rel="canonical" href="http://rngkll.github.io/posts/utilizar-nikola.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
@@ -26,11 +26,11 @@
                [<a href="utilizar-nikola.md" id="sourcelink">Código fuente</a>]
         </span>
         <br><span class="tags">Etiquetas: 
-                    <a class="tag" href=".././etiquetas/blog.html"><span>blog</span></a>
-                    <a class="tag" href=".././etiquetas/jaquerespeis.html"><span>jaquerespeis</span></a>
-                    <a class="tag" href=".././etiquetas/markdown.html"><span>markdown</span></a>
-                    <a class="tag" href=".././etiquetas/nikola.html"><span>nikola</span></a>
-                    <a class="tag" href=".././etiquetas/python.html"><span>python</span></a>
+                    <a class="tag" href="../categories/blog.html"><span>blog</span></a>
+                    <a class="tag" href="../categories/jaquerespeis.html"><span>jaquerespeis</span></a>
+                    <a class="tag" href="../categories/markdown.html"><span>markdown</span></a>
+                    <a class="tag" href="../categories/nikola.html"><span>nikola</span></a>
+                    <a class="tag" href="../categories/python.html"><span>python</span></a>
                 </span>
                 <br><span class="authordate">
             
@@ -41,7 +41,7 @@
 <h2>Instalación</h2>
 <p>La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.</p>
 <p>En el directorio del repositorio del sitio</p>
-<pre class="code literal-block">virtualenv --python=python3 .env
+<pre class="code literal-block"><span></span>virtualenv --python=python3 .env
 source .env/bin/activate
 pip3 install --upgrade "Nikola[extras]"
 </pre>
@@ -53,7 +53,7 @@ pip3 install --upgrade "Nikola[extras]"
 <h2>Utilizar markdown</h2>
 <p>Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.</p>
 <p>Primero se debe de verificar que este en la estructura <strong>COMPILERS</strong></p>
-<pre class="code literal-block"># 'rest' is reStructuredText
+<pre class="code literal-block"><span></span># 'rest' is reStructuredText
 # 'markdown' is MarkDown
 # 'html' assumes the file is HTML and just copies it
 COMPILERS = {
@@ -78,15 +78,15 @@ COMPILERS = {
 
 
 <p>Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, <code>("posts/*.md", "posts", "post.tmpl")</code> a los dos tipos de entras <strong>POST</strong> y <strong>PAGES</strong>.</p>
-<pre class="code literal-block"><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">(</span><span class="s">"posts/*.rst"</span><span class="p">,</span> <span class="s">"posts"</span><span class="p">,</span> <span class="s">"post.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s">"posts/*.txt"</span><span class="p">,</span> <span class="s">"posts"</span><span class="p">,</span> <span class="s">"post.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s">"posts/*.md"</span><span class="p">,</span> <span class="s">"posts"</span><span class="p">,</span> <span class="s">"post.tmpl"</span><span class="p">),</span>
+<pre class="code literal-block"><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"posts/*.md"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
 <span class="p">)</span>
 <span class="n">PAGES</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="p">(</span><span class="s">"stories/*.rst"</span><span class="p">,</span> <span class="s">"stories"</span><span class="p">,</span> <span class="s">"story.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s">"stories/*.txt"</span><span class="p">,</span> <span class="s">"stories"</span><span class="p">,</span> <span class="s">"story.tmpl"</span><span class="p">),</span>
-    <span class="p">(</span><span class="s">"stories/*.md"</span><span class="p">,</span> <span class="s">"stories"</span><span class="p">,</span> <span class="s">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"stories/*.rst"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">"stories/*.md"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
 <span class="p">)</span>
 </pre>
 
@@ -98,18 +98,18 @@ COMPILERS = {
 </li>
 <li>Definir cual es el locale que debe de utilizar Nikola por defecto.</li>
 </ol>
-<pre class="code literal-block"><span class="c"># What is the default language?</span>
-<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s">"es"</span>
+<pre class="code literal-block"><span></span><span class="c1"># What is the default language?</span>
+<span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s2">"es"</span>
 
-<span class="c"># What other languages do you have?</span>
-<span class="c"># The format is {"translationcode" : "path/to/translation" }</span>
-<span class="c"># the path will be used as a prefix for the generated pages location</span>
+<span class="c1"># What other languages do you have?</span>
+<span class="c1"># The format is {"translationcode" : "path/to/translation" }</span>
+<span class="c1"># the path will be used as a prefix for the generated pages location</span>
 <span class="n">TRANSLATIONS</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="s">"es_CR"</span><span class="p">,</span>
-    <span class="c"># Example for another language:</span>
-    <span class="c"># "es": "./es",</span>
-    <span class="s">"es"</span><span class="p">:</span> <span class="s">"./"</span><span class="p">,</span>
-    <span class="s">"en"</span><span class="p">:</span> <span class="s">"./en"</span><span class="p">,</span>
+    <span class="n">DEFAULT_LANG</span><span class="p">:</span> <span class="s2">"es_CR"</span><span class="p">,</span>
+    <span class="c1"># Example for another language:</span>
+    <span class="c1"># "es": "./es",</span>
+    <span class="s2">"es"</span><span class="p">:</span> <span class="s2">"./"</span><span class="p">,</span>
+    <span class="s2">"en"</span><span class="p">:</span> <span class="s2">"./en"</span><span class="p">,</span>
 <span class="p">}</span>
 </pre>
 
@@ -117,8 +117,8 @@ COMPILERS = {
 <ol>
 <li>Definir el locale que se va a utilizar para <code>es</code>, por defecto es <code>es_ES</code>.</li>
 </ol>
-<pre class="code literal-block"><span class="n">LOCALES</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">"es"</span><span class="p">:</span><span class="s">"es_CR.utf-8"</span><span class="p">,</span>
+<pre class="code literal-block"><span></span><span class="n">LOCALES</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"es"</span><span class="p">:</span><span class="s2">"es_CR.utf-8"</span><span class="p">,</span>
         <span class="p">}</span>
 </pre>
 
@@ -134,19 +134,13 @@ COMPILERS = {
                 <a href="el-mejor-jerk-chicken.html" rel="next" title="Jerk chicken natural">Siguiente publicación</a>
             </li>
         </ul>
-<script src="https://apis.google.com/js/plusone.js"></script><div class="g-comments" data-href="http://rngkll.github.io/posts/utilizar-nikola.html" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">
 </div>
-
-
-    
-
-    </div>
 
         </div>
         <div id="sidebar">
             <!--Sidebar content-->
             <h1 id="blog-title">
-                <a href="http://rngkll.github.io/" title="Mi blog">Mi blog</a>
+                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
             </h1>
             
             <small>
@@ -170,18 +164,12 @@ COMPILERS = {
 
             </li>
 <li>
-<!-- DuckDuckGo custom search -->
-<form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="http://rngkll.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
-</form>
-<!-- End of custom search -->
-</li>
             
             
             </ul>
 </div>
         <div id="footer">
-            Contents © 2016 <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="https://github.com" rel="nofollow">Github</a>    
+            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </div>
     </div>

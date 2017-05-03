@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Usuarios sftp sin ssh | Mi Sitio</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../rss.xml">
+<link rel="canonical" href="http://rngkll.github.io/en/posts/usuarios-sftp-sin-ssh.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+    <div class="post">
+    
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Usuarios sftp sin ssh</a></h1>
+
+        <div class="meta" style="background-color: rgb(234, 234, 234); ">
+        <span class="authordate">
+            Posted: <time class="published" datetime="2013-03-15T15:34:28-06:00">2013-03-15 15:34</time>
+               [<a href="usuarios-sftp-sin-ssh.md" id="sourcelink">Source</a>]
+        </span>
+        <br><span class="authordate">
+            
+
+        </span>
+        </div>
+    <div>
+<p>Para evitar que los usuario puedan acceder por medio de ssh pero si tengan acceso sftp al servidor.</p>
+<h3>Cambiar el shell del usuario al sftp-server</h3>
+<h4>Centos 5.7</h4>
+<pre class="code literal-block"><span></span>usermod -s  /usr/libexec/openssh/sftp-server username
+</pre>
+
+
+<h4>Debian 6.0</h4>
+<pre class="code literal-block"><span></span>usermod -s /usr/lib/sftp-server username
+</pre>
+
+
+<h3>Agregar al archivo /etc/shells</h3>
+<h4>Centos 5.7</h4>
+<pre class="code literal-block"><span></span>/usr/libexec/openssh/sftp-server
+</pre>
+
+
+<h4>Debian 6.0</h4>
+<pre class="code literal-block"><span></span>/usr/lib/sftp-server
+</pre>
+</div>
+    
+        <ul class="pager hidden-print">
+<li class="next">
+                <a href="openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.html" rel="next" title="OpenWRT en Ubiquiti Power AP N + Multiwan">Next post</a>
+            </li>
+        </ul>
+</div>
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
+            </h1>
+            
+            <small>
+                Also available in: 
+                
+            <li><a href="http://rngkll.github.io/" rel="alternate" hreflang="es">Español</a></li>
+
+            </small>
+            
+            <ul class="unstyled">
+<li>
+            
+                <li>
+<a href="../../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../../categories/index.html">Etiquetas</a>
+                </li>
+<li>
+<a href="../../rss.xml">Canal RSS</a>
+
+            </li>
+<li>
+            
+            
+            </ul>
+</div>
+        <div id="footer">
+            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </div>
+    </div>
+    
+            <script src="../../assets/js/all-nocdn.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+</body>
+</html>

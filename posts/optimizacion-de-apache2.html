@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Optimización de apache2 | Mi blog</title>
+<title>Optimización de apache2 | Mi Sitio</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href=".././rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../rss.xml">
 <link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../en/rss.xml">
 <link rel="canonical" href="http://rngkll.github.io/posts/optimizacion-de-apache2.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
@@ -25,10 +25,10 @@
                [<a href="optimizacion-de-apache2.md" id="sourcelink">Código fuente</a>]
         </span>
         <br><span class="tags">Etiquetas: 
-                    <a class="tag" href=".././etiquetas/apache.html"><span>apache</span></a>
-                    <a class="tag" href=".././etiquetas/keepalive.html"><span>keepalive</span></a>
-                    <a class="tag" href=".././etiquetas/optimizacion.html"><span>optimizacion</span></a>
-                    <a class="tag" href=".././etiquetas/web.html"><span>web</span></a>
+                    <a class="tag" href="../categories/apache.html"><span>apache</span></a>
+                    <a class="tag" href="../categories/keepalive.html"><span>keepalive</span></a>
+                    <a class="tag" href="../categories/optimizacion.html"><span>optimizacion</span></a>
+                    <a class="tag" href="../categories/web.html"><span>web</span></a>
                 </span>
                 <br><span class="authordate">
             
@@ -37,18 +37,18 @@
         </div>
     <div>
 <p>Primero hay que revisar cuales módulos están cargados, esto se puede hacer con</p>
-<pre class="code literal-block">apachectl -M
+<pre class="code literal-block"><span></span>apachectl -M
 </pre>
 
 
 <p>Lo ideal es tener solo los módulos necesarios para que el sitio funcione, la cantidad de módulos influye en e tamaño de cada proceso de apache que se encuentra corriendo.</p>
-<pre class="code literal-block">HostnameLookups off
+<pre class="code literal-block"><span></span>HostnameLookups off
 </pre>
 
 
 <p>Cuando un cliente el accede el servidor web, se crea una bitácora en access.log, si esta directiva esta en On se busca el nombre en el servidor de nombres, aun con un cache de dns esto es muy lento.</p>
 <p>Cuando se establece una conexión esta se deja escuchando por un tiempo por si se le hace una nueva petición, en el caso de tener muchos visitantes y dejar la conexiones abiertas por mucho tiempo, se crea un problema, por eso se puede bajar el tiempo para poder servir nuevas peticiones. (Esta altamente ligado al MaxClients).</p>
-<pre class="code literal-block">KeepAlive On
+<pre class="code literal-block"><span></span>KeepAlive On
 KeepAliveTimeout 2
 </pre>
 
@@ -58,7 +58,7 @@ KeepAliveTimeout 2
 <p>Una buena manera de ver el tamaño de un proceso de apache es con el comando <code>ps -ylC apache2 --sort:rss</code></p>
 <p>Con esto se puede ver el tamaño del proceso mas grande de ultimo.</p>
 <p>Una suma de la columna del rss nos da un valor del total de memoria que esta usando el proceso, esto puede aumentar porque no todos los procesos tiene el mismo tamaño.</p>
-<pre class="code literal-block">ps -ylC apache2 --sort:rss | awk '{SUM += $8 } END {print SUM}'
+<pre class="code literal-block"><span></span>ps -ylC apache2 --sort:rss | awk '{SUM += $8 } END {print SUM}'
 </pre>
 
 
@@ -68,25 +68,19 @@ KeepAliveTimeout 2
     
         <ul class="pager hidden-print">
 <li class="previous">
-                <a href="openwrt-en-ubiquiti-power-ap-n-+-multiwan.html" rel="prev" title="OpenWRT en Ubiquiti Power AP N + Multiwan">Publicación anterior</a>
+                <a href="freeswitch-in-raspberry-pi.html" rel="prev" title="Freeswitch in Raspberry Pi">Publicación anterior</a>
             </li>
             <li class="next">
                 <a href="instalando-repetierhost-en-ubuntu-1404.html" rel="next" title="Instalando RepetierHost en Ubuntu 1404">Siguiente publicación</a>
             </li>
         </ul>
-<script src="https://apis.google.com/js/plusone.js"></script><div class="g-comments" data-href="http://rngkll.github.io/posts/optimizacion-de-apache2.html" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">
 </div>
-
-
-    
-
-    </div>
 
         </div>
         <div id="sidebar">
             <!--Sidebar content-->
             <h1 id="blog-title">
-                <a href="http://rngkll.github.io/" title="Mi blog">Mi blog</a>
+                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
             </h1>
             
             <small>
@@ -110,18 +104,12 @@ KeepAliveTimeout 2
 
             </li>
 <li>
-<!-- DuckDuckGo custom search -->
-<form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="http://rngkll.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
-</form>
-<!-- End of custom search -->
-</li>
             
             
             </ul>
 </div>
         <div id="footer">
-            Contents © 2016 <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="https://github.com" rel="nofollow">Github</a>    
+            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </div>
     </div>

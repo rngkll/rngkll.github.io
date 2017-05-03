@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Optimización de apache2 | Mi Sitio</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../rss.xml">
+<link rel="canonical" href="http://rngkll.github.io/en/posts/optimizacion-de-apache2.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+    <div class="post">
+    
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Optimización de apache2</a></h1>
+
+        <div class="meta" style="background-color: rgb(234, 234, 234); ">
+        <span class="authordate">
+            Posted: <time class="published" datetime="2013-10-18T11:16:14-06:00">2013-10-18 11:16</time>
+               [<a href="optimizacion-de-apache2.md" id="sourcelink">Source</a>]
+        </span>
+        <br><span class="tags">Tags: 
+                    <a class="tag" href="../categories/apache.html"><span>apache</span></a>
+                    <a class="tag" href="../categories/keepalive.html"><span>keepalive</span></a>
+                    <a class="tag" href="../categories/optimizacion.html"><span>optimizacion</span></a>
+                    <a class="tag" href="../categories/web.html"><span>web</span></a>
+                </span>
+                <br><span class="authordate">
+            
+
+        </span>
+        </div>
+    <div>
+<p>Primero hay que revisar cuales módulos están cargados, esto se puede hacer con</p>
+<pre class="code literal-block"><span></span>apachectl -M
+</pre>
+
+
+<p>Lo ideal es tener solo los módulos necesarios para que el sitio funcione, la cantidad de módulos influye en e tamaño de cada proceso de apache que se encuentra corriendo.</p>
+<pre class="code literal-block"><span></span>HostnameLookups off
+</pre>
+
+
+<p>Cuando un cliente el accede el servidor web, se crea una bitácora en access.log, si esta directiva esta en On se busca el nombre en el servidor de nombres, aun con un cache de dns esto es muy lento.</p>
+<p>Cuando se establece una conexión esta se deja escuchando por un tiempo por si se le hace una nueva petición, en el caso de tener muchos visitantes y dejar la conexiones abiertas por mucho tiempo, se crea un problema, por eso se puede bajar el tiempo para poder servir nuevas peticiones. (Esta altamente ligado al MaxClients).</p>
+<pre class="code literal-block"><span></span>KeepAlive On
+KeepAliveTimeout 2
+</pre>
+
+
+<p>Para el momento de calcular MaxClients.</p>
+<p>Una buena referencia es MaxClients = (total de memoria)/(promedio de memoria utilizada por cada proceso de apache)</p>
+<p>Una buena manera de ver el tamaño de un proceso de apache es con el comando <code>ps -ylC apache2 --sort:rss</code></p>
+<p>Con esto se puede ver el tamaño del proceso mas grande de ultimo.</p>
+<p>Una suma de la columna del rss nos da un valor del total de memoria que esta usando el proceso, esto puede aumentar porque no todos los procesos tiene el mismo tamaño.</p>
+<pre class="code literal-block"><span></span>ps -ylC apache2 --sort:rss | awk '{SUM += $8 } END {print SUM}'
+</pre>
+
+
+<p>Hay que tomar en cuenta también el resto de procesos del servidor.</p>
+<p>Utilizando top y acomodando por rss podemos ver los procesos que están utilizando mas memoria, entre estos deberíamos encontrar los procesos de apache y el o los de la base de datos si es que se tiene una.</p>
+</div>
+    
+        <ul class="pager hidden-print">
+<li class="previous">
+                <a href="freeswitch-in-raspberry-pi.html" rel="prev" title="Freeswitch in Raspberry Pi">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="instalando-repetierhost-en-ubuntu-1404.html" rel="next" title="Instalando RepetierHost en Ubuntu 1404">Next post</a>
+            </li>
+        </ul>
+</div>
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
+            </h1>
+            
+            <small>
+                Also available in: 
+                
+            <li><a href="http://rngkll.github.io/" rel="alternate" hreflang="es">Español</a></li>
+
+            </small>
+            
+            <ul class="unstyled">
+<li>
+            
+                <li>
+<a href="../../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../../categories/index.html">Etiquetas</a>
+                </li>
+<li>
+<a href="../../rss.xml">Canal RSS</a>
+
+            </li>
+<li>
+            
+            
+            </ul>
+</div>
+        <div id="footer">
+            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </div>
+    </div>
+    
+            <script src="../../assets/js/all-nocdn.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+</body>
+</html>

@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Using US netflix with roku and openwrt | Mi blog</title>
+<title>Using US netflix with roku and openwrt | Mi Sitio</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../.././rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
 <link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../rss.xml">
 <link rel="canonical" href="http://rngkll.github.io/en/posts/using-us-netflix-with-roku-and-openwrt.html">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
@@ -36,7 +36,7 @@
 <p>Be careful to change x.x.x.x for the ip address of the DNS service you want to use.</p>
 <p>example http://www.unblock-us.com ip 208.122.23.23</p>
 <p>in the file /etc/config/dhcp add the following lines below config dnsmasq.</p>
-<pre class="code literal-block">    list server '/netflix.com/x.x.x.x'
+<pre class="code literal-block"><span></span>    list server '/netflix.com/x.x.x.x'
     list server '/nflximg.net/x.x.x.x'
     list server '/nflximg.com/x.x.x.x'
     list server '/roku.com/x.x.x.x'
@@ -53,7 +53,7 @@
 <h2>Second method</h2>
 <p>At first I was using the first method but I had to keep adding forwarder addresses to the dhcp file.</p>
 <p>in “network-&gt;firewall-&gt;custom rules” add the following rules</p>
-<pre class="code literal-block">iptables -t nat -A PREROUTING -i br-lan -s x.x.x.x -p udp –dport 53 -j DNAT –to-destination y.y.y.y:53
+<pre class="code literal-block"><span></span>iptables -t nat -A PREROUTING -i br-lan -s x.x.x.x -p udp –dport 53 -j DNAT –to-destination y.y.y.y:53
 #iptables -t nat -A POSTROUTING -j MASQUERADE
 </pre>
 
@@ -63,22 +63,19 @@
     
         <ul class="pager hidden-print">
 <li class="previous">
-                <a href="freeswitch-in-raspberry-pi.html" rel="prev" title="Freeswitch in Raspberry Pi">Previous post</a>
+                <a href="instalando-repetierhost-en-ubuntu-1404.html" rel="prev" title="Instalando RepetierHost en Ubuntu 1404">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="configuracion-para-la-printrbot-simple.html" rel="next" title="Configuración para la printrbot simple">Next post</a>
             </li>
         </ul>
-<script src="https://apis.google.com/js/plusone.js"></script><div class="g-comments" data-href="http://rngkll.github.io/en/posts/using-us-netflix-with-roku-and-openwrt.html" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">
 </div>
-
-
-    
-
-    </div>
 
         </div>
         <div id="sidebar">
             <!--Sidebar content-->
             <h1 id="blog-title">
-                <a href="http://rngkll.github.io/" title="Mi blog">Mi blog</a>
+                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
             </h1>
             
             <small>
@@ -102,18 +99,12 @@
 
             </li>
 <li>
-<!-- DuckDuckGo custom search -->
-<form method="get" id="search" action="//duckduckgo.com/" class="navbar-form pull-left">
-<input type="hidden" name="sites" value="http://rngkll.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
-</form>
-<!-- End of custom search -->
-</li>
             
             
             </ul>
 </div>
         <div id="footer">
-            Contents © 2016 <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> and <a href="https://github.com" rel="nofollow">Github</a>    
+            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
         </div>
     </div>

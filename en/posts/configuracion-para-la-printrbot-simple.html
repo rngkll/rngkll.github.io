@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Gcode para inicio de impresión en la printrbot">
+<meta name="viewport" content="width=device-width">
+<title>Configuración para la printrbot simple | Mi Sitio</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../rss.xml">
+<link rel="canonical" href="http://rngkll.github.io/en/posts/configuracion-para-la-printrbot-simple.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+    <div id="wrap" style="width:850px">
+        <div id="container" style="width:560px">
+            
+            
+    <div class="post">
+    
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Configuración para la printrbot simple</a></h1>
+
+        <div class="meta" style="background-color: rgb(234, 234, 234); ">
+        <span class="authordate">
+            Posted: <time class="published" datetime="2015-08-14T21:39:41-06:00">2015-08-14 21:39</time>
+               [<a href="configuracion-para-la-printrbot-simple.md" id="sourcelink">Source</a>]
+        </span>
+        <br><span class="tags">Tags: 
+                    <a class="tag" href="../categories/3dprint.html"><span>3dprint</span></a>
+                    <a class="tag" href="../categories/printrbot.html"><span>printrbot</span></a>
+                </span>
+                <br><span class="authordate">
+            
+
+        </span>
+        </div>
+    <div>
+<h3>Código:</h3>
+<pre class="code literal-block"><span></span>M104 S{TEMP0} ; set temperature
+G21 ;metric values
+G90 ;absolute positioning
+M82 ;set extruder to absolute mode
+M107 ;start with the fan off
+G28 X0 Y0 ;move X/Y to min endstops
+G28 Z0 ;move Z to min endstops
+M109 S{TEMP0} ;wait on temperature line
+G29 ; Auto bed levelling
+G92 E0 ;zero the extruded length
+G1 F{TRAVEL_SPEED} ;
+</pre>
+</div>
+    
+        <ul class="pager hidden-print">
+<li class="previous">
+                <a href="using-us-netflix-with-roku-and-openwrt.html" rel="prev" title="Using US netflix with roku and openwrt">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="utilizar-nikola.html" rel="next" title="Utilizar Nikola por primera vez">Next post</a>
+            </li>
+        </ul>
+</div>
+
+        </div>
+        <div id="sidebar">
+            <!--Sidebar content-->
+            <h1 id="blog-title">
+                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
+            </h1>
+            
+            <small>
+                Also available in: 
+                
+            <li><a href="http://rngkll.github.io/" rel="alternate" hreflang="es">Español</a></li>
+
+            </small>
+            
+            <ul class="unstyled">
+<li>
+            
+                <li>
+<a href="../../archive.html">Archivo</a>
+                </li>
+<li>
+<a href="../../categories/index.html">Etiquetas</a>
+                </li>
+<li>
+<a href="../../rss.xml">Canal RSS</a>
+
+            </li>
+<li>
+            
+            
+            </ul>
+</div>
+        <div id="footer">
+            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </div>
+    </div>
+    
+            <script src="../../assets/js/all-nocdn.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+</body>
+</html>
