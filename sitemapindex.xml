@@ -35,14 +35,10 @@
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/cat_guias.xml</loc>
-  <lastmod>2017-05-04T15:44:00Z</lastmod>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/cat_linux.xml</loc>
-  <lastmod>2017-05-04T15:39:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>http://rngkll.github.io/categories/cisco.xml</loc>
   <lastmod>2017-05-04T15:39:00Z</lastmod>
  </sitemap>
  <sitemap>
@@ -50,8 +46,16 @@
   <lastmod>2017-05-04T15:39:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://rngkll.github.io/categories/cryptomoneda.xml</loc>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/categories/ethereum.xml</loc>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://rngkll.github.io/categories/jaquerespeis.xml</loc>
-  <lastmod>2017-05-04T15:39:00Z</lastmod>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/jerk.xml</loc>
@@ -66,8 +70,8 @@
   <lastmod>2017-05-04T15:39:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://rngkll.github.io/categories/networking.xml</loc>
-  <lastmod>2017-05-04T15:39:00Z</lastmod>
+  <loc>http://rngkll.github.io/categories/minar.xml</loc>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/categories/nikola.xml</loc>
@@ -119,14 +123,10 @@
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/en/categories/cat_guias.xml</loc>
-  <lastmod>2017-05-04T15:44:00Z</lastmod>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/en/categories/cat_linux.xml</loc>
-  <lastmod>2017-05-04T15:39:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>http://rngkll.github.io/en/categories/cisco.xml</loc>
   <lastmod>2017-05-04T15:39:00Z</lastmod>
  </sitemap>
  <sitemap>
@@ -134,8 +134,16 @@
   <lastmod>2017-05-04T15:39:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://rngkll.github.io/en/categories/cryptomoneda.xml</loc>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://rngkll.github.io/en/categories/ethereum.xml</loc>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://rngkll.github.io/en/categories/jaquerespeis.xml</loc>
-  <lastmod>2017-05-04T15:39:00Z</lastmod>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/en/categories/jerk.xml</loc>
@@ -150,8 +158,8 @@
   <lastmod>2017-05-04T15:39:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>http://rngkll.github.io/en/categories/networking.xml</loc>
-  <lastmod>2017-05-04T15:39:00Z</lastmod>
+  <loc>http://rngkll.github.io/en/categories/minar.xml</loc>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/en/categories/nikola.xml</loc>
@@ -179,7 +187,7 @@
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/en/rss.xml</loc>
-  <lastmod>2017-05-04T15:44:00Z</lastmod>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/galleries/rss.xml</loc>
@@ -187,10 +195,10 @@
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/rss.xml</loc>
-  <lastmod>2017-05-04T15:44:00Z</lastmod>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://rngkll.github.io/sitemap.xml</loc>
-  <lastmod>2017-05-04T15:44:00Z</lastmod>
+  <lastmod>2017-05-04T15:56:00Z</lastmod>
  </sitemap>
 </sitemapindex>
