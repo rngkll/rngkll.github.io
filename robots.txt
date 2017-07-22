@@ -1,4 +1,2 @@
 Sitemap: http://rngkll.github.io/sitemapindex.xml
 
-User-Agent: *
-Host: rngkll.github.io

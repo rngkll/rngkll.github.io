@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Mi Sitio (Publicaciones de Alvaro Segura Del Barco)</title><link>http://rngkll.github.io/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://rngkll.github.io/authors/alvaro-segura-del-barco.xml"></atom:link><language>es</language><copyright>Contents © 2017 &lt;a href="mailto:alvarosb@gmail.com"&gt;Alvaro Segura Del Barco&lt;/a&gt; </copyright><lastBuildDate>Sat, 22 Jul 2017 00:42:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Minar ethereum</title><link>http://rngkll.github.io/posts/minar-ethereum.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Requerimientos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Minador&lt;/li&gt;
+&lt;li&gt;Ubuntu Server 16.04&lt;/li&gt;
+&lt;li&gt;Opcional(tarjeta de video)&lt;/li&gt;
+&lt;li&gt;Python y python-twisted&lt;/li&gt;
+&lt;li&gt;Ethereum&lt;/li&gt;
+&lt;li&gt;cpp-ethereum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Se considera Ubuntu Server, en caso de Ubuntu Desktop algunos requerimientos ya vienen instalados en el sistema.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar ubuntu 16.04&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar python y python-wisted&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install python
+sudo apt-get install python-twisted
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository ppa:ethereum/ethereum
+sudo add-apt-repository ppa:ethereum/ethereum-qt
+sudo add-apt-repository ppa:ethereum/ethereum-dev
+sudo apt-get update
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Instalar cpp-ethereum&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install cpp-ethereum
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clonar el repositorio de &lt;a href="https://github.com/Atrides/eth-proxy"&gt;eth-proxy&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Crear un wallet con &lt;a href="https://github.com/ethereum/go-ethereum/wiki/geth"&gt;geth&lt;/a&gt; o &lt;a href="https://github.com/paritytech/parity"&gt;parity&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instalar los drivers de vídeo, en el caso de usar una tarjeta de vídeo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Modificar el archivo de configuración de eth-proxy para usar el wallet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;En el directorio eth-proxy, ejecutar &lt;code&gt;eth-proxy.py&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo python eth-proxy/eth-proxy.py
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Ejecutar &lt;code&gt;ethminer&lt;/code&gt; apuntando a localhost&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ethminer -F http://127.0.0.1:8080/minador -G
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; La opción &lt;code&gt;-G&lt;/code&gt; indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice &lt;code&gt;--allow-opencl-cpu&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;https://github.com/paritytech/parity
+https://github.com/Atrides/eth-proxy
+https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html&lt;/p&gt;&lt;/div&gt;</description><category>cryptomoneda</category><category>ethereum</category><category>jaquerespeis</category><category>minar</category><guid>http://rngkll.github.io/posts/minar-ethereum.html</guid><pubDate>Thu, 30 Mar 2017 18:00:00 GMT</pubDate></item><item><title>Jerk chicken natural</title><link>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;La idea&lt;/h2&gt;
+&lt;p&gt;Hace unos días estábamos de vacaciones en pavones y Coco(administradora de la casa rentada) nos llevo unas hojas de Allspice, de una se me ocurrió que podíamos hacer Jerk Chicken, resulta que la hoja tiene muy buen sabor pero no se conserva bien, por lo que no se vende comercialmente.&lt;/p&gt;
+&lt;h2&gt;Ingredientes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hojas de &lt;a href="https://en.wikipedia.org/wiki/Allspice"&gt;allspice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Ginger"&gt;Jengibre&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Salsa de soya&lt;/li&gt;
+&lt;li&gt;Cebolla&lt;/li&gt;
+&lt;li&gt;Ajo&lt;/li&gt;
+&lt;li&gt;Chile panameño o algun otro&lt;/li&gt;
+&lt;li&gt;Azucar&lt;/li&gt;
+&lt;li&gt;Sal&lt;/li&gt;
+&lt;li&gt;Aceite&lt;/li&gt;
+&lt;li&gt;Jugo de limón&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Preparación&lt;/h2&gt;
+&lt;p&gt;Las proporciones dependen de la cantidad y que tan fuerte se quiera, no me gusta hacerlo con medida pero voy a escribir unas instrucciones de mas o menos como lo hice.&lt;/p&gt;
+&lt;p&gt;En una licuadora agregué(cantidades aproximadas):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Allspice, 6 hojas.&lt;/li&gt;
+&lt;li&gt;Como 2 centimetros cubicos de jengibre.&lt;/li&gt;
+&lt;li&gt;Una botella de salsa de soya, aprox 100ml.&lt;/li&gt;
+&lt;li&gt;Unas 2 cebollas medianas.&lt;/li&gt;
+&lt;li&gt;media cabeza de ajo.&lt;/li&gt;
+&lt;li&gt;Un chile&lt;/li&gt;
+&lt;li&gt;Mas o menos, 5 cucharadas de azucar.&lt;/li&gt;
+&lt;li&gt;Al gusto, creo que fueron 2 cucharaditas de sal.&lt;/li&gt;
+&lt;li&gt;Aceite aproximadamente 150ml.&lt;/li&gt;
+&lt;li&gt;El jugo de 4 limones. &lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>allspice</category><category>comida</category><category>jerk</category><guid>http://rngkll.github.io/posts/el-mejor-jerk-chicken.html</guid><pubDate>Fri, 01 Jan 2016 06:00:00 GMT</pubDate></item><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://rngkll.github.io/posts/programar%20microcontrolador%20stm322.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Que se necesita&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Microcontrolador STM322&lt;/li&gt;
+&lt;li&gt;GDB o un debugger, editor de texto o IDE&lt;/li&gt;
+&lt;li&gt;Una maquina con Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Requerimientos con Gnu/Linux&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;arm-none-eabi-gcc – The GNU Compiler Collection – cross compilador para ARM EABI (directo en el procesador)&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-gdb – The GNU Debugger for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;arm-none-eabi-binutils – A set of programs to assemble and manipulate binary and object files for the ARM EABI (bare-metal) target&lt;/li&gt;
+&lt;li&gt;openocd – Debugging, in-system programming and boundary-scan testing for embedded target devices&lt;/li&gt;
+&lt;li&gt;vim – Editor de texto&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Terminos importantes&lt;/h2&gt;
+&lt;p&gt;CMSIS = Cortex Microcontroller Software Interface Standard &lt;a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php"&gt;info&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;&lt;/div&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://rngkll.github.io/posts/programar%20microcontrolador%20stm322.html</guid><pubDate>Mon, 28 Dec 2015 05:00:00 GMT</pubDate></item><item><title>Lugares de comida que me gustan</title><link>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Estos son algunos de los lugares que mas me gusta vistar para comer.&lt;/p&gt;
+&lt;h2&gt;Lista&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ruca che:&lt;/strong&gt; En moravia, exelente restaurante de carnes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Manos en la masa:&lt;/strong&gt; Increible brunch en barrio escalante, afuera de Casa Batsu.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go-fish:&lt;/strong&gt; Pinares, especialidad en mariscos pero todo es muy bueno.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rincon picante:&lt;/strong&gt; 150 este, soda tapia la sabana, la sopa en la que uno cocina el resto de ingredientes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;La asociación china:&lt;/strong&gt; San José, comida china, conocido tambien como la casa china.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Maxi's by Ricky:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Patty factory:&lt;/strong&gt; Cuando quiero una sopa de mondongo y no estoy en Limón, este es el lugar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Soda guiligan:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diagonal a la alizan francesa:&lt;/strong&gt; &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Soda tala:&lt;/strong&gt; El talapindo como tiene que ser, es el mejor desayuno que uno puede probar. &lt;a href="https://www.facebook.com/Soda-Tala-201049860065851/timeline/"&gt;facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chicharronera hermanos Level:&lt;/strong&gt; &lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>comida</category><category>restaurantes</category><guid>http://rngkll.github.io/posts/lugares-de-comida-que-me-gustan.html</guid><pubDate>Thu, 08 Oct 2015 03:56:28 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.&lt;/p&gt;
+&lt;p&gt;En el directorio del repositorio del sitio&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;virtualenv --python=python3 .env
+source .env/bin/activate
+pip3 install --upgrade "Nikola[extras]"
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Primeros usos&lt;/h3&gt;
+&lt;p&gt;En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando &lt;code&gt;nikola init --demo .&lt;/code&gt;, luego se debe de construir el sitio con el comando &lt;code&gt;nikola build&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El siguiente paso es ver el sitio, para lo que va a utilizar el comando &lt;code&gt;nikola serve -b&lt;/code&gt;, pero es mucho mas fácil utilizar &lt;code&gt;nikola auto -b&lt;/code&gt; para reconstrucciones automáticas.&lt;/p&gt;
+&lt;h2&gt;Utilizar markdown&lt;/h2&gt;
+&lt;p&gt;Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.&lt;/p&gt;
+&lt;p&gt;Primero se debe de verificar que este en la estructura &lt;strong&gt;COMPILERS&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# 'rest' is reStructuredText
+# 'markdown' is MarkDown
+# 'html' assumes the file is HTML and just copies it
+COMPILERS = {
+    "rest": ('.rst', '.txt'),
+    "markdown": ('.md', '.mdown', '.markdown'),
+    "textile": ('.textile',),
+    "txt2tags": ('.t2t',),
+    "bbcode": ('.bb',),
+    #"wiki": ('.wiki',),
+    "ipynb": ('.ipynb',),
+    "html": ('.html', '.htm'),
+    # PHP files are rendered the usual way (i.e. with the full templates).
+    # The resulting files have .php extensions, making it possible to run
+    # them without reconfiguring your server to recognize them.
+    "php": ('.php',),
+    # Pandoc detects the input from the source filename
+    # but is disabled by default as it would conflict
+    # with many of the others.
+    # "pandoc": ('.rst', '.md', '.txt'),
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, &lt;code&gt;("posts/*.md", "posts", "post.tmpl")&lt;/code&gt; a los dos tipos de entras &lt;strong&gt;POST&lt;/strong&gt; y &lt;strong&gt;PAGES&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;PAGES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Utilizar locales para Costa Rica&lt;/h2&gt;
+&lt;p&gt;Este proceso debería funcionar para la mayoría de idiomas.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Generar el locale necesario con `locale-get &lt;locale&gt;&lt;/locale&gt;&lt;/li&gt;
+&lt;li&gt;Definir cual es el locale que debe de utilizar Nikola por defecto.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# What is the default language?&lt;/span&gt;
+&lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"es"&lt;/span&gt;
+
+&lt;span class="c1"&gt;# What other languages do you have?&lt;/span&gt;
+&lt;span class="c1"&gt;# The format is {"translationcode" : "path/to/translation" }&lt;/span&gt;
+&lt;span class="c1"&gt;# the path will be used as a prefix for the generated pages location&lt;/span&gt;
+&lt;span class="n"&gt;TRANSLATIONS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"es_CR"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="c1"&gt;# Example for another language:&lt;/span&gt;
+    &lt;span class="c1"&gt;# "es": "./es",&lt;/span&gt;
+    &lt;span class="s2"&gt;"es"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"./"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;"en"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"./en"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Definir el locale que se va a utilizar para &lt;code&gt;es&lt;/code&gt;, por defecto es &lt;code&gt;es_ES&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;LOCALES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"es"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;"es_CR.utf-8"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;El locale a utilizar puede ser probado, importando locale &lt;code&gt;import locale&lt;/code&gt; y llamando al locale necesario &lt;code&gt;locale.setlocale(locale.LC_ALL, 'es_CR.utf-8')&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>jaquerespeis</category><category>markdown</category><category>nikola</category><category>python</category><guid>http://rngkll.github.io/posts/utilizar-nikola.html</guid><pubDate>Fri, 21 Aug 2015 05:00:00 GMT</pubDate></item><item><title>Configuración para la printrbot simple</title><link>http://rngkll.github.io/posts/configuracion-para-la-printrbot-simple.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h3&gt;Código:&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;M104 S{TEMP0} ; set temperature
+G21 ;metric values
+G90 ;absolute positioning
+M82 ;set extruder to absolute mode
+M107 ;start with the fan off
+G28 X0 Y0 ;move X/Y to min endstops
+G28 Z0 ;move Z to min endstops
+M109 S{TEMP0} ;wait on temperature line
+G29 ; Auto bed levelling
+G92 E0 ;zero the extruded length
+G1 F{TRAVEL_SPEED} ;
+&lt;/pre&gt;&lt;/div&gt;</description><category>3dprint</category><category>printrbot</category><guid>http://rngkll.github.io/posts/configuracion-para-la-printrbot-simple.html</guid><pubDate>Sat, 15 Aug 2015 03:39:41 GMT</pubDate></item><item><title>Using US netflix with roku and openwrt</title><link>http://rngkll.github.io/posts/using-us-netflix-with-roku-and-openwrt.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;First method&lt;/h2&gt;
+&lt;p&gt;The Roku has no possibility to change the DNS to a specific one, so to use US Netflix with the roku the DNS has to be set in  the router.&lt;/p&gt;
+&lt;p&gt;I don’t like all my DNS traffic going to a DNS that I don’t trust so with options of dnsmasq that comes with openwrt I set DNS Forwarding.&lt;/p&gt;
+&lt;p&gt;Be careful to change x.x.x.x for the ip address of the DNS service you want to use.&lt;/p&gt;
+&lt;p&gt;example http://www.unblock-us.com ip 208.122.23.23&lt;/p&gt;
+&lt;p&gt;in the file /etc/config/dhcp add the following lines below config dnsmasq.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    list server '/netflix.com/x.x.x.x'
+    list server '/nflximg.net/x.x.x.x'
+    list server '/nflximg.com/x.x.x.x'
+    list server '/roku.com/x.x.x.x'
+    list server '/mgo-images.com/x.x.x.x'
+    list server '/netflix.net/x.x.x.x'
+    list server '/netflix.net/x.x.x.x'
+    list server '/roku.com/x.x.x.x'
+    list server '/scorecardresearch.com/x.x.x.x'
+&lt;/pre&gt;
+
+
+&lt;p&gt;it is necessary to add all that list servers.&lt;/p&gt;
+&lt;p&gt;This method could work for any other hardware but I have only tested it in the roku.&lt;/p&gt;
+&lt;h2&gt;Second method&lt;/h2&gt;
+&lt;p&gt;At first I was using the first method but I had to keep adding forwarder addresses to the dhcp file.&lt;/p&gt;
+&lt;p&gt;in “network-&amp;gt;firewall-&amp;gt;custom rules” add the following rules&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;iptables -t nat -A PREROUTING -i br-lan -s x.x.x.x -p udp –dport 53 -j DNAT –to-destination y.y.y.y:53
+#iptables -t nat -A POSTROUTING -j MASQUERADE
+&lt;/pre&gt;
+
+
+&lt;p&gt;where &lt;code&gt;x.x.x.x&lt;/code&gt; is the roku or other device you want to use with a specific dns server and &lt;code&gt;y.y.y.y&lt;/code&gt; is the address of the specific dns server.&lt;/p&gt;&lt;/div&gt;</description><guid>http://rngkll.github.io/posts/using-us-netflix-with-roku-and-openwrt.html</guid><pubDate>Sat, 30 Aug 2014 03:30:19 GMT</pubDate></item><item><title>Instalando RepetierHost en Ubuntu 1404</title><link>http://rngkll.github.io/posts/instalando-repetierhost-en-ubuntu-1404.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalar&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Para utilizar la printrbot simple estoy utilizando RepetierHost, estos son algunos de los pasos que seguí para poder imprimir.&lt;/li&gt;
+&lt;li&gt;Descargar RepetierHost de http://www.repetier.com/download/&lt;/li&gt;
+&lt;li&gt;Descomprimir y mover la carpeta RepetierHost al lugar donde se desea.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ej: repetierHostLinux_0_95.tgz&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;tar -xzf repetierHostLinux_0_95.tgz
+mv RepetierHost $HOME
+&lt;/pre&gt;
+
+
+&lt;p&gt;o donde se desea dejar, &lt;code&gt;cd RepetierHost&lt;/code&gt; y luego ejecutar configureFirst.sh, lo cual les va a instalar las dependencias del sistema.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;./configureFirst.sh&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Si da errores al descargar ExtUtils-ParseXS-3.18_04.tar.gz o parecido&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Working on SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz
+Fetching http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz ... FAIL
+! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
+! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
+! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
+! Failed to download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz
+! Failed to fetch distribution ExtUtils-ParseXS-3.18_04
+--&amp;gt; Working on ./xs
+&lt;/pre&gt;
+
+
+&lt;p&gt;es necesario actualizar la linea 127 en Slic3r/Build.PL
+y cambiar&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz';
+&lt;/pre&gt;
+
+
+&lt;p&gt;por&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.24.tar.gz';
+&lt;/pre&gt;
+
+
+&lt;p&gt;Luego ejecutar de nuevo configureFirst.sh como anteriormente.&lt;/p&gt;
+&lt;p&gt;van a ver unos errores en las pruebas pero el sistema va a funcionar bien.&lt;/p&gt;
+&lt;p&gt;Al abrir RepetierHost es necesario como primer paso configurar la impresora, para esto van a "Printer Settings" y utilizan la siguiente configuración&lt;/p&gt;
+&lt;p&gt;En la pestaña de connection&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;port: /dev/ttyACM0
+Baud Rate: 230400
+Trasfer Protocol: Autodetect
+Reset on Connect: Disabled
+Reset on Emergency: Send emergency command and reconnect
+En la pestaña Printer
+&lt;/pre&gt;
+
+
+&lt;p&gt;Defautl Heated Bed Temperature: 0&lt;/p&gt;
+&lt;p&gt;En la pestaña Printer Shape&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;X MAx 100
+Y Max 100
+Print Area Width: 100
+Print Area Depth: 100
+Print Area Height: 100
+&lt;/pre&gt;
+
+
+&lt;p&gt;Cuando tenga mas recomendaciones las agrego, si alguien tiene alguna recomendación se lo agradecería para agregarla.&lt;/p&gt;&lt;/div&gt;</description><category>3dprint printrbot</category><guid>http://rngkll.github.io/posts/instalando-repetierhost-en-ubuntu-1404.html</guid><pubDate>Wed, 07 May 2014 16:23:32 GMT</pubDate></item><item><title>Optimización de apache2</title><link>http://rngkll.github.io/posts/optimizacion-de-apache2.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;p&gt;Primero hay que revisar cuales módulos están cargados, esto se puede hacer con&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;apachectl -M
+&lt;/pre&gt;
+
+
+&lt;p&gt;Lo ideal es tener solo los módulos necesarios para que el sitio funcione, la cantidad de módulos influye en e tamaño de cada proceso de apache que se encuentra corriendo.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;HostnameLookups off
+&lt;/pre&gt;
+
+
+&lt;p&gt;Cuando un cliente el accede el servidor web, se crea una bitácora en access.log, si esta directiva esta en On se busca el nombre en el servidor de nombres, aun con un cache de dns esto es muy lento.&lt;/p&gt;
+&lt;p&gt;Cuando se establece una conexión esta se deja escuchando por un tiempo por si se le hace una nueva petición, en el caso de tener muchos visitantes y dejar la conexiones abiertas por mucho tiempo, se crea un problema, por eso se puede bajar el tiempo para poder servir nuevas peticiones. (Esta altamente ligado al MaxClients).&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;KeepAlive On
+KeepAliveTimeout 2
+&lt;/pre&gt;
+
+
+&lt;p&gt;Para el momento de calcular MaxClients.&lt;/p&gt;
+&lt;p&gt;Una buena referencia es MaxClients = (total de memoria)/(promedio de memoria utilizada por cada proceso de apache)&lt;/p&gt;
+&lt;p&gt;Una buena manera de ver el tamaño de un proceso de apache es con el comando &lt;code&gt;ps -ylC apache2 --sort:rss&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Con esto se puede ver el tamaño del proceso mas grande de ultimo.&lt;/p&gt;
+&lt;p&gt;Una suma de la columna del rss nos da un valor del total de memoria que esta usando el proceso, esto puede aumentar porque no todos los procesos tiene el mismo tamaño.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ps -ylC apache2 --sort:rss | awk '{SUM += $8 } END {print SUM}'
+&lt;/pre&gt;
+
+
+&lt;p&gt;Hay que tomar en cuenta también el resto de procesos del servidor.&lt;/p&gt;
+&lt;p&gt;Utilizando top y acomodando por rss podemos ver los procesos que están utilizando mas memoria, entre estos deberíamos encontrar los procesos de apache y el o los de la base de datos si es que se tiene una.&lt;/p&gt;&lt;/div&gt;</description><category>apache</category><category>keepalive</category><category>optimizacion</category><category>web</category><guid>http://rngkll.github.io/posts/optimizacion-de-apache2.html</guid><pubDate>Fri, 18 Oct 2013 17:16:14 GMT</pubDate></item><item><title>Freeswitch in Raspberry Pi</title><link>http://rngkll.github.io/posts/freeswitch-in-raspberry-pi.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Experiments using raspberry pi&lt;/h2&gt;
+&lt;p&gt;I bought the raspberry pi to use it as a print and scanner server in my house, now I have some more ideas, one is using freeswitch to test voip performance in the rpi.&lt;/p&gt;
+&lt;p&gt;installing Freeswitch in the rpi.&lt;/p&gt;
+&lt;p&gt;Pi uses the default Debian image so we need to install Debian dependencies.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;apt-get install autoconf automake gawk g++ git-core libjpeg62-dev libncurses5-dev libtool make python-dev gawk pkg-config libtiff4-dev libperl-dev libgdbm-dev libdb-dev
+&lt;/pre&gt;
+
+
+&lt;p&gt;Change to /usr/local/src and download Freeswitch using git&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone -b v1.2.stable git://git.freeswitch.org/freeswitch.git
+git clone git://git.freeswitch.org/freeswitch-contrib.git
+git clone git://git.freeswitch.org/freeswitch-sample-configs.git
+&lt;/pre&gt;
+
+
+&lt;p&gt;Raspberry Pi has limited resources so I will compile Freeswitch to get a better performance.&lt;/p&gt;
+&lt;h3&gt;Compiling steps&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;./bootstrap.sh ./configure -C
+&lt;/pre&gt;
+
+
+&lt;p&gt;I had some problems when mod_flite enabled, I have a 256mb rpi.&lt;/p&gt;
+&lt;p&gt;make &amp;amp;&amp;amp; make install Now Freeswitch is installed. freeswitch initscript for debian can be found here&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;p&gt;http://wiki.freeswitch.org/wiki/Installation_Guide&lt;/p&gt;&lt;/div&gt;</description><guid>http://rngkll.github.io/posts/freeswitch-in-raspberry-pi.html</guid><pubDate>Tue, 09 Jul 2013 16:23:32 GMT</pubDate></item></channel></rss>
