@@ -3,33 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="description" content="Varas ahí">
-<meta name="viewport" content="width=device-width">
-<title>Mi Sitio | Mi Sitio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Sitio</title>
 <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="en/rss.xml">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="en/rss.xml">
 <link rel="canonical" href="http://rngkll.github.io/index.html">
 <link rel="next" href="index-1.html" type="text/html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
 </head>
-<body class="home blog">
-    <div id="wrap" style="width:850px">
-        <div id="container" style="width:560px">
-            
-            
-        <div class="postbox">
-        <h1><a href="posts/holamundo-ethereum.html">HolaMundo con ethereum</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2017-07-18T23:00:00-06:00">2017-07-18 23:00</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/ethereum.html"><span>ethereum</span></a>
-                            <a class="tag" href="categories/jaquerespeis.html"><span>jaquerespeis</span></a>
-                            <a class="tag" href="categories/smart-contracts.html"><span>smart contracts</span></a>
-                </span>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
             </div>
-        <div>
-<h2>Lista de herramientas</h2>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href=".">
+
+            <span id="blog-title">Mi Sitio</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+
+                    
+                    
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="archive.html" class="nav-link">Archivo</a>
+                </li>
+<li class="nav-item">
+<a href="categories/index.html" class="nav-link">Etiquetas</a>
+                </li>
+<li class="nav-item">
+<a href="rss.xml" class="nav-link">Canal RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+    
+        
+
+    
+        
+    <div class="postindex">
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/holamundo-ethereum.html" class="u-url">HolaMundo con ethereum</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco-edgar-barrantes-brais.html">Alvaro Segura Del Barco, Edgar Barrantes Brais</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/holamundo-ethereum.html" rel="bookmark">
+            <time class="published dt-published" datetime="2017-07-18T23:00:00-06:00" itemprop="datePublished" title="2017-07-18 23:00">2017-07-18 23:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>Lista de herramientas</h2>
 <ul>
 <li>testRPC</li>
 <li>nvm</li>
@@ -41,256 +99,236 @@
 <h2>Instalación</h2>
 <h3>Linux</h3>
 <p>Los siguientes pasos muestras como instalar las herramientas necesarias en Ubuntu 17.04</p>
-<pre class="code literal-block"><span></span>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+<div class="code"><pre class="code literal-block">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm ls-remote
 nvm install &lt;la ultima LTS&gt;
 npm install -g ethereumjs-testrpc
 npm install solc
 npm install web3
-</pre>
-
+</pre></div>
 
 <h3>Mac</h3>
 <p>Para instalar nvm es necesario tener <a href="https://brew.sh/">brew</a></p>
-<pre class="code literal-block"><span></span>brew install nvm
+<div class="code"><pre class="code literal-block">brew install nvm
 nvm ls-remote
 nvm install &lt;la ultima LTS&gt;
 npm install -g ethereumjs-testrpc
 npm install solc
 npm install web3
-</pre>
-
+</pre></div>
 
 <h2>Desarrollo</h2>
 <p>Con el editor preferido, escribir el contrato, para esto se va a utilizar el lenguage <a href="https://solidity.readthedocs.io/en/develop/"><strong>solidity</strong></a>, sin embargo existen otras opciones como <a href="https://github.com/ethereum/wiki/wiki/Serpent"><strong>serpent</strong></a>.</p>
 <p>Para compilar el contrato vamos a utilizar el comando <code>solc --bin --optimize &lt;archivo.sol&gt;</code></p>
 <p>Escribit el siguiente contrato en un archivo llamado Voting.sol</p>
-<pre class="code literal-block"><span></span>pragma solidity ^0.4.11;
-// We have to specify what version of compiler this code will compile with
+<div class="code"><pre class="code literal-block"><span class="k">pragma solidity</span><span class="w"> </span><span class="o">^</span><span class="k">0.4.11</span><span class="p">;</span>
+<span class="c1">// We have to specify what version of compiler this code will compile with</span>
 
-contract Voting {
-  /* mapping field below is equivalent to an associative array or hash.
-  The key of the mapping is candidate name stored as type bytes32 and value is
-  an unsigned integer to store the vote count
-  */
+<span class="k">contract</span><span class="w"> </span><span class="ni">Voting</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="cm">/* mapping field below is equivalent to an associative array or hash.</span>
+<span class="cm">  The key of the mapping is candidate name stored as type bytes32 and value is</span>
+<span class="cm">  an unsigned integer to store the vote count</span>
+<span class="cm">  */</span>
 
-  mapping (bytes32 =&gt; uint8) public votesReceived;
+<span class="w">  </span><span class="kt">mapping</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">uint8</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>votesReceived<span class="p">;</span>
 
-  /* Solidity doesn't let you pass in an array of strings in the constructor (yet).
-  We will use an array of bytes32 instead to store the list of candidates
-  */
+<span class="w">  </span><span class="cm">/* Solidity doesn't let you pass in an array of strings in the constructor (yet).</span>
+<span class="cm">  We will use an array of bytes32 instead to store the list of candidates</span>
+<span class="cm">  */</span>
 
-  bytes32[] public candidateList;
+<span class="w">  </span><span class="kt">bytes32</span><span class="p">[]</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>candidateList<span class="p">;</span>
 
-  /* This is the constructor which will be called once when you
-  deploy the contract to the blockchain. When we deploy the contract,
-  we will pass an array of candidates who will be contesting in the election
-  */
-  function Voting(bytes32[] candidateNames) {
-    candidateList = candidateNames;
-  }
+<span class="w">  </span><span class="cm">/* This is the constructor which will be called once when you</span>
+<span class="cm">  deploy the contract to the blockchain. When we deploy the contract,</span>
+<span class="cm">  we will pass an array of candidates who will be contesting in the election</span>
+<span class="cm">  */</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">Voting</span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[]</span><span class="w"> </span>candidateNames<span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>candidateList<span class="w"> </span><span class="o">=</span><span class="w"> </span>candidateNames<span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-  // This function returns the total votes a candidate has received so far
-  function totalVotesFor(bytes32 candidate) returns (uint8) {
-    if (validCandidate(candidate) == false) throw;
-    return votesReceived[candidate];
-  }
+<span class="w">  </span><span class="c1">// This function returns the total votes a candidate has received so far</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">totalVotesFor</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">candidate</span><span class="p">)</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>validCandidate<span class="p">(</span>candidate<span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">false</span><span class="p">)</span><span class="w"> </span><span class="kt">throw</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">return</span><span class="w"> </span>votesReceived<span class="p">[</span>candidate<span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
 
-  // This function increments the vote count for the specified candidate. This
-  // is equivalent to casting a vote
-  function voteForCandidate(bytes32 candidate) {
-    if (validCandidate(candidate) == false) throw;
-    votesReceived[candidate] += 1;
-  }
+<span class="w">  </span><span class="c1">// This function increments the vote count for the specified candidate. This</span>
+<span class="w">  </span><span class="c1">// is equivalent to casting a vote</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">voteForCandidate</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">candidate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>validCandidate<span class="p">(</span>candidate<span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">false</span><span class="p">)</span><span class="w"> </span><span class="kt">throw</span><span class="p">;</span>
+<span class="w">    </span>votesReceived<span class="p">[</span>candidate<span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-  function validCandidate(bytes32 candidate) returns (bool) {
-    for(uint i = 0; i &lt; candidateList.length; i++) {
-      if (candidateList[i] == candidate) {
-        return true;
-      }
-    }
-    return false;
-  }
-}
-</pre>
-
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">validCandidate</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">candidate</span><span class="p">)</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">for</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>candidateList<span class="p">.</span>length<span class="p">;</span><span class="w"> </span>i<span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>candidateList<span class="p">[</span>i<span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>candidate<span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">return</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">return</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
 
 <h3>Pasos para desplegar el contrato</h3>
 <p><em>Ejecutar node</em></p>
 <p>Mientras se ejecutan los comandos, se puede ver su salida y analizarla.</p>
-<pre class="code literal-block"><span></span><span class="nx">Web3</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'web3'</span><span class="p">)</span>
-<span class="nx">web3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Web3</span><span class="p">(</span><span class="k">new</span> <span class="nx">Web3</span><span class="p">.</span><span class="nx">providers</span><span class="p">.</span><span class="nx">HttpProvider</span><span class="p">(</span><span class="s2">"http://localhost:8545"</span><span class="p">));</span>
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="nx">Web3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'web3'</span><span class="p">)</span>
+<span class="nx">web3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Web3</span><span class="p">(</span><span class="ow">new</span><span class="w"> </span><span class="nx">Web3</span><span class="p">.</span><span class="nx">providers</span><span class="p">.</span><span class="nx">HttpProvider</span><span class="p">(</span><span class="s2">"http://localhost:8545"</span><span class="p">));</span>
+</pre></div>
 
 <p>Listar las cuentas existentes en la red</p>
-<pre class="code literal-block"><span></span><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span>
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span>
+</pre></div>
 
 <p>Compilar el código </p>
-<pre class="code literal-block"><span></span><span class="nx">code</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">'Voting.sol'</span><span class="p">).</span><span class="nx">toString</span><span class="p">()</span>
-<span class="nx">solc</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'solc'</span><span class="p">)</span>
-<span class="nx">compiledCode</span> <span class="o">=</span> <span class="nx">solc</span><span class="p">.</span><span class="nx">compile</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span>
-</pre>
+<div class="code"><pre class="code literal-block"><span class="nx">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">'Voting.sol'</span><span class="p">).</span><span class="nx">toString</span><span class="p">()</span>
+<span class="nx">solc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'solc'</span><span class="p">)</span>
+<span class="nx">compiledCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">solc</span><span class="p">.</span><span class="nx">compile</span><span class="p">(</span><span class="nx">code</span><span class="p">)</span>
+</pre></div>
 
-
-<pre class="code literal-block"><span></span><span class="nx">abiDefinition</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">compiledCode</span><span class="p">.</span><span class="nx">contracts</span><span class="p">[</span><span class="s1">':Voting'</span><span class="p">].</span><span class="kr">interface</span><span class="p">)</span>
-<span class="nx">VotingContract</span> <span class="o">=</span> <span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">contract</span><span class="p">(</span><span class="nx">abiDefinition</span><span class="p">)</span>
-<span class="nx">byteCode</span> <span class="o">=</span> <span class="nx">compiledCode</span><span class="p">.</span><span class="nx">contracts</span><span class="p">[</span><span class="s1">':Voting'</span><span class="p">].</span><span class="nx">bytecode</span>
-<span class="nx">deployedContract</span> <span class="o">=</span> <span class="nx">VotingContract</span><span class="p">.</span><span class="k">new</span><span class="p">([</span><span class="s1">'Rama'</span><span class="p">,</span><span class="s1">'Nick'</span><span class="p">,</span><span class="s1">'Jose'</span><span class="p">],{</span><span class="nx">data</span><span class="o">:</span> <span class="nx">byteCode</span><span class="p">,</span> <span class="nx">from</span><span class="o">:</span> <span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">gas</span><span class="o">:</span> <span class="mi">4700000</span><span class="p">})</span>
+<div class="code"><pre class="code literal-block"><span class="nx">abiDefinition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">compiledCode</span><span class="p">.</span><span class="nx">contracts</span><span class="p">[</span><span class="s1">':Voting'</span><span class="p">].</span><span class="kr">interface</span><span class="p">)</span>
+<span class="nx">VotingContract</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">contract</span><span class="p">(</span><span class="nx">abiDefinition</span><span class="p">)</span>
+<span class="nx">byteCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">compiledCode</span><span class="p">.</span><span class="nx">contracts</span><span class="p">[</span><span class="s1">':Voting'</span><span class="p">].</span><span class="nx">bytecode</span>
+<span class="nx">deployedContract</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">VotingContract</span><span class="p">.</span><span class="ow">new</span><span class="p">([</span><span class="s1">'Rama'</span><span class="p">,</span><span class="s1">'Nick'</span><span class="p">,</span><span class="s1">'Jose'</span><span class="p">],{</span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="nx">byteCode</span><span class="p">,</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">gas</span><span class="o">:</span><span class="w"> </span><span class="mf">4700000</span><span class="p">})</span>
 <span class="nx">deployedContract</span><span class="p">.</span><span class="nx">address</span>
-<span class="nx">contractInstance</span> <span class="o">=</span> <span class="nx">VotingContract</span><span class="p">.</span><span class="nx">at</span><span class="p">(</span><span class="nx">deployedContract</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
-</pre>
+<span class="nx">contractInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">VotingContract</span><span class="p">.</span><span class="nx">at</span><span class="p">(</span><span class="nx">deployedContract</span><span class="p">.</span><span class="nx">address</span><span class="p">)</span>
+</pre></div>
 
+<div class="code"><pre class="code literal-block"><span class="o">&gt;</span><span class="w"> </span><span class="nx">contractInstance</span><span class="p">.</span><span class="nx">totalVotesFor</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">)</span>
 
-<pre class="code literal-block"><span></span><span class="o">&gt;</span> <span class="nx">contractInstance</span><span class="p">.</span><span class="nx">totalVotesFor</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">)</span>
+<span class="p">{</span><span class="w"> </span><span class="p">[</span><span class="nb">String</span><span class="o">:</span><span class="w"> </span><span class="s1">'0'</span><span class="p">]</span><span class="w"> </span><span class="nx">s</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">e</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
 
-<span class="p">{</span> <span class="p">[</span><span class="nb">String</span><span class="o">:</span> <span class="s1">'0'</span><span class="p">]</span> <span class="nx">s</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">e</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">c</span><span class="o">:</span> <span class="p">[</span> <span class="mi">0</span> <span class="p">]</span> <span class="p">}</span>
-
-<span class="o">&gt;</span> <span class="nx">contractInstance</span><span class="p">.</span><span class="nx">voteForCandidate</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">,</span> <span class="p">{</span><span class="nx">from</span><span class="o">:</span> <span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nx">contractInstance</span><span class="p">.</span><span class="nx">voteForCandidate</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mf">0</span><span class="p">]})</span>
 
 <span class="s1">'0xdedc7ae544c3dde74ab5a0b07422c5a51b5240603d31074f5b75c0ebc786bf53'</span>
 
-<span class="o">&gt;</span> <span class="nx">contractInstance</span><span class="p">.</span><span class="nx">voteForCandidate</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">,</span> <span class="p">{</span><span class="nx">from</span><span class="o">:</span> <span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nx">contractInstance</span><span class="p">.</span><span class="nx">voteForCandidate</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mf">0</span><span class="p">]})</span>
 
 <span class="s1">'0x02c054d238038d68b65d55770fabfca592a5cf6590229ab91bbe7cd72da46de9'</span>
 
-<span class="o">&gt;</span> <span class="nx">contractInstance</span><span class="p">.</span><span class="nx">voteForCandidate</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">,</span> <span class="p">{</span><span class="nx">from</span><span class="o">:</span> <span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]})</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nx">contractInstance</span><span class="p">.</span><span class="nx">voteForCandidate</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="nx">web3</span><span class="p">.</span><span class="nx">eth</span><span class="p">.</span><span class="nx">accounts</span><span class="p">[</span><span class="mf">0</span><span class="p">]})</span>
 
 <span class="s1">'0x3da069a09577514f2baaa11bc3015a16edf26aad28dffbcd126bde2e71f2b76f'</span>
 
-<span class="o">&gt;</span> <span class="nx">contractInstance</span><span class="p">.</span><span class="nx">totalVotesFor</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">()</span>
+<span class="o">&gt;</span><span class="w"> </span><span class="nx">contractInstance</span><span class="p">.</span><span class="nx">totalVotesFor</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s1">'Rama'</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">()</span>
 
 <span class="s1">'3'</span>
-</pre>
-
+</pre></div>
 
 <h2>Opcodes de la EVM</h2>
 <h3>0s: Stop and Arithmetic Operations</h3>
-<pre class="code literal-block"><span></span>0x00    STOP        Halts execution
-0x01    ADD         Addition operation
-0x02    MUL         Multiplication operation
-0x03    SUB         Subtraction operation
-0x04    DIV         Integer division operation
-0x05    SDIV        Signed integer
-0x06    MOD         Modulo
-0x07    SMOD        Signed modulo
-0x08    ADDMOD      Modulo
-0x09    MULMOD      Modulo
-0x0a    EXP         Exponential operation
-0x0b    SIGNEXTEND  Extend length of two's complement signed integer
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x00</span><span class="w">    </span><span class="kr">STOP</span><span class="w">        </span><span class="n">Halts</span><span class="w"> </span><span class="n">execution</span>
+<span class="mf">0</span><span class="n">x01</span><span class="w">    </span><span class="n">ADD</span><span class="w">         </span><span class="n">Addition</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x02</span><span class="w">    </span><span class="n">MUL</span><span class="w">         </span><span class="n">Multiplication</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x03</span><span class="w">    </span><span class="n">SUB</span><span class="w">         </span><span class="n">Subtraction</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x04</span><span class="w">    </span><span class="n">DIV</span><span class="w">         </span><span class="nb">Int</span><span class="n">eger</span><span class="w"> </span><span class="n">division</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x05</span><span class="w">    </span><span class="n">SDIV</span><span class="w">        </span><span class="n">Signed</span><span class="w"> </span><span class="nb">int</span><span class="n">eger</span>
+<span class="mf">0</span><span class="n">x06</span><span class="w">    </span><span class="n">MOD</span><span class="w">         </span><span class="n">Modulo</span>
+<span class="mf">0</span><span class="n">x07</span><span class="w">    </span><span class="n">SMOD</span><span class="w">        </span><span class="n">Signed</span><span class="w"> </span><span class="n">modulo</span>
+<span class="mf">0</span><span class="n">x08</span><span class="w">    </span><span class="n">ADDMOD</span><span class="w">      </span><span class="n">Modulo</span>
+<span class="mf">0</span><span class="n">x09</span><span class="w">    </span><span class="n">MULMOD</span><span class="w">      </span><span class="n">Modulo</span>
+<span class="mf">0</span><span class="n">x0a</span><span class="w">    </span><span class="nb">EXP</span><span class="w">         </span><span class="nb">Exp</span><span class="kr">on</span><span class="n">ential</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x0b</span><span class="w">    </span><span class="n">SIGNEXTEND</span><span class="w">  </span><span class="n">Extend</span><span class="w"> </span><span class="nb">len</span><span class="n">gth</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">two</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">complement</span><span class="w"> </span><span class="n">signed</span><span class="w"> </span><span class="nb">int</span><span class="n">eger</span>
+</pre></div>
 
 <h3>10s: Comparison &amp; Bitwise Logic Operations</h3>
-<pre class="code literal-block"><span></span>0x10    LT      Lesser-than comparison
-0x11    GT      Greater-than comparison
-0x12    SLT     Signed less-than comparison
-0x13    SGT     Signed greater-than comparison
-0x14    EQ      Equality  comparison
-0x15    ISZERO  Simple not operator
-0x16    AND     Bitwise AND operation
-0x17    OR      Bitwise OR operation
-0x18    XOR     Bitwise XOR operation
-0x19    NOT     Bitwise NOT operation
-0x1a    BYTE    Retrieve single byte from word
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x10</span><span class="w">    </span><span class="n">LT</span><span class="w">      </span><span class="n">Lesser</span><span class="o">-</span><span class="n">than</span><span class="w"> </span><span class="n">comparison</span>
+<span class="mf">0</span><span class="n">x11</span><span class="w">    </span><span class="n">GT</span><span class="w">      </span><span class="n">Greater</span><span class="o">-</span><span class="n">than</span><span class="w"> </span><span class="n">comparison</span>
+<span class="mf">0</span><span class="n">x12</span><span class="w">    </span><span class="n">SLT</span><span class="w">     </span><span class="n">Signed</span><span class="w"> </span><span class="n">less</span><span class="o">-</span><span class="n">than</span><span class="w"> </span><span class="n">comparison</span>
+<span class="mf">0</span><span class="n">x13</span><span class="w">    </span><span class="n">SGT</span><span class="w">     </span><span class="n">Signed</span><span class="w"> </span><span class="n">greater</span><span class="o">-</span><span class="n">than</span><span class="w"> </span><span class="n">comparison</span>
+<span class="mf">0</span><span class="n">x14</span><span class="w">    </span><span class="n">EQ</span><span class="w">      </span><span class="n">Equality</span><span class="w">  </span><span class="n">comparison</span>
+<span class="mf">0</span><span class="n">x15</span><span class="w">    </span><span class="n">ISZERO</span><span class="w">  </span><span class="n">Simple</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">operator</span>
+<span class="mf">0</span><span class="n">x16</span><span class="w">    </span><span class="ow">AND</span><span class="w">     </span><span class="n">Bitwise</span><span class="w"> </span><span class="ow">AND</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x17</span><span class="w">    </span><span class="ow">OR</span><span class="w">      </span><span class="n">Bitwise</span><span class="w"> </span><span class="ow">OR</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x18</span><span class="w">    </span><span class="n">XOR</span><span class="w">     </span><span class="n">Bitwise</span><span class="w"> </span><span class="n">XOR</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x19</span><span class="w">    </span><span class="ow">NOT</span><span class="w">     </span><span class="n">Bitwise</span><span class="w"> </span><span class="ow">NOT</span><span class="w"> </span><span class="n">operation</span>
+<span class="mf">0</span><span class="n">x1a</span><span class="w">    </span><span class="n">BYTE</span><span class="w">    </span><span class="n">Retrieve</span><span class="w"> </span><span class="nb">sin</span><span class="n">gle</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">word</span>
+</pre></div>
 
 <h3>20s: SHA3</h3>
-<pre class="code literal-block"><span></span>0x20    SHA3    Compute Keccak-256 hash
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x20</span><span class="w">    </span><span class="n">SHA3</span><span class="w">    </span><span class="n">Compute</span><span class="w"> </span><span class="n">Keccak</span><span class="o">-</span><span class="mf">256</span><span class="w"> </span><span class="n">hash</span>
+</pre></div>
 
 <h3>30s: Environmental Information</h3>
-<pre class="code literal-block"><span></span>0x30    ADDRESS         Get address of currently executing account
-0x31    BALANCE         Get balance of the given account
-0x32    ORIGIN          Get execution origination address
-0x33    CALLER          Get caller address. This is the address of the account that is directly responsible for this execution
-0x34    CALLVALUE       Get deposited value by the instruction/transaction responsible for this execution
-0x35    CALLDATALOAD    Get input data of current environment
-0x36    CALLDATASIZE    Get size of input data in current environment
-0x37    CALLDATACOPY    Copy input data in current environment to memory This pertains to the input data passed with the message call instruction or transaction
-0x38    CODESIZE        Get size of code running in current environment
-0x39    CODECOPY        Copy code running in current environment to memory
-0x3a    GASPRICE        Get price of gas in current environment
-0x3b    EXTCODESIZE     Get size of an account's code
-0x3c    EXTCODECOPY     Copy an account's code to memory
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x30</span><span class="w">    </span><span class="n">ADDRESS</span><span class="w">         </span><span class="kr">Get</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">currently</span><span class="w"> </span><span class="n">executing</span><span class="w"> </span><span class="n">account</span>
+<span class="mf">0</span><span class="n">x31</span><span class="w">    </span><span class="n">BALANCE</span><span class="w">         </span><span class="kr">Get</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">given</span><span class="w"> </span><span class="n">account</span>
+<span class="mf">0</span><span class="n">x32</span><span class="w">    </span><span class="ow">OR</span><span class="n">IGIN</span><span class="w">          </span><span class="kr">Get</span><span class="w"> </span><span class="n">execution</span><span class="w"> </span><span class="ow">or</span><span class="n">igination</span><span class="w"> </span><span class="n">address</span>
+<span class="mf">0</span><span class="n">x33</span><span class="w">    </span><span class="n">CALLER</span><span class="w">          </span><span class="kr">Get</span><span class="w"> </span><span class="n">caller</span><span class="w"> </span><span class="n">address</span><span class="mf">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">address</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">directly</span><span class="w"> </span><span class="n">responsible</span><span class="w"> </span><span class="kr">for</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">execution</span>
+<span class="mf">0</span><span class="n">x34</span><span class="w">    </span><span class="n">CALLVALUE</span><span class="w">       </span><span class="kr">Get</span><span class="w"> </span><span class="n">deposited</span><span class="w"> </span><span class="nb">val</span><span class="n">ue</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">instruction</span><span class="o">/</span><span class="n">transaction</span><span class="w"> </span><span class="n">responsible</span><span class="w"> </span><span class="kr">for</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">execution</span>
+<span class="mf">0</span><span class="n">x35</span><span class="w">    </span><span class="n">CALLDATALOAD</span><span class="w">    </span><span class="kr">Get</span><span class="w"> </span><span class="kr">input</span><span class="w"> </span><span class="kd">data</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">environment</span>
+<span class="mf">0</span><span class="n">x36</span><span class="w">    </span><span class="n">CALLDATASIZE</span><span class="w">    </span><span class="kr">Get</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="kr">input</span><span class="w"> </span><span class="kd">data</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">environment</span>
+<span class="mf">0</span><span class="n">x37</span><span class="w">    </span><span class="n">CALLDATACOPY</span><span class="w">    </span><span class="n">Copy</span><span class="w"> </span><span class="kr">input</span><span class="w"> </span><span class="kd">data</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">pertains</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="kr">input</span><span class="w"> </span><span class="kd">data</span><span class="w"> </span><span class="n">passed</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">instruction</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">transaction</span>
+<span class="mf">0</span><span class="n">x38</span><span class="w">    </span><span class="n">CODESIZE</span><span class="w">        </span><span class="kr">Get</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="kr">run</span><span class="n">ning</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">environment</span>
+<span class="mf">0</span><span class="n">x39</span><span class="w">    </span><span class="n">CODECOPY</span><span class="w">        </span><span class="n">Copy</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="kr">run</span><span class="n">ning</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">memory</span>
+<span class="mf">0</span><span class="n">x3a</span><span class="w">    </span><span class="n">GASPRICE</span><span class="w">        </span><span class="kr">Get</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">gas</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">environment</span>
+<span class="mf">0</span><span class="n">x3b</span><span class="w">    </span><span class="n">EXTCODESIZE</span><span class="w">     </span><span class="kr">Get</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">account</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">code</span>
+<span class="mf">0</span><span class="n">x3c</span><span class="w">    </span><span class="n">EXTCODECOPY</span><span class="w">     </span><span class="n">Copy</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">account</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">memory</span>
+</pre></div>
 
 <h3>40s: Block Information</h3>
-<pre class="code literal-block"><span></span>0x40    BLOCKHASH   Get the hash of one of the 256 most recent complete blocks
-0x41    COINBASE    Get the block's beneficiary address
-0x42    TIMESTAMP   Get the block's timestamp
-0x43    NUMBER      Get the block's number
-0x44    DIFFICULTY  Get the block's difficulty
-0x45    GASLIMIT    Get the block's gas limit
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x40</span><span class="w">    </span><span class="n">BLOCKHASH</span><span class="w">   </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="kr">on</span><span class="n">e</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="mf">256</span><span class="w"> </span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">complete</span><span class="w"> </span><span class="n">blocks</span>
+<span class="mf">0</span><span class="n">x41</span><span class="w">    </span><span class="n">COINBASE</span><span class="w">    </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">beneficiary</span><span class="w"> </span><span class="n">address</span>
+<span class="mf">0</span><span class="n">x42</span><span class="w">    </span><span class="n">TIMESTAMP</span><span class="w">   </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">timestamp</span>
+<span class="mf">0</span><span class="n">x43</span><span class="w">    </span><span class="n">NUMBER</span><span class="w">      </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">number</span>
+<span class="mf">0</span><span class="n">x44</span><span class="w">    </span><span class="n">DIFFICULTY</span><span class="w">  </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">difficulty</span>
+<span class="mf">0</span><span class="n">x45</span><span class="w">    </span><span class="n">GASLIMIT</span><span class="w">    </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">gas</span><span class="w"> </span><span class="n">limit</span>
+</pre></div>
 
 <h3>50s Stack, Memory, Storage and Flow Operations</h3>
-<pre class="code literal-block"><span></span>0x50    POP         Remove item from stack
-0x51    MLOAD       Load word from memory
-0x52    MSTORE      Save word to memory
-0x53    MSTORE8     Save byte to memory
-0x54    SLOAD       Load word from storage
-0x55    SSTORE      Save word to storage
-0x56    JUMP        Alter the program counter
-0x57    JUMPI       Conditionally alter the program counter
-0x58    PC          Get the value of the program counter prior to the increment
-0x59    MSIZE       Get the size of active memory in bytes
-0x5a    GAS         Get the amount of available gas, including the corresponding reduction
-0x5b    JUMPDEST    Mark a valid destination for jumps
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x50</span><span class="w">    </span><span class="n">POP</span><span class="w">         </span><span class="c1">Remove item from stack</span>
+<span class="mf">0</span><span class="n">x51</span><span class="w">    </span><span class="n">MLOAD</span><span class="w">       </span><span class="kr">Load</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">memory</span>
+<span class="mf">0</span><span class="n">x52</span><span class="w">    </span><span class="n">MSTORE</span><span class="w">      </span><span class="kr">Save</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">memory</span>
+<span class="mf">0</span><span class="n">x53</span><span class="w">    </span><span class="n">MSTORE8</span><span class="w">     </span><span class="kr">Save</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">memory</span>
+<span class="mf">0</span><span class="n">x54</span><span class="w">    </span><span class="n">SLOAD</span><span class="w">       </span><span class="kr">Load</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">storage</span>
+<span class="mf">0</span><span class="n">x55</span><span class="w">    </span><span class="n">SSTORE</span><span class="w">      </span><span class="kr">Save</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">storage</span>
+<span class="mf">0</span><span class="n">x56</span><span class="w">    </span><span class="n">JUMP</span><span class="w">        </span><span class="n">Alter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="n">counter</span>
+<span class="mf">0</span><span class="n">x57</span><span class="w">    </span><span class="n">JUMPI</span><span class="w">       </span><span class="n">Conditionally</span><span class="w"> </span><span class="n">alter</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="n">counter</span>
+<span class="mf">0</span><span class="n">x58</span><span class="w">    </span><span class="n">PC</span><span class="w">          </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">val</span><span class="n">ue</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">program</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="n">prior</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">increment</span>
+<span class="mf">0</span><span class="n">x59</span><span class="w">    </span><span class="n">MSIZE</span><span class="w">       </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">active</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">bytes</span>
+<span class="mf">0</span><span class="n">x5a</span><span class="w">    </span><span class="n">GAS</span><span class="w">         </span><span class="kr">Get</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="n">including</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">corresponding</span><span class="w"> </span><span class="n">reduction</span>
+<span class="mf">0</span><span class="n">x5b</span><span class="w">    </span><span class="n">JUMPDEST</span><span class="w">    </span><span class="n">Mark</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nb">val</span><span class="n">id</span><span class="w"> </span><span class="n">destination</span><span class="w"> </span><span class="kr">for</span><span class="w"> </span><span class="n">jumps</span>
+</pre></div>
 
 <h3>60s &amp; 70s: Push Operations</h3>
-<pre class="code literal-block"><span></span>0x60    PUSH1   Place 1 byte item on stack
-0x61    PUSH2   Place 2-byte item on stack
-…
-0x7f    PUSH32  Place 32-byte (full word) item on stack
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x60</span><span class="w">    </span><span class="n">PUSH1</span><span class="w">   </span><span class="n">Place</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="n">byte</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="kr">on</span><span class="w"> </span><span class="n">stack</span>
+<span class="mf">0</span><span class="n">x61</span><span class="w">    </span><span class="n">PUSH2</span><span class="w">   </span><span class="n">Place</span><span class="w"> </span><span class="mf">2</span><span class="o">-</span><span class="n">byte</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="kr">on</span><span class="w"> </span><span class="n">stack</span>
+<span class="err">…</span>
+<span class="mf">0</span><span class="n">x7f</span><span class="w">    </span><span class="n">PUSH32</span><span class="w">  </span><span class="n">Place</span><span class="w"> </span><span class="mf">32</span><span class="o">-</span><span class="n">byte</span><span class="w"> </span><span class="p">(</span><span class="n">full</span><span class="w"> </span><span class="n">word</span><span class="p">)</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="kr">on</span><span class="w"> </span><span class="n">stack</span>
+</pre></div>
 
 <h3>80s: Duplication Operations</h3>
-<pre class="code literal-block"><span></span>0x80    DUP1    Duplicate 1st stack item
-0x81    DUP2    Duplicate 2nd stack item
-…
-0x8f    DUP16   Duplicate 16th stack item
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x80</span><span class="w">    </span><span class="n">DUP1</span><span class="w">    </span><span class="n">Duplicate</span><span class="w"> </span><span class="mf">1</span><span class="n">st</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="n">item</span>
+<span class="mf">0</span><span class="n">x81</span><span class="w">    </span><span class="n">DUP2</span><span class="w">    </span><span class="n">Duplicate</span><span class="w"> </span><span class="mf">2</span><span class="n">nd</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="n">item</span>
+<span class="err">…</span>
+<span class="mf">0</span><span class="n">x8f</span><span class="w">    </span><span class="n">DUP16</span><span class="w">   </span><span class="n">Duplicate</span><span class="w"> </span><span class="mf">16</span><span class="n">th</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="n">item</span>
+</pre></div>
 
 <h3>90s: Exchange Operations</h3>
-<pre class="code literal-block"><span></span>0x90    SWAP1   Exchange 1st and 2nd stack items
-0x91    SWAP2   Exchange 1st and 3rd stack items
-…   …
-0x9f    SWAP16  Exchange 1st and 17th stack items
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">x90</span><span class="w">    </span><span class="n">SWAP1</span><span class="w">   </span><span class="n">Exchange</span><span class="w"> </span><span class="mf">1</span><span class="n">st</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mf">2</span><span class="n">nd</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="n">items</span>
+<span class="mf">0</span><span class="n">x91</span><span class="w">    </span><span class="n">SWAP2</span><span class="w">   </span><span class="n">Exchange</span><span class="w"> </span><span class="mf">1</span><span class="n">st</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mf">3</span><span class="n">rd</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="n">items</span>
+<span class="err">…</span><span class="w">   </span><span class="err">…</span>
+<span class="mf">0</span><span class="n">x9f</span><span class="w">    </span><span class="n">SWAP16</span><span class="w">  </span><span class="n">Exchange</span><span class="w"> </span><span class="mf">1</span><span class="n">st</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mf">17</span><span class="n">th</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="n">items</span>
+</pre></div>
 
 <h3>a0s: Logging Operations</h3>
-<pre class="code literal-block"><span></span>0xa0    LOG0    Append log record with no topics
-0xa1    LOG1    Append log record with one topic
-…   …
-0xa4    LOG4    Append log record with four topics
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">xa0</span><span class="w">    </span><span class="nb">LOG</span><span class="mf">0</span><span class="w">    </span><span class="n">Append</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="kr">to</span><span class="n">pics</span>
+<span class="mf">0</span><span class="n">xa1</span><span class="w">    </span><span class="nb">LOG</span><span class="mf">1</span><span class="w">    </span><span class="n">Append</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="kr">on</span><span class="n">e</span><span class="w"> </span><span class="kr">to</span><span class="n">pic</span>
+<span class="err">…</span><span class="w">   </span><span class="err">…</span>
+<span class="mf">0</span><span class="n">xa4</span><span class="w">    </span><span class="nb">LOG</span><span class="mf">4</span><span class="w">    </span><span class="n">Append</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">four</span><span class="w"> </span><span class="kr">to</span><span class="n">pics</span>
+</pre></div>
 
 <h3>f0s: System operations</h3>
-<pre class="code literal-block"><span></span>0xf0    CREATE          Create a new account with associated code
-0xf1    CALL            Message-call into an account
-0xf2    CALLCODE        Message-call into this account with alternative account's code
-0xf3    RETURN          Halt execution returning output data
-0xf4    DELEGATECALL    Message-call into this account with an alternative account's code, but persisting the current values for `sender` and `value`
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mh">0xf0</span><span class="w">    </span><span class="k">CREATE</span><span class="w">          </span><span class="k">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="k">account</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">associated</span><span class="w"> </span><span class="k">code</span>
+<span class="mh">0xf1</span><span class="w">    </span><span class="k">CALL</span><span class="w">            </span><span class="n">Message</span><span class="o">-</span><span class="k">call</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="k">account</span>
+<span class="mh">0xf2</span><span class="w">    </span><span class="n">CALLCODE</span><span class="w">        </span><span class="n">Message</span><span class="o">-</span><span class="k">call</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">account</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="k">account</span><span class="s1">'s code</span>
+<span class="s1">0xf3    RETURN          Halt execution returning output data</span>
+<span class="s1">0xf4    DELEGATECALL    Message-call into this account with an alternative account'</span><span class="n">s</span><span class="w"> </span><span class="k">code</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">persisting</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">current</span><span class="w"> </span><span class="k">values</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n n-Quoted">`sender`</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n n-Quoted">`value`</span>
+</pre></div>
 
 <h3>Halt Execution, Mark for deletion</h3>
-<pre class="code literal-block"><span></span>0xff    SELFDESTRUCT    Halt execution and register account for later deletion
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="mf">0</span><span class="n">xff</span><span class="w">    </span><span class="n">SELFDESTRUCT</span><span class="w">    </span><span class="n">Halt</span><span class="w"> </span><span class="n">execution</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">register</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="kr">for</span><span class="w"> </span><span class="n">later</span><span class="w"> </span><span class="n">deletion</span>
+</pre></div>
 
 <h2>Referencias</h2>
 <ul>
@@ -304,24 +342,19 @@ contract Voting {
 </ul>
 <h2>Notas</h2>
 <p>testrpc -n5</p>
-</div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/minar-ethereum.html">Minar ethereum</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2017-03-30T12:00:00-06:00">2017-03-30 12:00</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/cryptomoneda.html"><span>cryptomoneda</span></a>
-                            <a class="tag" href="categories/ethereum.html"><span>ethereum</span></a>
-                            <a class="tag" href="categories/jaquerespeis.html"><span>jaquerespeis</span></a>
-                            <a class="tag" href="categories/minar.html"><span>minar</span></a>
-                </span>
-            </div>
-        <div>
-<h2>Requerimientos</h2>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/minar-ethereum.html" class="u-url">Minar ethereum</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/minar-ethereum.html" rel="bookmark">
+            <time class="published dt-published" datetime="2017-03-30T12:00:00-06:00" itemprop="datePublished" title="2017-03-30 12:00">2017-03-30 12:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>Requerimientos</h2>
 <ul>
 <li>Minador</li>
 <li>Ubuntu Server 16.04</li>
@@ -340,34 +373,30 @@ contract Voting {
 <p>Instalar python y python-wisted</p>
 </li>
 </ol>
-<pre class="code literal-block"><span></span>sudo apt-get install python
-sudo apt-get install python-twisted
-</pre>
-
+<div class="code"><pre class="code literal-block">sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python-twisted
+</pre></div>
 
 <ol>
 <li>Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum</li>
 </ol>
-<pre class="code literal-block"><span></span>sudo add-apt-repository ppa:ethereum/ethereum
-sudo add-apt-repository ppa:ethereum/ethereum-qt
-sudo add-apt-repository ppa:ethereum/ethereum-dev
-sudo apt-get update
-</pre>
-
+<div class="code"><pre class="code literal-block">sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ethereum/ethereum
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ethereum/ethereum-qt
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ethereum/ethereum-dev
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</pre></div>
 
 <ol>
 <li>Instalar ethereum</li>
 </ol>
-<pre class="code literal-block"><span></span>sudo apt-get install ethereum
-</pre>
-
+<div class="code"><pre class="code literal-block">sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>ethereum
+</pre></div>
 
 <ol>
 <li>Instalar cpp-ethereum</li>
 </ol>
-<pre class="code literal-block"><span></span>sudo apt-get install cpp-ethereum
-</pre>
-
+<div class="code"><pre class="code literal-block">sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>cpp-ethereum
+</pre></div>
 
 <ol>
 <li>
@@ -386,16 +415,14 @@ sudo apt-get update
 <p>En el directorio eth-proxy, ejecutar <code>eth-proxy.py</code></p>
 </li>
 </ol>
-<pre class="code literal-block"><span></span>sudo python eth-proxy/eth-proxy.py
-</pre>
-
+<div class="code"><pre class="code literal-block">sudo<span class="w"> </span>python<span class="w"> </span>eth-proxy/eth-proxy.py
+</pre></div>
 
 <ol>
 <li>Ejecutar <code>ethminer</code> apuntando a localhost</li>
 </ol>
-<pre class="code literal-block"><span></span>ethminer -F http://127.0.0.1:8080/minador -G
-</pre>
-
+<div class="code"><pre class="code literal-block">ethminer<span class="w"> </span>-F<span class="w"> </span>http://127.0.0.1:8080/minador<span class="w"> </span>-G
+</pre></div>
 
 <p><em><strong>NOTA:</strong> La opción <code>-G</code> indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice <code>--allow-opencl-cpu</code>.</em></p>
 <h2>Referencias</h2>
@@ -403,23 +430,19 @@ sudo apt-get update
 https://github.com/Atrides/eth-proxy
 https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
 http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html</p>
-</div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/el-mejor-jerk-chicken.html">Jerk chicken natural</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2016-01-01T00:00:00-06:00">2016-01-01 00:00</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/allspice.html"><span>allspice</span></a>
-                            <a class="tag" href="categories/comida.html"><span>comida</span></a>
-                            <a class="tag" href="categories/jerk.html"><span>jerk</span></a>
-                </span>
-            </div>
-        <div>
-<h2>La idea</h2>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/el-mejor-jerk-chicken.html" class="u-url">Jerk chicken natural</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/el-mejor-jerk-chicken.html" rel="bookmark">
+            <time class="published dt-published" datetime="2016-01-01T00:00:00-06:00" itemprop="datePublished" title="2016-01-01 00:00">2016-01-01 00:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>La idea</h2>
 <p>Hace unos días estábamos de vacaciones en pavones y Coco(administradora de la casa rentada) nos llevo unas hojas de Allspice, de una se me ocurrió que podíamos hacer Jerk Chicken, resulta que la hoja tiene muy buen sabor pero no se conserva bien, por lo que no se vende comercialmente.</p>
 <h2>Ingredientes</h2>
 <ul>
@@ -451,23 +474,18 @@ http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/l
 <li>El jugo de 4 limones. </li>
 </ol>
 </div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/programar%20microcontrolador%20stm322.html">Como programar un microcontrolador stm32 con cpp</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2015-12-27T23:00:00-06:00">2015-12-27 23:00</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/arm.html"><span>arm</span></a>
-                            <a class="tag" href="categories/cpp.html"><span>cpp</span></a>
-                            <a class="tag" href="categories/jaquerespeis.html"><span>jaquerespeis</span></a>
-                            <a class="tag" href="categories/stm32.html"><span>stm32</span></a>
-                </span>
-            </div>
-        <div>
-<h2>Que se necesita</h2>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/programar%20microcontrolador%20stm322.html" class="u-url">Como programar un microcontrolador stm32 con cpp</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/programar%20microcontrolador%20stm322.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-12-27T23:00:00-06:00" itemprop="datePublished" title="2015-12-27 23:00">2015-12-27 23:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>Que se necesita</h2>
 <ul>
 <li>Microcontrolador STM322</li>
 <li>GDB o un debugger, editor de texto o IDE</li>
@@ -485,22 +503,19 @@ http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/l
 <p>CMSIS = Cortex Microcontroller Software Interface Standard <a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php">info</a></p>
 <h2>Referencias</h2>
 <p>http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/</p>
-</div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/lugares-de-comida-que-me-gustan.html">Lugares de comida que me gustan</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2015-10-07T21:56:28-06:00">2015-10-07 21:56</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/comida.html"><span>comida</span></a>
-                            <a class="tag" href="categories/restaurantes.html"><span>restaurantes</span></a>
-                </span>
-            </div>
-        <div>
-<p>Estos son algunos de los lugares que mas me gusta vistar para comer.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/lugares-de-comida-que-me-gustan.html" class="u-url">Lugares de comida que me gustan</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/lugares-de-comida-que-me-gustan.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-10-07T21:56:28-06:00" itemprop="datePublished" title="2015-10-07 21:56">2015-10-07 21:56</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Estos son algunos de los lugares que mas me gusta vistar para comer.</p>
 <h2>Lista</h2>
 <ul>
 <li>
@@ -528,31 +543,24 @@ http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/l
 <strong>Chicharronera hermanos Level:</strong> </li>
 </ul>
 </div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/utilizar-nikola.html">Utilizar Nikola por primera vez</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2015-08-20T23:00:00-06:00">2015-08-20 23:00</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/blog.html"><span>blog</span></a>
-                            <a class="tag" href="categories/jaquerespeis.html"><span>jaquerespeis</span></a>
-                            <a class="tag" href="categories/markdown.html"><span>markdown</span></a>
-                            <a class="tag" href="categories/nikola.html"><span>nikola</span></a>
-                            <a class="tag" href="categories/python.html"><span>python</span></a>
-                </span>
-            </div>
-        <div>
-<h2>Instalación</h2>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/utilizar-nikola.html" class="u-url">Utilizar Nikola por primera vez</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/utilizar-nikola.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-08-20T23:00:00-06:00" itemprop="datePublished" title="2015-08-20 23:00">2015-08-20 23:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>Instalación</h2>
 <p>La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.</p>
 <p>En el directorio del repositorio del sitio</p>
-<pre class="code literal-block"><span></span>virtualenv --python=python3 .env
-source .env/bin/activate
-pip3 install --upgrade "Nikola[extras]"
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="n">virtualenv</span><span class="w"> </span><span class="c1">--python=python3 .env</span>
+<span class="n">source</span><span class="w"> </span><span class="p">.</span><span class="n">env</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip3</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="c1">--upgrade "Nikola[extras]"</span>
+</pre></div>
 
 <h3>Primeros usos</h3>
 <p>En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando <code>nikola init --demo .</code>, luego se debe de construir el sitio con el comando <code>nikola build</code>.</p>
@@ -560,7 +568,7 @@ pip3 install --upgrade "Nikola[extras]"
 <h2>Utilizar markdown</h2>
 <p>Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.</p>
 <p>Primero se debe de verificar que este en la estructura <strong>COMPILERS</strong></p>
-<pre class="code literal-block"><span></span># 'rest' is reStructuredText
+<div class="code"><pre class="code literal-block"># 'rest' is reStructuredText
 # 'markdown' is MarkDown
 # 'html' assumes the file is HTML and just copies it
 COMPILERS = {
@@ -581,11 +589,10 @@ COMPILERS = {
     # with many of the others.
     # "pandoc": ('.rst', '.md', '.txt'),
 }
-</pre>
-
+</pre></div>
 
 <p>Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, <code>("posts/*.md", "posts", "post.tmpl")</code> a los dos tipos de entras <strong>POST</strong> y <strong>PAGES</strong>.</p>
-<pre class="code literal-block"><span></span><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
+<div class="code"><pre class="code literal-block"><span class="n">POSTS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="p">(</span><span class="s2">"posts/*.rst"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"posts/*.txt"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"posts/*.md"</span><span class="p">,</span> <span class="s2">"posts"</span><span class="p">,</span> <span class="s2">"post.tmpl"</span><span class="p">),</span>
@@ -595,8 +602,7 @@ COMPILERS = {
     <span class="p">(</span><span class="s2">"stories/*.txt"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
     <span class="p">(</span><span class="s2">"stories/*.md"</span><span class="p">,</span> <span class="s2">"stories"</span><span class="p">,</span> <span class="s2">"story.tmpl"</span><span class="p">),</span>
 <span class="p">)</span>
-</pre>
-
+</pre></div>
 
 <h2>Utilizar locales para Costa Rica</h2>
 <p>Este proceso debería funcionar para la mayoría de idiomas.</p>
@@ -605,7 +611,7 @@ COMPILERS = {
 </li>
 <li>Definir cual es el locale que debe de utilizar Nikola por defecto.</li>
 </ol>
-<pre class="code literal-block"><span></span><span class="c1"># What is the default language?</span>
+<div class="code"><pre class="code literal-block"><span class="c1"># What is the default language?</span>
 <span class="n">DEFAULT_LANG</span> <span class="o">=</span> <span class="s2">"es"</span>
 
 <span class="c1"># What other languages do you have?</span>
@@ -618,36 +624,31 @@ COMPILERS = {
     <span class="s2">"es"</span><span class="p">:</span> <span class="s2">"./"</span><span class="p">,</span>
     <span class="s2">"en"</span><span class="p">:</span> <span class="s2">"./en"</span><span class="p">,</span>
 <span class="p">}</span>
-</pre>
-
+</pre></div>
 
 <ol>
 <li>Definir el locale que se va a utilizar para <code>es</code>, por defecto es <code>es_ES</code>.</li>
 </ol>
-<pre class="code literal-block"><span></span><span class="n">LOCALES</span> <span class="o">=</span> <span class="p">{</span>
+<div class="code"><pre class="code literal-block"><span class="n">LOCALES</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">"es"</span><span class="p">:</span><span class="s2">"es_CR.utf-8"</span><span class="p">,</span>
         <span class="p">}</span>
-</pre>
-
+</pre></div>
 
 <p>El locale a utilizar puede ser probado, importando locale <code>import locale</code> y llamando al locale necesario <code>locale.setlocale(locale.LC_ALL, 'es_CR.utf-8')</code></p>
-</div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/configuracion-para-la-printrbot-simple.html">Configuración para la printrbot simple</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2015-08-14T21:39:41-06:00">2015-08-14 21:39</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/3dprint.html"><span>3dprint</span></a>
-                            <a class="tag" href="categories/printrbot.html"><span>printrbot</span></a>
-                </span>
-            </div>
-        <div>
-<h3>Código:</h3>
-<pre class="code literal-block"><span></span>M104 S{TEMP0} ; set temperature
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/configuracion-para-la-printrbot-simple.html" class="u-url">Configuración para la printrbot simple</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/configuracion-para-la-printrbot-simple.html" rel="bookmark">
+            <time class="published dt-published" datetime="2015-08-14T21:39:41-06:00" itemprop="datePublished" title="2015-08-14 21:39">2015-08-14 21:39</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h3>Código:</h3>
+<div class="code"><pre class="code literal-block">M104 S{TEMP0} ; set temperature
 G21 ;metric values
 G90 ;absolute positioning
 M82 ;set extruder to absolute mode
@@ -658,27 +659,26 @@ M109 S{TEMP0} ;wait on temperature line
 G29 ; Auto bed levelling
 G92 E0 ;zero the extruded length
 G1 F{TRAVEL_SPEED} ;
-</pre>
-</div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/using-us-netflix-with-roku-and-openwrt.html">Using US netflix with roku and openwrt</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2014-08-29T21:30:19-06:00">2014-08-29 21:30</time></span>
-                <br><span class="tags">Tags: 
-                </span>
-            </div>
-        <div>
-<h2>First method</h2>
+</pre></div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/using-us-netflix-with-roku-and-openwrt.html" class="u-url">Using US netflix with roku and openwrt</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/using-us-netflix-with-roku-and-openwrt.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-08-29T21:30:19-06:00" itemprop="datePublished" title="2014-08-29 21:30">2014-08-29 21:30</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>First method</h2>
 <p>The Roku has no possibility to change the DNS to a specific one, so to use US Netflix with the roku the DNS has to be set in  the router.</p>
 <p>I don’t like all my DNS traffic going to a DNS that I don’t trust so with options of dnsmasq that comes with openwrt I set DNS Forwarding.</p>
 <p>Be careful to change x.x.x.x for the ip address of the DNS service you want to use.</p>
 <p>example http://www.unblock-us.com ip 208.122.23.23</p>
 <p>in the file /etc/config/dhcp add the following lines below config dnsmasq.</p>
-<pre class="code literal-block"><span></span>    list server '/netflix.com/x.x.x.x'
+<div class="code"><pre class="code literal-block">    list server '/netflix.com/x.x.x.x'
     list server '/nflximg.net/x.x.x.x'
     list server '/nflximg.com/x.x.x.x'
     list server '/roku.com/x.x.x.x'
@@ -687,188 +687,141 @@ G1 F{TRAVEL_SPEED} ;
     list server '/netflix.net/x.x.x.x'
     list server '/roku.com/x.x.x.x'
     list server '/scorecardresearch.com/x.x.x.x'
-</pre>
-
+</pre></div>
 
 <p>it is necessary to add all that list servers.</p>
 <p>This method could work for any other hardware but I have only tested it in the roku.</p>
 <h2>Second method</h2>
 <p>At first I was using the first method but I had to keep adding forwarder addresses to the dhcp file.</p>
 <p>in “network-&gt;firewall-&gt;custom rules” add the following rules</p>
-<pre class="code literal-block"><span></span>iptables -t nat -A PREROUTING -i br-lan -s x.x.x.x -p udp –dport 53 -j DNAT –to-destination y.y.y.y:53
+<div class="code"><pre class="code literal-block">iptables -t nat -A PREROUTING -i br-lan -s x.x.x.x -p udp –dport 53 -j DNAT –to-destination y.y.y.y:53
 #iptables -t nat -A POSTROUTING -j MASQUERADE
-</pre>
-
+</pre></div>
 
 <p>where <code>x.x.x.x</code> is the roku or other device you want to use with a specific dns server and <code>y.y.y.y</code> is the address of the specific dns server.</p>
-</div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/instalando-repetierhost-en-ubuntu-1404.html">Instalando RepetierHost en Ubuntu 1404</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2014-05-07T10:23:32-06:00">2014-05-07 10:23</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/3dprint-printrbot.html"><span>3dprint printrbot</span></a>
-                </span>
-            </div>
-        <div>
-<h2>Instalar</h2>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/instalando-repetierhost-en-ubuntu-1404.html" class="u-url">Instalando RepetierHost en Ubuntu 1404</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/instalando-repetierhost-en-ubuntu-1404.html" rel="bookmark">
+            <time class="published dt-published" datetime="2014-05-07T10:23:32-06:00" itemprop="datePublished" title="2014-05-07 10:23">2014-05-07 10:23</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>Instalar</h2>
 <ol>
 <li>Para utilizar la printrbot simple estoy utilizando RepetierHost, estos son algunos de los pasos que seguí para poder imprimir.</li>
 <li>Descargar RepetierHost de http://www.repetier.com/download/</li>
 <li>Descomprimir y mover la carpeta RepetierHost al lugar donde se desea.</li>
 </ol>
 <p>Ej: repetierHostLinux_0_95.tgz</p>
-<pre class="code literal-block"><span></span>tar -xzf repetierHostLinux_0_95.tgz
+<div class="code"><pre class="code literal-block">tar -xzf repetierHostLinux_0_95.tgz
 mv RepetierHost $HOME
-</pre>
-
+</pre></div>
 
 <p>o donde se desea dejar, <code>cd RepetierHost</code> y luego ejecutar configureFirst.sh, lo cual les va a instalar las dependencias del sistema.</p>
 <p><code>./configureFirst.sh</code></p>
 <p>Si da errores al descargar ExtUtils-ParseXS-3.18_04.tar.gz o parecido</p>
-<pre class="code literal-block"><span></span>Working on SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz
-Fetching http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz ... FAIL
-! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
-! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
-! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
-! Failed to download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz
-! Failed to fetch distribution ExtUtils-ParseXS-3.18_04
---&gt; Working on ./xs
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="n">Working</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">Fetching</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="n">FAIL</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">failed</span><span class="o">.</span><span class="w"> </span><span class="n">Retrying</span><span class="w"> </span><span class="o">...</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">failed</span><span class="o">.</span><span class="w"> </span><span class="n">Retrying</span><span class="w"> </span><span class="o">...</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">failed</span><span class="o">.</span><span class="w"> </span><span class="n">Retrying</span><span class="w"> </span><span class="o">...</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Failed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Failed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">fetch</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span>
+<span class="o">--&gt;</span><span class="w"> </span><span class="n">Working</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="o">./</span><span class="n">xs</span>
+</pre></div>
 
 <p>es necesario actualizar la linea 127 en Slic3r/Build.PL
 y cambiar</p>
-<pre class="code literal-block"><span></span>system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz';
-</pre>
-
+<div class="code"><pre class="code literal-block">system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz';
+</pre></div>
 
 <p>por</p>
-<pre class="code literal-block"><span></span>system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.24.tar.gz';
-</pre>
-
+<div class="code"><pre class="code literal-block">system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.24.tar.gz';
+</pre></div>
 
 <p>Luego ejecutar de nuevo configureFirst.sh como anteriormente.</p>
 <p>van a ver unos errores en las pruebas pero el sistema va a funcionar bien.</p>
 <p>Al abrir RepetierHost es necesario como primer paso configurar la impresora, para esto van a "Printer Settings" y utilizan la siguiente configuración</p>
 <p>En la pestaña de connection</p>
-<pre class="code literal-block"><span></span>port: /dev/ttyACM0
-Baud Rate: 230400
-Trasfer Protocol: Autodetect
-Reset on Connect: Disabled
-Reset on Emergency: Send emergency command and reconnect
-En la pestaña Printer
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="nv">port</span>:<span class="w"> </span><span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">ttyACM0</span>
+<span class="nv">Baud</span><span class="w"> </span><span class="nv">Rate</span>:<span class="w"> </span><span class="mi">230400</span>
+<span class="nv">Trasfer</span><span class="w"> </span><span class="nv">Protocol</span>:<span class="w"> </span><span class="nv">Autodetect</span>
+<span class="nv">Reset</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="k">Connect</span>:<span class="w"> </span><span class="nv">Disabled</span>
+<span class="nv">Reset</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">Emergency</span>:<span class="w"> </span><span class="k">Send</span><span class="w"> </span><span class="nv">emergency</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">reconnect</span>
+<span class="nv">En</span><span class="w"> </span><span class="nv">la</span><span class="w"> </span><span class="nv">pesta</span>ñ<span class="nv">a</span><span class="w"> </span><span class="nv">Printer</span>
+</pre></div>
 
 <p>Defautl Heated Bed Temperature: 0</p>
 <p>En la pestaña Printer Shape</p>
-<pre class="code literal-block"><span></span>X MAx 100
+<div class="code"><pre class="code literal-block">X MAx 100
 Y Max 100
 Print Area Width: 100
 Print Area Depth: 100
 Print Area Height: 100
-</pre>
-
+</pre></div>
 
 <p>Cuando tenga mas recomendaciones las agrego, si alguien tiene alguna recomendación se lo agradecería para agregarla.</p>
-</div>
-            
-
-        </div>
-        <div class="postbox">
-        <h1><a href="posts/optimizacion-de-apache2.html">Optimización de apache2</a></h1>
-            <div class="meta" style="background-color: rgb(234, 234, 234); ">
-                <span class="authordate">
-                    Publicado: <time class="published" datetime="2013-10-18T11:16:14-06:00">2013-10-18 11:16</time></span>
-                <br><span class="tags">Tags: 
-                            <a class="tag" href="categories/apache.html"><span>apache</span></a>
-                            <a class="tag" href="categories/keepalive.html"><span>keepalive</span></a>
-                            <a class="tag" href="categories/optimizacion.html"><span>optimizacion</span></a>
-                            <a class="tag" href="categories/web.html"><span>web</span></a>
-                </span>
-            </div>
-        <div>
-<p>Primero hay que revisar cuales módulos están cargados, esto se puede hacer con</p>
-<pre class="code literal-block"><span></span>apachectl -M
-</pre>
-
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/optimizacion-de-apache2.html" class="u-url">Optimización de apache2</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/optimizacion-de-apache2.html" rel="bookmark">
+            <time class="published dt-published" datetime="2013-10-18T11:16:14-06:00" itemprop="datePublished" title="2013-10-18 11:16">2013-10-18 11:16</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Primero hay que revisar cuales módulos están cargados, esto se puede hacer con</p>
+<div class="code"><pre class="code literal-block">apachectl -M
+</pre></div>
 
 <p>Lo ideal es tener solo los módulos necesarios para que el sitio funcione, la cantidad de módulos influye en e tamaño de cada proceso de apache que se encuentra corriendo.</p>
-<pre class="code literal-block"><span></span>HostnameLookups off
-</pre>
-
+<div class="code"><pre class="code literal-block">HostnameLookups off
+</pre></div>
 
 <p>Cuando un cliente el accede el servidor web, se crea una bitácora en access.log, si esta directiva esta en On se busca el nombre en el servidor de nombres, aun con un cache de dns esto es muy lento.</p>
 <p>Cuando se establece una conexión esta se deja escuchando por un tiempo por si se le hace una nueva petición, en el caso de tener muchos visitantes y dejar la conexiones abiertas por mucho tiempo, se crea un problema, por eso se puede bajar el tiempo para poder servir nuevas peticiones. (Esta altamente ligado al MaxClients).</p>
-<pre class="code literal-block"><span></span>KeepAlive On
+<div class="code"><pre class="code literal-block">KeepAlive On
 KeepAliveTimeout 2
-</pre>
-
+</pre></div>
 
 <p>Para el momento de calcular MaxClients.</p>
 <p>Una buena referencia es MaxClients = (total de memoria)/(promedio de memoria utilizada por cada proceso de apache)</p>
 <p>Una buena manera de ver el tamaño de un proceso de apache es con el comando <code>ps -ylC apache2 --sort:rss</code></p>
 <p>Con esto se puede ver el tamaño del proceso mas grande de ultimo.</p>
 <p>Una suma de la columna del rss nos da un valor del total de memoria que esta usando el proceso, esto puede aumentar porque no todos los procesos tiene el mismo tamaño.</p>
-<pre class="code literal-block"><span></span>ps -ylC apache2 --sort:rss | awk '{SUM += $8 } END {print SUM}'
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="n">ps</span> <span class="o">-</span><span class="n">ylC</span> <span class="n">apache2</span> <span class="o">--</span><span class="n">sort</span><span class="p">:</span><span class="n">rss</span> <span class="p">|</span> <span class="n">awk</span> <span class="s">'{SUM += $8 } END {print SUM}'</span>
+</pre></div>
 
 <p>Hay que tomar en cuenta también el resto de procesos del servidor.</p>
 <p>Utilizando top y acomodando por rss podemos ver los procesos que están utilizando mas memoria, entre estos deberíamos encontrar los procesos de apache y el o los de la base de datos si es que se tiene una.</p>
+                </div>
+            </article>
 </div>
-            
-
-        </div>
     
-        <nav class="postindexpager"><ul class="pager">
-<li class="next">
-                <a href="index-1.html" rel="next">Publicaciones anteriores</a>
-            </li>
-        </ul></nav>
+        <ul class="pager postindexpager clearfix">
+<li class="next"><a href="index-1.html" rel="next">Publicaciones anteriores</a></li>
+        </ul>
+<!--End of body content--><footer id="footer">
+            Contents © 2026         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
 </div>
-        <div id="sidebar">
-            <!--Sidebar content-->
-            <h1 id="blog-title">
-                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
-            </h1>
-            
-            <small>
-                También disponible en: 
-                
-            <li><a href="http://rngkll.github.io/en/" rel="alternate" hreflang="en">English</a></li>
-
-            </small>
-            
-            <ul class="unstyled">
-<li>
-            
-                <li>
-<a href="archive.html">Archivo</a>
-                </li>
-<li>
-<a href="categories/index.html">Etiquetas</a>
-                </li>
-<li>
-<a href="rss.xml">Canal RSS</a>
-
-            </li>
-<li>
-            
-            
-            </ul>
 </div>
-        <div id="footer">
-            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
-            
-        </div>
-    </div>
-    
-            <script src="assets/js/all-nocdn.js"></script><script src="assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+
+
+        <script src="assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
 </body>
 </html>

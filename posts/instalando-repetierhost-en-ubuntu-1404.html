@@ -2,148 +2,188 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Instalando RepetierHost en Ubuntu 1404 | Mi Sitio</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../en/rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../rss.xml">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../en/rss.xml">
 <link rel="canonical" href="http://rngkll.github.io/posts/instalando-repetierhost-en-ubuntu-1404.html">
-<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Alvaro Segura Del Barco">
+<link rel="prev" href="optimizacion-de-apache2.html" title="Optimización de apache2" type="text/html">
+<link rel="next" href="using-us-netflix-with-roku-and-openwrt.html" title="Using US netflix with roku and openwrt" type="text/html">
+<meta property="og:site_name" content="Mi Sitio">
+<meta property="og:title" content="Instalando RepetierHost en Ubuntu 1404">
+<meta property="og:url" content="http://rngkll.github.io/posts/instalando-repetierhost-en-ubuntu-1404.html">
+<meta property="og:description" content="Instalar
+
+Para utilizar la printrbot simple estoy utilizando RepetierHost, estos son algunos de los pasos que seguí para poder imprimir.
+Descargar RepetierHost de http://www.repetier.com/download/
+Des">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2014-05-07T10:23:32-06:00">
+<meta property="article:tag" content="3dprint printrbot">
+<link rel="alternate" hreflang="en" href="../en/posts/instalando-repetierhost-en-ubuntu-1404.html">
 </head>
-<body class="home blog">
-    <div id="wrap" style="width:850px">
-        <div id="container" style="width:560px">
-            
-            
-    <div class="post">
-    
-    <h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Instalando RepetierHost en Ubuntu 1404</a></h1>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
 
-        <div class="meta" style="background-color: rgb(234, 234, 234); ">
-        <span class="authordate">
-            Publicado: <time class="published" datetime="2014-05-07T10:23:32-06:00">2014-05-07 10:23</time>
-               [<a href="instalando-repetierhost-en-ubuntu-1404.md" id="sourcelink">Código fuente</a>]
-        </span>
-        <br><span class="tags">Etiquetas: 
-                    <a class="tag" href="../categories/3dprint-printrbot.html"><span>3dprint printrbot</span></a>
-                </span>
-                <br><span class="authordate">
-            
-
-        </span>
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
         </div>
-    <div>
-<h2>Instalar</h2>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="../">
+
+            <span id="blog-title">Mi Sitio</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="../en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="instalando-repetierhost-en-ubuntu-1404.md" id="sourcelink" class="nav-link">Código fuente</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../archive.html" class="nav-link">Archivo</a>
+                </li>
+<li class="nav-item">
+<a href="../categories/index.html" class="nav-link">Etiquetas</a>
+                </li>
+<li class="nav-item">
+<a href="../rss.xml" class="nav-link">Canal RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Instalando RepetierHost en Ubuntu 1404</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    <a class="u-url" href="../authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+            </span></p>
+            <p class="dateline">
+            <a href="#" rel="bookmark">
+            <time class="published dt-published" datetime="2014-05-07T10:23:32-06:00" itemprop="datePublished" title="2014-05-07 10:23">2014-05-07 10:23</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="instalando-repetierhost-en-ubuntu-1404.md" class="sourcelink">Código fuente</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <h2>Instalar</h2>
 <ol>
 <li>Para utilizar la printrbot simple estoy utilizando RepetierHost, estos son algunos de los pasos que seguí para poder imprimir.</li>
 <li>Descargar RepetierHost de http://www.repetier.com/download/</li>
 <li>Descomprimir y mover la carpeta RepetierHost al lugar donde se desea.</li>
 </ol>
 <p>Ej: repetierHostLinux_0_95.tgz</p>
-<pre class="code literal-block"><span></span>tar -xzf repetierHostLinux_0_95.tgz
+<div class="code"><pre class="code literal-block">tar -xzf repetierHostLinux_0_95.tgz
 mv RepetierHost $HOME
-</pre>
-
+</pre></div>
 
 <p>o donde se desea dejar, <code>cd RepetierHost</code> y luego ejecutar configureFirst.sh, lo cual les va a instalar las dependencias del sistema.</p>
 <p><code>./configureFirst.sh</code></p>
 <p>Si da errores al descargar ExtUtils-ParseXS-3.18_04.tar.gz o parecido</p>
-<pre class="code literal-block"><span></span>Working on SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz
-Fetching http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz ... FAIL
-! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
-! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
-! Download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz failed. Retrying ...
-! Failed to download http://www.cpan.org/authors/id/S/SM/SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz
-! Failed to fetch distribution ExtUtils-ParseXS-3.18_04
---&gt; Working on ./xs
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="n">Working</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">Fetching</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="n">FAIL</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">failed</span><span class="o">.</span><span class="w"> </span><span class="n">Retrying</span><span class="w"> </span><span class="o">...</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">failed</span><span class="o">.</span><span class="w"> </span><span class="n">Retrying</span><span class="w"> </span><span class="o">...</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="w"> </span><span class="n">failed</span><span class="o">.</span><span class="w"> </span><span class="n">Retrying</span><span class="w"> </span><span class="o">...</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Failed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">cpan</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">authors</span><span class="o">/</span><span class="n">id</span><span class="o">/</span><span class="n">S</span><span class="o">/</span><span class="n">SM</span><span class="o">/</span><span class="n">SMUELLER</span><span class="o">/</span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="o">!</span><span class="w"> </span><span class="n">Failed</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">fetch</span><span class="w"> </span><span class="n">distribution</span><span class="w"> </span><span class="n">ExtUtils</span><span class="o">-</span><span class="n">ParseXS</span><span class="o">-</span><span class="mf">3.18</span><span class="n">_04</span>
+<span class="o">--&gt;</span><span class="w"> </span><span class="n">Working</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="o">./</span><span class="n">xs</span>
+</pre></div>
 
 <p>es necesario actualizar la linea 127 en Slic3r/Build.PL
 y cambiar</p>
-<pre class="code literal-block"><span></span>system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz';
-</pre>
-
+<div class="code"><pre class="code literal-block">system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.18_04.tar.gz';
+</pre></div>
 
 <p>por</p>
-<pre class="code literal-block"><span></span>system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.24.tar.gz';
-</pre>
-
+<div class="code"><pre class="code literal-block">system $cpanm, 'SMUELLER/ExtUtils-ParseXS-3.24.tar.gz';
+</pre></div>
 
 <p>Luego ejecutar de nuevo configureFirst.sh como anteriormente.</p>
 <p>van a ver unos errores en las pruebas pero el sistema va a funcionar bien.</p>
 <p>Al abrir RepetierHost es necesario como primer paso configurar la impresora, para esto van a "Printer Settings" y utilizan la siguiente configuración</p>
 <p>En la pestaña de connection</p>
-<pre class="code literal-block"><span></span>port: /dev/ttyACM0
-Baud Rate: 230400
-Trasfer Protocol: Autodetect
-Reset on Connect: Disabled
-Reset on Emergency: Send emergency command and reconnect
-En la pestaña Printer
-</pre>
-
+<div class="code"><pre class="code literal-block"><span class="nv">port</span>:<span class="w"> </span><span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">ttyACM0</span>
+<span class="nv">Baud</span><span class="w"> </span><span class="nv">Rate</span>:<span class="w"> </span><span class="mi">230400</span>
+<span class="nv">Trasfer</span><span class="w"> </span><span class="nv">Protocol</span>:<span class="w"> </span><span class="nv">Autodetect</span>
+<span class="nv">Reset</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="k">Connect</span>:<span class="w"> </span><span class="nv">Disabled</span>
+<span class="nv">Reset</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">Emergency</span>:<span class="w"> </span><span class="k">Send</span><span class="w"> </span><span class="nv">emergency</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">reconnect</span>
+<span class="nv">En</span><span class="w"> </span><span class="nv">la</span><span class="w"> </span><span class="nv">pesta</span>ñ<span class="nv">a</span><span class="w"> </span><span class="nv">Printer</span>
+</pre></div>
 
 <p>Defautl Heated Bed Temperature: 0</p>
 <p>En la pestaña Printer Shape</p>
-<pre class="code literal-block"><span></span>X MAx 100
+<div class="code"><pre class="code literal-block">X MAx 100
 Y Max 100
 Print Area Width: 100
 Print Area Depth: 100
 Print Area Height: 100
-</pre>
-
+</pre></div>
 
 <p>Cuando tenga mas recomendaciones las agrego, si alguien tiene alguna recomendación se lo agradecería para agregarla.</p>
-</div>
-    
-        <ul class="pager hidden-print">
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/3dprint-printrbot.html" rel="tag">3dprint printrbot</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
                 <a href="optimizacion-de-apache2.html" rel="prev" title="Optimización de apache2">Publicación anterior</a>
             </li>
             <li class="next">
                 <a href="using-us-netflix-with-roku-and-openwrt.html" rel="next" title="Using US netflix with roku and openwrt">Siguiente publicación</a>
             </li>
-        </ul>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2026         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
 </div>
 
-        </div>
-        <div id="sidebar">
-            <!--Sidebar content-->
-            <h1 id="blog-title">
-                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
-            </h1>
-            
-            <small>
-                También disponible en: 
-                
-            <li><a href="http://rngkll.github.io/en/" rel="alternate" hreflang="en">English</a></li>
 
-            </small>
-            
-            <ul class="unstyled">
-<li>
-            
-                <li>
-<a href="../archive.html">Archivo</a>
-                </li>
-<li>
-<a href="../categories/index.html">Etiquetas</a>
-                </li>
-<li>
-<a href="../rss.xml">Canal RSS</a>
-
-            </li>
-<li>
-            
-            
-            </ul>
-</div>
-        <div id="footer">
-            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
-            
-        </div>
-    </div>
-    
-            <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
 </body>
 </html>

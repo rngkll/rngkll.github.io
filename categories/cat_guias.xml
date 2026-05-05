@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mi Sitio (Publicaciones sobre guias)</title><link>http://rngkll.github.io/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://rngkll.github.io/categories/cat_guias.xml"></atom:link><language>es</language><copyright>Contents © 2017 &lt;a href="mailto:alvarosb@gmail.com"&gt;Alvaro Segura Del Barco&lt;/a&gt; </copyright><lastBuildDate>Sat, 22 Jul 2017 21:43:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>HolaMundo con ethereum</title><link>http://rngkll.github.io/posts/holamundo-ethereum.html</link><dc:creator>Alvaro Segura Del Barco, Edgar Barrantes Brais</dc:creator><description>&lt;div&gt;&lt;h2&gt;Lista de herramientas&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mi Sitio (Publicaciones sobre guias)</title><link>http://rngkll.github.io/</link><description></description><atom:link href="http://rngkll.github.io/categories/cat_guias.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2026 &lt;a href="mailto:alvarosb@gmail.com"&gt;Alvaro Segura Del Barco&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 May 2026 12:50:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>HolaMundo con ethereum</title><link>http://rngkll.github.io/posts/holamundo-ethereum.html</link><dc:creator>Alvaro Segura Del Barco, Edgar Barrantes Brais</dc:creator><description>&lt;h2&gt;Lista de herramientas&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;testRPC&lt;/li&gt;
 &lt;li&gt;nvm&lt;/li&gt;
@@ -11,256 +11,236 @@
 &lt;h2&gt;Instalación&lt;/h2&gt;
 &lt;h3&gt;Linux&lt;/h3&gt;
 &lt;p&gt;Los siguientes pasos muestras como instalar las herramientas necesarias en Ubuntu 17.04&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm ls-remote
 nvm install &amp;lt;la ultima LTS&amp;gt;
 npm install -g ethereumjs-testrpc
 npm install solc
 npm install web3
-&lt;/pre&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Mac&lt;/h3&gt;
 &lt;p&gt;Para instalar nvm es necesario tener &lt;a href="https://brew.sh/"&gt;brew&lt;/a&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;brew install nvm
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;brew install nvm
 nvm ls-remote
 nvm install &amp;lt;la ultima LTS&amp;gt;
 npm install -g ethereumjs-testrpc
 npm install solc
 npm install web3
-&lt;/pre&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;Desarrollo&lt;/h2&gt;
 &lt;p&gt;Con el editor preferido, escribir el contrato, para esto se va a utilizar el lenguage &lt;a href="https://solidity.readthedocs.io/en/develop/"&gt;&lt;strong&gt;solidity&lt;/strong&gt;&lt;/a&gt;, sin embargo existen otras opciones como &lt;a href="https://github.com/ethereum/wiki/wiki/Serpent"&gt;&lt;strong&gt;serpent&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Para compilar el contrato vamos a utilizar el comando &lt;code&gt;solc --bin --optimize &amp;lt;archivo.sol&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Escribit el siguiente contrato en un archivo llamado Voting.sol&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pragma solidity ^0.4.11;
-// We have to specify what version of compiler this code will compile with
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;pragma solidity&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;^&lt;/span&gt;&lt;span class="k"&gt;0.4.11&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="c1"&gt;// We have to specify what version of compiler this code will compile with&lt;/span&gt;
 
-contract Voting {
-  /* mapping field below is equivalent to an associative array or hash.
-  The key of the mapping is candidate name stored as type bytes32 and value is
-  an unsigned integer to store the vote count
-  */
+&lt;span class="k"&gt;contract&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ni"&gt;Voting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="cm"&gt;/* mapping field below is equivalent to an associative array or hash.&lt;/span&gt;
+&lt;span class="cm"&gt;  The key of the mapping is candidate name stored as type bytes32 and value is&lt;/span&gt;
+&lt;span class="cm"&gt;  an unsigned integer to store the vote count&lt;/span&gt;
+&lt;span class="cm"&gt;  */&lt;/span&gt;
 
-  mapping (bytes32 =&amp;gt; uint8) public votesReceived;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kt"&gt;mapping&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;bytes32&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;uint8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;votesReceived&lt;span class="p"&gt;;&lt;/span&gt;
 
-  /* Solidity doesn't let you pass in an array of strings in the constructor (yet).
-  We will use an array of bytes32 instead to store the list of candidates
-  */
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="cm"&gt;/* Solidity doesn't let you pass in an array of strings in the constructor (yet).&lt;/span&gt;
+&lt;span class="cm"&gt;  We will use an array of bytes32 instead to store the list of candidates&lt;/span&gt;
+&lt;span class="cm"&gt;  */&lt;/span&gt;
 
-  bytes32[] public candidateList;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kt"&gt;bytes32&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;candidateList&lt;span class="p"&gt;;&lt;/span&gt;
 
-  /* This is the constructor which will be called once when you
-  deploy the contract to the blockchain. When we deploy the contract,
-  we will pass an array of candidates who will be contesting in the election
-  */
-  function Voting(bytes32[] candidateNames) {
-    candidateList = candidateNames;
-  }
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="cm"&gt;/* This is the constructor which will be called once when you&lt;/span&gt;
+&lt;span class="cm"&gt;  deploy the contract to the blockchain. When we deploy the contract,&lt;/span&gt;
+&lt;span class="cm"&gt;  we will pass an array of candidates who will be contesting in the election&lt;/span&gt;
+&lt;span class="cm"&gt;  */&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kt"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;Voting&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;bytes32&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;candidateNames&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;candidateList&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;candidateNames&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-  // This function returns the total votes a candidate has received so far
-  function totalVotesFor(bytes32 candidate) returns (uint8) {
-    if (validCandidate(candidate) == false) throw;
-    return votesReceived[candidate];
-  }
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// This function returns the total votes a candidate has received so far&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kt"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;bytes32&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;returns&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;uint8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kt"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;validCandidate&lt;span class="p"&gt;(&lt;/span&gt;candidate&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;throw&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kt"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;votesReceived&lt;span class="p"&gt;[&lt;/span&gt;candidate&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-  // This function increments the vote count for the specified candidate. This
-  // is equivalent to casting a vote
-  function voteForCandidate(bytes32 candidate) {
-    if (validCandidate(candidate) == false) throw;
-    votesReceived[candidate] += 1;
-  }
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// This function increments the vote count for the specified candidate. This&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="c1"&gt;// is equivalent to casting a vote&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kt"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;bytes32&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kt"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;validCandidate&lt;span class="p"&gt;(&lt;/span&gt;candidate&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;throw&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;votesReceived&lt;span class="p"&gt;[&lt;/span&gt;candidate&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;+=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m m-Decimal"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-  function validCandidate(bytes32 candidate) returns (bool) {
-    for(uint i = 0; i &amp;lt; candidateList.length; i++) {
-      if (candidateList[i] == candidate) {
-        return true;
-      }
-    }
-    return false;
-  }
-}
-&lt;/pre&gt;
-
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kt"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;validCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;bytes32&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;returns&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kt"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;uint&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m m-Decimal"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;i&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;candidateList&lt;span class="p"&gt;.&lt;/span&gt;length&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;i&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kt"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;candidateList&lt;span class="p"&gt;[&lt;/span&gt;i&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;candidate&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="kt"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kt"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Pasos para desplegar el contrato&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Ejecutar node&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Mientras se ejecutan los comandos, se puede ver su salida y analizarla.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;Web3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'web3'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nx"&gt;web3&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;providers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;HttpProvider&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"http://localhost:8545"&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'web3'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;providers&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;HttpProvider&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"http://localhost:8545"&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Listar las cuentas existentes en la red&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Compilar el código &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;readFileSync&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Voting.sol'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="nx"&gt;solc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'solc'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nx"&gt;compiledCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;solc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;fs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;readFileSync&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Voting.sol'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="nx"&gt;solc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'solc'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;solc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;code&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="kr"&gt;interface&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nx"&gt;VotingContract&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nx"&gt;byteCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;bytecode&lt;/span&gt;
-&lt;span class="nx"&gt;deployedContract&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Nick'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Jose'&lt;/span&gt;&lt;span class="p"&gt;],{&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;byteCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nx"&gt;gas&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4700000&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;JSON&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="kr"&gt;interface&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;abiDefinition&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nx"&gt;byteCode&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;compiledCode&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;contracts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;':Voting'&lt;/span&gt;&lt;span class="p"&gt;].&lt;/span&gt;&lt;span class="nx"&gt;bytecode&lt;/span&gt;
+&lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="ow"&gt;new&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Nick'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'Jose'&lt;/span&gt;&lt;span class="p"&gt;],{&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;byteCode&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;gas&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;4700000&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
 &lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;address&lt;/span&gt;
-&lt;span class="nx"&gt;contractInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;at&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;address&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
+&lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;VotingContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;at&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;deployedContract&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;address&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;String&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'0'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;String&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'0'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nx"&gt;s&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;c&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
 
 &lt;span class="s1"&gt;'0xdedc7ae544c3dde74ab5a0b07422c5a51b5240603d31074f5b75c0ebc786bf53'&lt;/span&gt;
 
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
 
 &lt;span class="s1"&gt;'0x02c054d238038d68b65d55770fabfca592a5cf6590229ab91bbe7cd72da46de9'&lt;/span&gt;
 
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;voteForCandidate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kr"&gt;from&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;web3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;eth&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;accounts&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]})&lt;/span&gt;
 
 &lt;span class="s1"&gt;'0x3da069a09577514f2baaa11bc3015a16edf26aad28dffbcd126bde2e71f2b76f'&lt;/span&gt;
 
-&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toLocaleString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;contractInstance&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;totalVotesFor&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Rama'&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;toLocaleString&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
 &lt;span class="s1"&gt;'3'&lt;/span&gt;
-&lt;/pre&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;Opcodes de la EVM&lt;/h2&gt;
 &lt;h3&gt;0s: Stop and Arithmetic Operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x00    STOP        Halts execution
-0x01    ADD         Addition operation
-0x02    MUL         Multiplication operation
-0x03    SUB         Subtraction operation
-0x04    DIV         Integer division operation
-0x05    SDIV        Signed integer
-0x06    MOD         Modulo
-0x07    SMOD        Signed modulo
-0x08    ADDMOD      Modulo
-0x09    MULMOD      Modulo
-0x0a    EXP         Exponential operation
-0x0b    SIGNEXTEND  Extend length of two's complement signed integer
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x00&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kr"&gt;STOP&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Halts&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;execution&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x01&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ADD&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;Addition&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x02&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;MUL&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;Multiplication&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x03&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SUB&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;Subtraction&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x04&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;DIV&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nb"&gt;Int&lt;/span&gt;&lt;span class="n"&gt;eger&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;division&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x05&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SDIV&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="n"&gt;eger&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x06&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;MOD&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="n"&gt;Modulo&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x07&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SMOD&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;modulo&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x08&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ADDMOD&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;Modulo&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x09&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;MULMOD&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;Modulo&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x0a&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;EXP&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nb"&gt;Exp&lt;/span&gt;&lt;span class="kr"&gt;on&lt;/span&gt;&lt;span class="n"&gt;ential&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x0b&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SIGNEXTEND&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Extend&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="n"&gt;gth&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;two&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complement&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="n"&gt;eger&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;10s: Comparison &amp;amp; Bitwise Logic Operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x10    LT      Lesser-than comparison
-0x11    GT      Greater-than comparison
-0x12    SLT     Signed less-than comparison
-0x13    SGT     Signed greater-than comparison
-0x14    EQ      Equality  comparison
-0x15    ISZERO  Simple not operator
-0x16    AND     Bitwise AND operation
-0x17    OR      Bitwise OR operation
-0x18    XOR     Bitwise XOR operation
-0x19    NOT     Bitwise NOT operation
-0x1a    BYTE    Retrieve single byte from word
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x10&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;LT&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;Lesser&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;than&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;comparison&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x11&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;GT&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;Greater&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;than&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;comparison&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x12&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SLT&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="n"&gt;Signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;less&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;than&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;comparison&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x13&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SGT&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="n"&gt;Signed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;greater&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;than&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;comparison&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x14&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;EQ&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;Equality&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;comparison&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x15&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ISZERO&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Simple&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;not&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operator&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x16&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="ow"&gt;AND&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="n"&gt;Bitwise&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;AND&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x17&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="ow"&gt;OR&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="n"&gt;Bitwise&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;OR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x18&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;XOR&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="n"&gt;Bitwise&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;XOR&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x19&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="ow"&gt;NOT&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="n"&gt;Bitwise&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;NOT&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;operation&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x1a&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;BYTE&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Retrieve&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;sin&lt;/span&gt;&lt;span class="n"&gt;gle&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;20s: SHA3&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x20    SHA3    Compute Keccak-256 hash
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x20&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SHA3&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Compute&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Keccak&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;256&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;hash&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;30s: Environmental Information&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x30    ADDRESS         Get address of currently executing account
-0x31    BALANCE         Get balance of the given account
-0x32    ORIGIN          Get execution origination address
-0x33    CALLER          Get caller address. This is the address of the account that is directly responsible for this execution
-0x34    CALLVALUE       Get deposited value by the instruction/transaction responsible for this execution
-0x35    CALLDATALOAD    Get input data of current environment
-0x36    CALLDATASIZE    Get size of input data in current environment
-0x37    CALLDATACOPY    Copy input data in current environment to memory This pertains to the input data passed with the message call instruction or transaction
-0x38    CODESIZE        Get size of code running in current environment
-0x39    CODECOPY        Copy code running in current environment to memory
-0x3a    GASPRICE        Get price of gas in current environment
-0x3b    EXTCODESIZE     Get size of an account's code
-0x3c    EXTCODECOPY     Copy an account's code to memory
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x30&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;ADDRESS&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;currently&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;executing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;account&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x31&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;BALANCE&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;balance&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;given&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;account&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x32&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="ow"&gt;OR&lt;/span&gt;&lt;span class="n"&gt;IGIN&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;execution&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;&lt;span class="n"&gt;igination&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x33&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CALLER&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;caller&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt;&lt;span class="mf"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;account&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;that&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;directly&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;responsible&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;execution&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x34&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CALLVALUE&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;deposited&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;val&lt;/span&gt;&lt;span class="n"&gt;ue&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;instruction&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;transaction&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;responsible&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;execution&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x35&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CALLDATALOAD&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;input&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x36&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CALLDATASIZE&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;input&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x37&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CALLDATACOPY&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Copy&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;input&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;memory&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;This&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pertains&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;input&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;data&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;passed&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;instruction&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;transaction&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x38&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CODESIZE&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;run&lt;/span&gt;&lt;span class="n"&gt;ning&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x39&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CODECOPY&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Copy&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;run&lt;/span&gt;&lt;span class="n"&gt;ning&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;memory&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x3a&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;GASPRICE&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;gas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x3b&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;EXTCODESIZE&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;account&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x3c&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;EXTCODECOPY&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="n"&gt;Copy&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;account&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;memory&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;40s: Block Information&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x40    BLOCKHASH   Get the hash of one of the 256 most recent complete blocks
-0x41    COINBASE    Get the block's beneficiary address
-0x42    TIMESTAMP   Get the block's timestamp
-0x43    NUMBER      Get the block's number
-0x44    DIFFICULTY  Get the block's difficulty
-0x45    GASLIMIT    Get the block's gas limit
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x40&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;BLOCKHASH&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;hash&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;on&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;256&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;most&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;recent&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;complete&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;blocks&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x41&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;COINBASE&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;beneficiary&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;address&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x42&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;TIMESTAMP&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;timestamp&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x43&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;NUMBER&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x44&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;DIFFICULTY&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;difficulty&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x45&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;GASLIMIT&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;block&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;gas&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;limit&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;50s Stack, Memory, Storage and Flow Operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x50    POP         Remove item from stack
-0x51    MLOAD       Load word from memory
-0x52    MSTORE      Save word to memory
-0x53    MSTORE8     Save byte to memory
-0x54    SLOAD       Load word from storage
-0x55    SSTORE      Save word to storage
-0x56    JUMP        Alter the program counter
-0x57    JUMPI       Conditionally alter the program counter
-0x58    PC          Get the value of the program counter prior to the increment
-0x59    MSIZE       Get the size of active memory in bytes
-0x5a    GAS         Get the amount of available gas, including the corresponding reduction
-0x5b    JUMPDEST    Mark a valid destination for jumps
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x50&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;POP&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="c1"&gt;Remove item from stack&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x51&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;MLOAD&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="kr"&gt;Load&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;memory&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x52&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;MSTORE&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kr"&gt;Save&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;memory&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x53&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;MSTORE8&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="kr"&gt;Save&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;memory&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x54&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SLOAD&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="kr"&gt;Load&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x55&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SSTORE&lt;/span&gt;&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="kr"&gt;Save&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;storage&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x56&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;JUMP&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Alter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x57&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;JUMPI&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="n"&gt;Conditionally&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;alter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x58&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;PC&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;val&lt;/span&gt;&lt;span class="n"&gt;ue&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;program&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;counter&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;prior&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;increment&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x59&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;MSIZE&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;active&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;memory&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bytes&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x5a&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;GAS&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="kr"&gt;Get&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;amount&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;available&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;gas&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;including&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;corresponding&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;reduction&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x5b&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;JUMPDEST&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Mark&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;val&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;destination&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;jumps&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;60s &amp;amp; 70s: Push Operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x60    PUSH1   Place 1 byte item on stack
-0x61    PUSH2   Place 2-byte item on stack
-…
-0x7f    PUSH32  Place 32-byte (full word) item on stack
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x60&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;PUSH1&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;Place&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x61&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;PUSH2&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;Place&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;
+&lt;span class="err"&gt;…&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x7f&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;PUSH32&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Place&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;byte&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;full&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;80s: Duplication Operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x80    DUP1    Duplicate 1st stack item
-0x81    DUP2    Duplicate 2nd stack item
-…
-0x8f    DUP16   Duplicate 16th stack item
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x80&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;DUP1&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Duplicate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="n"&gt;st&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x81&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;DUP2&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Duplicate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="n"&gt;nd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;
+&lt;span class="err"&gt;…&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x8f&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;DUP16&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;Duplicate&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;16&lt;/span&gt;&lt;span class="n"&gt;th&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;90s: Exchange Operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0x90    SWAP1   Exchange 1st and 2nd stack items
-0x91    SWAP2   Exchange 1st and 3rd stack items
-…   …
-0x9f    SWAP16  Exchange 1st and 17th stack items
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x90&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SWAP1&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;Exchange&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="n"&gt;st&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="n"&gt;nd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x91&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SWAP2&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="n"&gt;Exchange&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="n"&gt;st&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="n"&gt;rd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;
+&lt;span class="err"&gt;…&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="err"&gt;…&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;x9f&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SWAP16&lt;/span&gt;&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="n"&gt;Exchange&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="n"&gt;st&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;17&lt;/span&gt;&lt;span class="n"&gt;th&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stack&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;a0s: Logging Operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xa0    LOG0    Append log record with no topics
-0xa1    LOG1    Append log record with one topic
-…   …
-0xa4    LOG4    Append log record with four topics
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;xa0&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;LOG&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Append&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;log&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;record&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="n"&gt;pics&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;xa1&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;LOG&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Append&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;log&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;record&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;on&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;
+&lt;span class="err"&gt;…&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="err"&gt;…&lt;/span&gt;
+&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;xa4&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;LOG&lt;/span&gt;&lt;span class="mf"&gt;4&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Append&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;log&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;record&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;four&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;to&lt;/span&gt;&lt;span class="n"&gt;pics&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;f0s: System operations&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xf0    CREATE          Create a new account with associated code
-0xf1    CALL            Message-call into an account
-0xf2    CALLCODE        Message-call into this account with alternative account's code
-0xf3    RETURN          Halt execution returning output data
-0xf4    DELEGATECALL    Message-call into this account with an alternative account's code, but persisting the current values for `sender` and `value`
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mh"&gt;0xf0&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;CREATE&lt;/span&gt;&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="k"&gt;Create&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;account&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;associated&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;code&lt;/span&gt;
+&lt;span class="mh"&gt;0xf1&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;CALL&lt;/span&gt;&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;call&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;into&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;account&lt;/span&gt;
+&lt;span class="mh"&gt;0xf2&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;CALLCODE&lt;/span&gt;&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;call&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;into&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;account&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;alternative&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;account&lt;/span&gt;&lt;span class="s1"&gt;'s code&lt;/span&gt;
+&lt;span class="s1"&gt;0xf3    RETURN          Halt execution returning output data&lt;/span&gt;
+&lt;span class="s1"&gt;0xf4    DELEGATECALL    Message-call into this account with an alternative account'&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;but&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;persisting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;values&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`sender`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`value`&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Halt Execution, Mark for deletion&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;0xff    SELFDESTRUCT    Halt execution and register account for later deletion
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="n"&gt;xff&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;SELFDESTRUCT&lt;/span&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;Halt&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;execution&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;account&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;later&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;deletion&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;Referencias&lt;/h2&gt;
 &lt;ul&gt;
@@ -273,7 +253,7 @@ contract Voting {
 &lt;li&gt;https://github.com/ethereum/yellowpaper&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Notas&lt;/h2&gt;
-&lt;p&gt;testrpc -n5&lt;/p&gt;&lt;/div&gt;</description><category>ethereum</category><category>jaquerespeis</category><category>smart contracts</category><guid>http://rngkll.github.io/posts/holamundo-ethereum.html</guid><pubDate>Wed, 19 Jul 2017 05:00:00 GMT</pubDate></item><item><title>Minar ethereum</title><link>http://rngkll.github.io/posts/minar-ethereum.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Requerimientos&lt;/h2&gt;
+&lt;p&gt;testrpc -n5&lt;/p&gt;</description><category>ethereum</category><category>jaquerespeis</category><category>smart contracts</category><guid>http://rngkll.github.io/posts/holamundo-ethereum.html</guid><pubDate>Wed, 19 Jul 2017 05:00:00 GMT</pubDate></item><item><title>Minar ethereum</title><link>http://rngkll.github.io/posts/minar-ethereum.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;h2&gt;Requerimientos&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Minador&lt;/li&gt;
 &lt;li&gt;Ubuntu Server 16.04&lt;/li&gt;
@@ -292,34 +272,30 @@ contract Voting {
 &lt;p&gt;Instalar python y python-wisted&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install python
-sudo apt-get install python-twisted
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python
+sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;python-twisted
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Un vez que se tiene instalado el sistema operativo, activar el ppa de ethereum&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository ppa:ethereum/ethereum
-sudo add-apt-repository ppa:ethereum/ethereum-qt
-sudo add-apt-repository ppa:ethereum/ethereum-dev
-sudo apt-get update
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;add-apt-repository&lt;span class="w"&gt; &lt;/span&gt;ppa:ethereum/ethereum
+sudo&lt;span class="w"&gt; &lt;/span&gt;add-apt-repository&lt;span class="w"&gt; &lt;/span&gt;ppa:ethereum/ethereum-qt
+sudo&lt;span class="w"&gt; &lt;/span&gt;add-apt-repository&lt;span class="w"&gt; &lt;/span&gt;ppa:ethereum/ethereum-dev
+sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;update
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Instalar ethereum&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install ethereum
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;ethereum
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Instalar cpp-ethereum&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install cpp-ethereum
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;apt-get&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;cpp-ethereum
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ol&gt;
 &lt;li&gt;
@@ -338,23 +314,21 @@ sudo apt-get update
 &lt;p&gt;En el directorio eth-proxy, ejecutar &lt;code&gt;eth-proxy.py&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sudo python eth-proxy/eth-proxy.py
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;sudo&lt;span class="w"&gt; &lt;/span&gt;python&lt;span class="w"&gt; &lt;/span&gt;eth-proxy/eth-proxy.py
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Ejecutar &lt;code&gt;ethminer&lt;/code&gt; apuntando a localhost&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ethminer -F http://127.0.0.1:8080/minador -G
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;ethminer&lt;span class="w"&gt; &lt;/span&gt;-F&lt;span class="w"&gt; &lt;/span&gt;http://127.0.0.1:8080/minador&lt;span class="w"&gt; &lt;/span&gt;-G
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; La opción &lt;code&gt;-G&lt;/code&gt; indica a ethminer que utilice GPU para minar, en caso de no contar con GPU utilice &lt;code&gt;--allow-opencl-cpu&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;Referencias&lt;/h2&gt;
 &lt;p&gt;https://github.com/paritytech/parity
 https://github.com/Atrides/eth-proxy
 https://launchpad.net/~ethereum/+archive/ubuntu/ethereum
-http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html&lt;/p&gt;&lt;/div&gt;</description><category>cryptomoneda</category><category>ethereum</category><category>jaquerespeis</category><category>minar</category><guid>http://rngkll.github.io/posts/minar-ethereum.html</guid><pubDate>Thu, 30 Mar 2017 18:00:00 GMT</pubDate></item><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://rngkll.github.io/posts/programar%20microcontrolador%20stm322.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Que se necesita&lt;/h2&gt;
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/linux-ubuntu-ppa.html&lt;/p&gt;</description><category>cryptomoneda</category><category>ethereum</category><category>jaquerespeis</category><category>minar</category><guid>http://rngkll.github.io/posts/minar-ethereum.html</guid><pubDate>Thu, 30 Mar 2017 18:00:00 GMT</pubDate></item><item><title>Como programar un microcontrolador stm32 con cpp</title><link>http://rngkll.github.io/posts/programar%20microcontrolador%20stm322.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;h2&gt;Que se necesita&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Microcontrolador STM322&lt;/li&gt;
 &lt;li&gt;GDB o un debugger, editor de texto o IDE&lt;/li&gt;
@@ -371,14 +345,13 @@ http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/installing-binaries/l
 &lt;h2&gt;Terminos importantes&lt;/h2&gt;
 &lt;p&gt;CMSIS = Cortex Microcontroller Software Interface Standard &lt;a href="http://www.arm.com/products/processors/cortex-m/cortex-microcontroller-software-interface-standard.php"&gt;info&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Referencias&lt;/h2&gt;
-&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;&lt;/div&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://rngkll.github.io/posts/programar%20microcontrolador%20stm322.html</guid><pubDate>Mon, 28 Dec 2015 05:00:00 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;div&gt;&lt;h2&gt;Instalación&lt;/h2&gt;
+&lt;p&gt;http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/&lt;/p&gt;</description><category>arm</category><category>cpp</category><category>jaquerespeis</category><category>stm32</category><guid>http://rngkll.github.io/posts/programar%20microcontrolador%20stm322.html</guid><pubDate>Mon, 28 Dec 2015 05:00:00 GMT</pubDate></item><item><title>Utilizar Nikola por primera vez</title><link>http://rngkll.github.io/posts/utilizar-nikola.html</link><dc:creator>Alvaro Segura Del Barco</dc:creator><description>&lt;h2&gt;Instalación&lt;/h2&gt;
 &lt;p&gt;La forma mas simple de instalar Nikola es con pip y virtual, también se podría utilizar uno de los paquetes de la distribución que se este utilizando, en si son usuarios de Linux.&lt;/p&gt;
 &lt;p&gt;En el directorio del repositorio del sitio&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;virtualenv --python=python3 .env
-source .env/bin/activate
-pip3 install --upgrade "Nikola[extras]"
-&lt;/pre&gt;
-
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;virtualenv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;--python=python3 .env&lt;/span&gt;
+&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip3&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;--upgrade "Nikola[extras]"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Primeros usos&lt;/h3&gt;
 &lt;p&gt;En este momento se tiene el sistema instalado, ahora hay que crear el contenido del primer sitio de prueba, estando en el directorio que va a mantener el código, se ejecuta el comando &lt;code&gt;nikola init --demo .&lt;/code&gt;, luego se debe de construir el sitio con el comando &lt;code&gt;nikola build&lt;/code&gt;.&lt;/p&gt;
@@ -386,7 +359,7 @@ pip3 install --upgrade "Nikola[extras]"
 &lt;h2&gt;Utilizar markdown&lt;/h2&gt;
 &lt;p&gt;Para utilizar markdown para crear los post se debe usar uno de los múltiples lenguajes de marcado ligero soportado, para eso se debe de editar el archivo config.py en la raíz del sitio en Nikola.&lt;/p&gt;
 &lt;p&gt;Primero se debe de verificar que este en la estructura &lt;strong&gt;COMPILERS&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;# 'rest' is reStructuredText
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;# 'rest' is reStructuredText
 # 'markdown' is MarkDown
 # 'html' assumes the file is HTML and just copies it
 COMPILERS = {
@@ -407,11 +380,10 @@ COMPILERS = {
     # with many of the others.
     # "pandoc": ('.rst', '.md', '.txt'),
 }
-&lt;/pre&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Luego se debe de agregar a la estructura del tipo de entrada, en el ejemplo de abajo se agregó la linea, &lt;code&gt;("posts/*.md", "posts", "post.tmpl")&lt;/code&gt; a los dos tipos de entras &lt;strong&gt;POST&lt;/strong&gt; y &lt;strong&gt;PAGES&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;POSTS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.rst"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"posts/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"posts"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"post.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
@@ -421,8 +393,7 @@ COMPILERS = {
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.txt"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
     &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"stories/*.md"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"stories"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"story.tmpl"&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
 &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;Utilizar locales para Costa Rica&lt;/h2&gt;
 &lt;p&gt;Este proceso debería funcionar para la mayoría de idiomas.&lt;/p&gt;
@@ -430,7 +401,7 @@ COMPILERS = {
 &lt;li&gt;Generar el locale necesario con `locale-get &lt;locale&gt;&lt;/locale&gt;&lt;/li&gt;
 &lt;li&gt;Definir cual es el locale que debe de utilizar Nikola por defecto.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# What is the default language?&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="c1"&gt;# What is the default language?&lt;/span&gt;
 &lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"es"&lt;/span&gt;
 
 &lt;span class="c1"&gt;# What other languages do you have?&lt;/span&gt;
@@ -443,16 +414,14 @@ COMPILERS = {
     &lt;span class="s2"&gt;"es"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"./"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="s2"&gt;"en"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"./en"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-
+&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Definir el locale que se va a utilizar para &lt;code&gt;es&lt;/code&gt;, por defecto es &lt;code&gt;es_ES&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;LOCALES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;div class="code"&gt;&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;LOCALES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="s2"&gt;"es"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;"es_CR.utf-8"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
 
-
-&lt;p&gt;El locale a utilizar puede ser probado, importando locale &lt;code&gt;import locale&lt;/code&gt; y llamando al locale necesario &lt;code&gt;locale.setlocale(locale.LC_ALL, 'es_CR.utf-8')&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><category>blog</category><category>jaquerespeis</category><category>markdown</category><category>nikola</category><category>python</category><guid>http://rngkll.github.io/posts/utilizar-nikola.html</guid><pubDate>Fri, 21 Aug 2015 05:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;El locale a utilizar puede ser probado, importando locale &lt;code&gt;import locale&lt;/code&gt; y llamando al locale necesario &lt;code&gt;locale.setlocale(locale.LC_ALL, 'es_CR.utf-8')&lt;/code&gt;&lt;/p&gt;</description><category>blog</category><category>jaquerespeis</category><category>markdown</category><category>nikola</category><category>python</category><guid>http://rngkll.github.io/posts/utilizar-nikola.html</guid><pubDate>Fri, 21 Aug 2015 05:00:00 GMT</pubDate></item></channel></rss>

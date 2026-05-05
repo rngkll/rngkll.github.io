@@ -2,35 +2,108 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OpenWRT en Ubiquiti Power AP N + Multiwan | Mi Sitio</title>
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../en/rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../rss.xml">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../en/rss.xml">
 <link rel="canonical" href="http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.html">
-<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="Alvaro Segura Del Barco">
+<link rel="prev" href="usuarios-sftp-sin-ssh.html" title="Usuarios sftp sin ssh" type="text/html">
+<link rel="next" href="freeswitch-in-raspberry-pi.html" title="Freeswitch in Raspberry Pi" type="text/html">
+<meta property="og:site_name" content="Mi Sitio">
+<meta property="og:title" content="OpenWRT en Ubiquiti Power AP N + Multiwan">
+<meta property="og:url" content="http://rngkll.github.io/posts/openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.html">
+<meta property="og:description" content="Instalación de openwrt
+Descargar la imagen
+Como en openwrt.org no existe una imagen hecha específicamente para ese router es necesario utilizar la del Ubiquiti Nanostation M
+http://backfire.openwrt.or">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2013-04-01T11:19:38-06:00">
+<link rel="alternate" hreflang="en" href="../en/posts/openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.html">
 </head>
-<body class="home blog">
-    <div id="wrap" style="width:850px">
-        <div id="container" style="width:560px">
-            
-            
-    <div class="post">
-    
-    <h1 class="p-name entry-title" itemprop="headline name"><a href="openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.html" class="u-url">OpenWRT en Ubiquiti Power AP N + Multiwan</a></h1>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
 
-        <div class="meta" style="background-color: rgb(234, 234, 234); ">
-        <span class="authordate">
-            Publicado: <time class="published" datetime="2013-04-01T11:19:38-06:00">2013-04-01 11:19</time>
-               [<a href="openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.md" id="sourcelink">Código fuente</a>]
-        </span>
-        <br><span class="authordate">
-            
-
-        </span>
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
         </div>
-    <div>
-<h2>Instalación de openwrt</h2>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="../">
+
+            <span id="blog-title">Mi Sitio</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="../en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.md" id="sourcelink" class="nav-link">Código fuente</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../archive.html" class="nav-link">Archivo</a>
+                </li>
+<li class="nav-item">
+<a href="../categories/index.html" class="nav-link">Etiquetas</a>
+                </li>
+<li class="nav-item">
+<a href="../rss.xml" class="nav-link">Canal RSS</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.html" class="u-url">OpenWRT en Ubiquiti Power AP N + Multiwan</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    <a class="u-url" href="../authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+            </span></p>
+            <p class="dateline">
+            <a href="openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.html" rel="bookmark">
+            <time class="published dt-published" datetime="2013-04-01T11:19:38-06:00" itemprop="datePublished" title="2013-04-01 11:19">2013-04-01 11:19</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="openwrt-en-ubiquiti-power-ap-n-%2B-multiwan.md" class="sourcelink">Código fuente</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <h2>Instalación de openwrt</h2>
 <h3>Descargar la imagen</h3>
 <p>Como en openwrt.org no existe una imagen hecha específicamente para ese router es necesario utilizar la del Ubiquiti Nanostation M</p>
 <p>http://backfire.openwrt.org/10.03.1/ar71xx/openwrt-ar71xx-ubnt-nano-m-jffs2-factory.bin
@@ -51,159 +124,126 @@ Cargar por TFTP</p>
 <li>hacer ping 192.168.1.20, si funciona estamos listos para cargar la imagen.</li>
 <li>Cargar la imagen por tftp como flash_update (Me parece que en las versiones mas nuevas no es necesario)</li>
 </ul>
-<pre class="code literal-block"><span></span>tftp 192.168.1.20
+<div class="code"><pre class="code literal-block">tftp 192.168.1.20
 tftp&gt; bin
 tftp&gt; put imagen.bin flash_update
 Sent 1965199 bytes in 28.8 seconds
 tftp&gt; quit
-</pre>
-
+</pre></div>
 
 <p>En el momento que el equipo reinicia solo va a contestar por el puerto de la WAN, ingresamos a http://192.168.1.1 y cambiamos la contraseña.</p>
 <h3>Configuración</h3>
 <p>Por ssh vamos a editar las interfaces de red en /etc/config/network y sustituimos por lo siguiente.</p>
-<pre class="code literal-block"><span></span>config 'switch' 'eth1'
-        option 'enable_vlan' '1'
+<div class="code"><pre class="code literal-block"><span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="nx">switch</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">enable_vlan</span><span class="sc">' '</span><span class="mi">1</span><span class="err">'</span>
 
-config 'switch_vlan'
-        option 'device' 'eth1'
-        option 'vlan' '1'
-        option 'ports' '0 1 2 3 4'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="nx">switch_vlan</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">device</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">vlan</span><span class="sc">' '</span><span class="mi">1</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ports</span><span class="sc">' '</span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="err">'</span>
 
-config 'interface' 'loopback'
-        option 'ifname' 'lo'
-        option 'proto' 'static'
-        option 'ipaddr' '127.0.0.1'
-        option 'netmask' '255.0.0.0'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="kd">interface</span><span class="sc">' '</span><span class="nx">loopback</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ifname</span><span class="sc">' '</span><span class="nx">lo</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">proto</span><span class="sc">' '</span><span class="nx">static</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ipaddr</span><span class="sc">' '</span><span class="m m-Double">127.0.0.1</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">netmask</span><span class="sc">' '</span><span class="m m-Double">255.0.0.0</span><span class="err">'</span>
 
-config 'interface' 'lan'
-        option 'ifname' 'eth1'
-        option 'type' 'bridge'
-        option 'proto' 'static'
-        option 'ipaddr' '192.168.1.1'
-        option 'netmask' '255.255.255.0'
-        option '_orig_ifname' 'eth1'
-        option '_orig_bridge' 'true'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="kd">interface</span><span class="sc">' '</span><span class="nx">lan</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ifname</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="k">type</span><span class="sc">' '</span><span class="nx">bridge</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">proto</span><span class="sc">' '</span><span class="nx">static</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ipaddr</span><span class="sc">' '</span><span class="m m-Double">192.168.1.1</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">netmask</span><span class="sc">' '</span><span class="m m-Double">255.255.255.0</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_ifname</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_bridge</span><span class="sc">' '</span><span class="kc">true</span><span class="err">'</span>
 
-config 'interface' 'wan'
-        option 'ifname' 'eth0'
-        option '_orig_ifname' 'eth0'
-        option '_orig_bridge' 'false'
-        option 'proto' 'dhcp'
-</pre>
-
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="kd">interface</span><span class="sc">' '</span><span class="nx">wan</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ifname</span><span class="sc">' '</span><span class="nx">eth0</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_ifname</span><span class="sc">' '</span><span class="nx">eth0</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_bridge</span><span class="sc">' '</span><span class="kc">false</span><span class="err">'</span>
+<span class="w">        </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">proto</span><span class="sc">' '</span><span class="nx">dhcp</span><span class="err">'</span>
+</pre></div>
 
 <p>Con esto ya tenemos un router inalámbrico en su configuración normal, de aquí en adelante es jugar con el OpenWRT para poder hacer lo que uno quiera.</p>
 <h2>Multiwan</h2>
 <p>Es necesario instalar los siguientes paquetes:</p>
-<pre class="code literal-block"><span></span>luci-app-multiwan
+<div class="code"><pre class="code literal-block">luci-app-multiwan
 multiwan
-</pre>
-
+</pre></div>
 
 <p>Para utilizar se tiene que configurar el switch que concentra los 4 puertos para separar uno para utilizarlo como una segunda wan.</p>
-<pre class="code literal-block"><span></span>config 'interface' 'loopback'
-    option 'ifname' 'lo'
-    option 'proto' 'static'
-    option 'ipaddr' '127.0.0.1'
-    option 'netmask' '255.0.0.0'
+<div class="code"><pre class="code literal-block"><span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="kd">interface</span><span class="sc">' '</span><span class="nx">loopback</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ifname</span><span class="sc">' '</span><span class="nx">lo</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">proto</span><span class="sc">' '</span><span class="nx">static</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ipaddr</span><span class="sc">' '</span><span class="m m-Double">127.0.0.1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">netmask</span><span class="sc">' '</span><span class="m m-Double">255.0.0.0</span><span class="err">'</span>
 
-config 'switch' 'eth1'
-    option 'enable_vlan' '1'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="nx">switch</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">enable_vlan</span><span class="sc">' '</span><span class="mi">1</span><span class="err">'</span>
 
-config 'switch_vlan'
-    option 'device' 'eth1'
-    option 'vlan' '1'
-    option 'vid' '1'
-    option 'ports' '0t 1 2 3'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="nx">switch_vlan</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">device</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">vlan</span><span class="sc">' '</span><span class="mi">1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">vid</span><span class="sc">' '</span><span class="mi">1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ports</span><span class="sc">' '</span><span class="mi">0</span><span class="nx">t</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="err">'</span>
 
-config 'switch_vlan'
-    option 'device' 'eth1'
-    option 'vlan' '2'
-    option 'vid' '2'
-    option 'ports' '0t 4'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="nx">switch_vlan</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">device</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">vlan</span><span class="sc">' '</span><span class="mi">2</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">vid</span><span class="sc">' '</span><span class="mi">2</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ports</span><span class="sc">' '</span><span class="mi">0</span><span class="nx">t</span><span class="w"> </span><span class="mi">4</span><span class="err">'</span>
 
-config 'interface' 'lan'
-    option 'ifname' 'eth1.1'
-    option 'type' 'bridge'
-    option '_orig_ifname' 'eth1'
-    option '_orig_bridge' 'true'
-    option 'proto' 'static'
-    option 'ipaddr' '172.16.1.1'
-    option 'netmask' '255.255.255.0'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="kd">interface</span><span class="sc">' '</span><span class="nx">lan</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ifname</span><span class="sc">' '</span><span class="nx">eth1</span><span class="m m-Double">.1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="k">type</span><span class="sc">' '</span><span class="nx">bridge</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_ifname</span><span class="sc">' '</span><span class="nx">eth1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_bridge</span><span class="sc">' '</span><span class="kc">true</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">proto</span><span class="sc">' '</span><span class="nx">static</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ipaddr</span><span class="sc">' '</span><span class="m m-Double">172.16.1.1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">netmask</span><span class="sc">' '</span><span class="m m-Double">255.255.255.0</span><span class="err">'</span>
 
-config 'interface' 'wan'
-    option 'ifname' 'eth0'
-    option '_orig_ifname' 'eth0'
-    option '_orig_bridge' 'false'
-    option 'proto' 'dhcp'
-    option 'broadcast' '1'
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="kd">interface</span><span class="sc">' '</span><span class="nx">wan</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ifname</span><span class="sc">' '</span><span class="nx">eth0</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_ifname</span><span class="sc">' '</span><span class="nx">eth0</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_bridge</span><span class="sc">' '</span><span class="kc">false</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">proto</span><span class="sc">' '</span><span class="nx">dhcp</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">broadcast</span><span class="sc">' '</span><span class="mi">1</span><span class="err">'</span>
 
-config 'interface' 'wan2'
-    option 'ifname' 'eth1.2'
-    option '_orig_ifname' 'eth1.2'
-    option '_orig_bridge' 'false'
-    option 'proto' 'static'
-    option 'ipaddr' '192.168.1.3'
-    option 'netmask' '255.255.255.0'
-    option 'gateway' '192.168.1.1'
-    option 'broadcast' '192.168.1.255'
-    option 'dns' '200.91.75.5 200.91.75.6'
-</pre>
-
+<span class="nx">config</span><span class="w"> </span><span class="err">'</span><span class="kd">interface</span><span class="sc">' '</span><span class="nx">wan2</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ifname</span><span class="sc">' '</span><span class="nx">eth1</span><span class="m m-Double">.2</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_ifname</span><span class="sc">' '</span><span class="nx">eth1</span><span class="m m-Double">.2</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">_orig_bridge</span><span class="sc">' '</span><span class="kc">false</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">proto</span><span class="sc">' '</span><span class="nx">static</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">ipaddr</span><span class="sc">' '</span><span class="m m-Double">192.168.1.3</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">netmask</span><span class="sc">' '</span><span class="m m-Double">255.255.255.0</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">gateway</span><span class="sc">' '</span><span class="m m-Double">192.168.1.1</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">broadcast</span><span class="sc">' '</span><span class="m m-Double">192.168.1.255</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">option</span><span class="w"> </span><span class="err">'</span><span class="nx">dns</span><span class="sc">' '</span><span class="m m-Double">200.91.75.5</span><span class="w"> </span><span class="m m-Double">200.91.75.6</span><span class="err">'</span>
+</pre></div>
 
 <p>Despues de esto nada mas hay que agregar la nueva interfaz creada a la zona del wan del firewall, esto se puede hacer de manera gráfica.</p>
 <p>A causa de un pico de voltaje durante una tormenta eléctrica no se va experimentar mas con este router.</p>
-</div>
-    
-        <ul class="pager hidden-print">
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
                 <a href="usuarios-sftp-sin-ssh.html" rel="prev" title="Usuarios sftp sin ssh">Publicación anterior</a>
             </li>
             <li class="next">
                 <a href="freeswitch-in-raspberry-pi.html" rel="next" title="Freeswitch in Raspberry Pi">Siguiente publicación</a>
             </li>
-        </ul>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2026         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
 </div>
 
-        </div>
-        <div id="sidebar">
-            <!--Sidebar content-->
-            <h1 id="blog-title">
-                <a href="http://rngkll.github.io/" title="Mi Sitio">Mi Sitio</a>
-            </h1>
-            
-            <small>
-                También disponible en: 
-                
-            <li><a href="http://rngkll.github.io/en/" rel="alternate" hreflang="en">English</a></li>
 
-            </small>
-            
-            <ul class="unstyled">
-<li>
-            
-                <li>
-<a href="../archive.html">Archivo</a>
-                </li>
-<li>
-<a href="../categories/index.html">Etiquetas</a>
-                </li>
-<li>
-<a href="../rss.xml">Canal RSS</a>
-
-            </li>
-<li>
-            
-            
-            </ul>
-</div>
-        <div id="footer">
-            Contents © 2017         <a href="mailto:alvarosb@gmail.com">Alvaro Segura Del Barco</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
-            
-        </div>
-    </div>
-    
-            <script src="../assets/js/all-nocdn.js"></script><script src="../assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+        <script src="../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
 </body>
 </html>
