@@ -76,7 +76,43 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/freeswitch-in-raspberry-pi.html" class="u-url">Freeswitch in Raspberry Pi</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/optimizacion-de-apache2.html" class="u-url">Optimización de apache2</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/optimizacion-de-apache2.html" rel="bookmark">
+            <time class="published dt-published" datetime="2013-10-18T11:16:14-06:00" itemprop="datePublished" title="2013-10-18 11:16">2013-10-18 11:16</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <p>Primero hay que revisar cuales módulos están cargados, esto se puede hacer con</p>
+<div class="code"><pre class="code literal-block">apachectl -M
+</pre></div>
+
+<p>Lo ideal es tener solo los módulos necesarios para que el sitio funcione, la cantidad de módulos influye en e tamaño de cada proceso de apache que se encuentra corriendo.</p>
+<div class="code"><pre class="code literal-block">HostnameLookups off
+</pre></div>
+
+<p>Cuando un cliente el accede el servidor web, se crea una bitácora en access.log, si esta directiva esta en On se busca el nombre en el servidor de nombres, aun con un cache de dns esto es muy lento.</p>
+<p>Cuando se establece una conexión esta se deja escuchando por un tiempo por si se le hace una nueva petición, en el caso de tener muchos visitantes y dejar la conexiones abiertas por mucho tiempo, se crea un problema, por eso se puede bajar el tiempo para poder servir nuevas peticiones. (Esta altamente ligado al MaxClients).</p>
+<div class="code"><pre class="code literal-block">KeepAlive On
+KeepAliveTimeout 2
+</pre></div>
+
+<p>Para el momento de calcular MaxClients.</p>
+<p>Una buena referencia es MaxClients = (total de memoria)/(promedio de memoria utilizada por cada proceso de apache)</p>
+<p>Una buena manera de ver el tamaño de un proceso de apache es con el comando <code>ps -ylC apache2 --sort:rss</code></p>
+<p>Con esto se puede ver el tamaño del proceso mas grande de ultimo.</p>
+<p>Una suma de la columna del rss nos da un valor del total de memoria que esta usando el proceso, esto puede aumentar porque no todos los procesos tiene el mismo tamaño.</p>
+<div class="code"><pre class="code literal-block"><span class="n">ps</span> <span class="o">-</span><span class="n">ylC</span> <span class="n">apache2</span> <span class="o">--</span><span class="n">sort</span><span class="p">:</span><span class="n">rss</span> <span class="p">|</span> <span class="n">awk</span> <span class="s">'{SUM += $8 } END {print SUM}'</span>
+</pre></div>
+
+<p>Hay que tomar en cuenta también el resto de procesos del servidor.</p>
+<p>Utilizando top y acomodando por rss podemos ver los procesos que están utilizando mas memoria, entre estos deberíamos encontrar los procesos de apache y el o los de la base de datos si es que se tiene una.</p>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/freeswitch-in-raspberry-pi.html" class="u-url">Freeswitch in Raspberry Pi</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>

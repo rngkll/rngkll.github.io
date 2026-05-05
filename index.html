@@ -76,7 +76,57 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/holamundo-ethereum.html" class="u-url">HolaMundo con ethereum</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/arroz-con-palmito-vegano.html" class="u-url">Arroz con palmito vegano</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/arroz-con-palmito-vegano.html" rel="bookmark">
+            <time class="published dt-published" datetime="2026-05-05T00:00:00-06:00" itemprop="datePublished" title="2026-05-05 00:00">2026-05-05 00:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <h2>Arroz con palmito vegano</h2>
+<p>Una receta deliciosa y cremosa de arroz con palmito, totalmente libre de lácteos.</p>
+<h3>Ingredientes</h3>
+<h4>Para el arroz</h4>
+<ul>
+<li>2 tazas de arroz</li>
+<li>Agua</li>
+</ul>
+<h4>Para la salsa de palmito</h4>
+<ul>
+<li>500 g de palmito natural (preferiblemente no de lata)</li>
+<li>400 ml de leche de coco (preferiblemente natural, no de lata)</li>
+<li>1 cebolla mediana, picada en medias lunas</li>
+<li>1 chile dulce, picado</li>
+<li>1 zanahoria, picada</li>
+<li>4 dientes de ajo, picados</li>
+<li>2 cucharaditas de curry en polvo</li>
+<li>Aceite de coco</li>
+<li>Sal y pimienta al gusto (se recomienda pimienta recién molida)</li>
+<li>Harina de yuca o fécula de maíz (opcional, para espesar)</li>
+</ul>
+<h3>Preparación</h3>
+<h4>1. El Arroz</h4>
+<p>Prepara 2 tazas de arroz de forma simple (solo con agua, sin sal). Es recomendable prepararlo con bastante tiempo de antelación o el día anterior para que esté frío al momento de integrarlo con la salsa de palmito.</p>
+<h4>2. La Salsa de Palmito</h4>
+<ol>
+<li>En una olla, calienta dos cucharadas de aceite de coco.</li>
+<li>Sofríe la cebolla picada en medias lunas hasta que esté confitada.</li>
+<li>Agrega sal y pimienta al gusto. Al ser una salsa, se recomienda usar una cantidad generosa de pimienta, idealmente recién molida.</li>
+<li>Una vez que la cebolla esté lista, añade los ajos picados y cocina brevemente.</li>
+<li>Incorpora el chile dulce picado y cocina hasta que esté ligeramente suave.</li>
+<li>Incorpora la zanahoria picada y cocina hasta que esté ligeramente suave.</li>
+<li>Agrega 400 ml de agua y el palmito picado.</li>
+<li>Cuando el palmito esté casi cocido, añade los 400 ml de leche de coco.</li>
+<li>Deja cocinar a fuego lento para que los sabores se integren y ajusta la sal. Recuerda salar un poco más de lo habitual, ya que el arroz no tiene sal.</li>
+<li>Si deseas una consistencia más espesa, añade un poco de harina de yuca o fécula de maíz y deja que espese.</li>
+<li>Finalmente, incorpora el arroz poco a poco a la salsa, mezclando suavemente hasta que esté completamente integrado.</li>
+</ol>
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/holamundo-ethereum.html" class="u-url">HolaMundo con ethereum</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         <a href="authors/alvaro-segura-del-barco-edgar-barrantes-brais.html">Alvaro Segura Del Barco, Edgar Barrantes Brais</a>
@@ -766,42 +816,6 @@ Print Area Height: 100
 </pre></div>
 
 <p>Cuando tenga mas recomendaciones las agrego, si alguien tiene alguna recomendación se lo agradecería para agregarla.</p>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/optimizacion-de-apache2.html" class="u-url">Optimización de apache2</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        <a href="authors/alvaro-segura-del-barco.html">Alvaro Segura Del Barco</a>
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/optimizacion-de-apache2.html" rel="bookmark">
-            <time class="published dt-published" datetime="2013-10-18T11:16:14-06:00" itemprop="datePublished" title="2013-10-18 11:16">2013-10-18 11:16</time></a>
-            </p>
-                </div>
-            </header><div class="e-content entry-content">
-                    <p>Primero hay que revisar cuales módulos están cargados, esto se puede hacer con</p>
-<div class="code"><pre class="code literal-block">apachectl -M
-</pre></div>
-
-<p>Lo ideal es tener solo los módulos necesarios para que el sitio funcione, la cantidad de módulos influye en e tamaño de cada proceso de apache que se encuentra corriendo.</p>
-<div class="code"><pre class="code literal-block">HostnameLookups off
-</pre></div>
-
-<p>Cuando un cliente el accede el servidor web, se crea una bitácora en access.log, si esta directiva esta en On se busca el nombre en el servidor de nombres, aun con un cache de dns esto es muy lento.</p>
-<p>Cuando se establece una conexión esta se deja escuchando por un tiempo por si se le hace una nueva petición, en el caso de tener muchos visitantes y dejar la conexiones abiertas por mucho tiempo, se crea un problema, por eso se puede bajar el tiempo para poder servir nuevas peticiones. (Esta altamente ligado al MaxClients).</p>
-<div class="code"><pre class="code literal-block">KeepAlive On
-KeepAliveTimeout 2
-</pre></div>
-
-<p>Para el momento de calcular MaxClients.</p>
-<p>Una buena referencia es MaxClients = (total de memoria)/(promedio de memoria utilizada por cada proceso de apache)</p>
-<p>Una buena manera de ver el tamaño de un proceso de apache es con el comando <code>ps -ylC apache2 --sort:rss</code></p>
-<p>Con esto se puede ver el tamaño del proceso mas grande de ultimo.</p>
-<p>Una suma de la columna del rss nos da un valor del total de memoria que esta usando el proceso, esto puede aumentar porque no todos los procesos tiene el mismo tamaño.</p>
-<div class="code"><pre class="code literal-block"><span class="n">ps</span> <span class="o">-</span><span class="n">ylC</span> <span class="n">apache2</span> <span class="o">--</span><span class="n">sort</span><span class="p">:</span><span class="n">rss</span> <span class="p">|</span> <span class="n">awk</span> <span class="s">'{SUM += $8 } END {print SUM}'</span>
-</pre></div>
-
-<p>Hay que tomar en cuenta también el resto de procesos del servidor.</p>
-<p>Utilizando top y acomodando por rss podemos ver los procesos que están utilizando mas memoria, entre estos deberíamos encontrar los procesos de apache y el o los de la base de datos si es que se tiene una.</p>
                 </div>
             </article>
 </div>
